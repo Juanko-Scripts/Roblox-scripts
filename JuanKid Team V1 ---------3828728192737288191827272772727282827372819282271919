@@ -1,1 +1,1164 @@
-([[This file was protected with MoonSec V3]]):gsub('.+', (function(a) _xaCYJ_JXoqXM = a; end)); return(function(o,...)local s;local d;local t;local r;local f;local c;local e=24915;local n=0;local l={};while n<176 do n=n+1;while n<0x17d and e%0x1346<0x9a3 do n=n+1 e=(e*261)%27101 local a=n+e if(e%0x30e2)<=0x1871 then e=(e-0xd6)%0x163 while n<0x257 and e%0x372e<0x1b97 do n=n+1 e=(e-323)%37263 local d=n+e if(e%0x34d6)<0x1a6b then e=(e*0x2a)%0x99ca local e=33493 if not l[e]then l[e]=0x1 c=string;end elseif e%2~=0 then e=(e-0x3f2)%0x542c local e=93262 if not l[e]then l[e]=0x1 r={};end else e=(e*0x325)%0x31e6 n=n+1 local e=25972 if not l[e]then l[e]=0x1 t=getfenv and getfenv();end end end elseif e%2~=0 then e=(e+0x255)%0x76bb while n<0x369 and e%0x3b9c<0x1dce do n=n+1 e=(e-186)%22001 local d=n+e if(e%0xc80)<0x640 then e=(e-0x111)%0x6bf7 local e=44154 if not l[e]then l[e]=0x1 t=(not t)and _ENV or t;end elseif e%2~=0 then e=(e+0xe5)%0x978d local e=3866 if not l[e]then l[e]=0x1 end else e=(e-0x82)%0x18c0 n=n+1 local e=70398 if not l[e]then l[e]=0x1 end end end else e=(e-0x29d)%0x568d n=n+1 while n<0xc4 and e%0x22b2<0x1159 do n=n+1 e=(e+239)%26374 local a=n+e if(e%0x329e)>=0x194f then e=(e-0xa6)%0x4935 local e=36833 if not l[e]then l[e]=0x1 s=tonumber;end elseif e%2~=0 then e=(e-0x3fa)%0x274b local e=20858 if not l[e]then l[e]=0x1 d=function(l)local e=0x01 local function n(n)e=e+n return l:sub(e-n,e-0x01)end while true do local l=n(0x01)if(l=="\5")then break end local e=c.byte(n(0x01))local e=n(e)if l=="\2"then e=r.hYuOzseS(e)elseif l=="\3"then e=e~="\0"elseif l=="\6"then t[e]=function(n,e)return o(8,nil,o,e,n)end elseif l=="\4"then e=t[e]elseif l=="\0"then e=t[e][n(c.byte(n(0x01)))];end local n=n(0x08)r[n]=e end end end else e=(e*0x246)%0x5b15 n=n+1 local e=70767 if not l[e]then l[e]=0x1 f="\4\8\116\111\110\117\109\98\101\114\104\89\117\79\122\115\101\83\0\6\115\116\114\105\110\103\4\99\104\97\114\67\110\72\75\111\79\120\100\0\6\115\116\114\105\110\103\3\115\117\98\105\110\119\114\74\77\70\90\0\6\115\116\114\105\110\103\4\98\121\116\101\121\75\73\109\99\75\99\108\0\5\116\97\98\108\101\6\99\111\110\99\97\116\75\121\98\119\65\101\86\82\0\5\116\97\98\108\101\6\105\110\115\101\114\116\81\115\108\69\86\103\71\71\5";end end end end end e=(e*835)%17779 end d(f);local e={};for n=0x0,0xff do local l=r.CnHKoOxd(n);e[n]=l;e[l]=n;end local function a(n)return e[n];end local c=(function(f,d)local c,l=0x01,0x10 local n={{},{},{}}local t=-0x01 local e=0x01 local o=f while true do n[0x03][r.inwrJMFZ(d,e,(function()e=c+e return e-0x01 end)())]=(function()t=t+0x01 return t end)()if t==(0x0f)then t=""l=0x000 break end end local t=#d while e<t+0x01 do n[0x02][l]=r.inwrJMFZ(d,e,(function()e=c+e return e-0x01 end)())l=l+0x01 if l%0x02==0x00 then l=0x00 r.QslEVgGG(n[0x01],(a((((n[0x03][n[0x02][0x00]]or 0x00)*0x10)+(n[0x03][n[0x02][0x01]]or 0x00)+o)%0x100)));o=f+o;end end return r.KybwAeVR(n[0x01])end);d(c(94,"aNK#q?uz3REit}4OEz"));d(c(47,"?voV*nA/u-bC :l3:vbulACuu/*3onl3n:ul/1V-{: VbHAoVis*lo l--3b  7u  -C//*u333Vbuu:VAv*l/b-VAXC*/vbloCuu3*ovvlVb-ub*-*f3A/**Cu-nCob3o u-o7vVb33lVbV/-o:DC3v-l/u*uoo3CAbV3/-Vlool/nnu:nAouQ :n-/AA*b3o:lC ulV* o-C:V-A/A*Ny-l-b/uC*-vC3A p/vAnvC3V Vu /-n Cuu: b-AACV:j :*bb/*v38l *bn-nnlV:PoAAV / Vb1 l/CvoVAVo:>w o-nAlVlr3 : D/lnVS 3/A;VV/VV:vI:obn/lnCoV3b o-3n5Ell:/H*o/lnvv-l3 AA*V vC3/ Cu*/V*vb3uo BuVnCon3*:A-:nv*vaB Au-Aoo3CC-c bu3/VVubA:ub3uVn*ou3nb_-3A3V*^v vuVv*"));local e=(-40925+(function()local t,n=0,1;(function(e,n)e(e(e,n),e(n,e))end)(function(e,l)if t>183 then return e end t=t+1 n=(n+483)%37848 if(n%298)<149 then n=(n*621)%44984 return e else return l(e(l,e),e(l,e))end return e(l(e,l),l(l,e)and e(e,l))end,function(l,e)if t>119 then return e end t=t+1 n=(n+912)%39985 if(n%1270)<=635 then n=(n-269)%49580 return l(e(l,e)and e(e,e),e(l,e and e))else return e end return e end)return n;end)())local h=r.wntkwWDR or r.jjWyfjRl;local le=(getfenv)or(function()return _ENV end);local p=1;local a=4;local t=3;local d=2;local function ne(b,...)local u=c(e,"6Kjcm/8Z4_-Y+MF5Y//+R-Y48ZjM+jZ2KFK_F__ZmmMZ_ZmcFM45/Fp--58jl_+cm8K/YF8+KYMj/ccmFj4F+YZ5j8Mm4jZ4/jS2--j55YY45cKKmF5+--+?Z-j4Mj4c54_Ym_c4MZ_Zm8F//+mc5K8Z/8+c4+8/55Y-8/KZZYc8Fj-MZMjsMMcM54-mZYjm-M8KKc+K8MKY+m-cj^MjZ+jMM-44cYFc4Fm/KY++m_5+MZ4cHcFK/MKPF__Zmc5KZ8KY7nYK8j=_+/j5FjYFcYKF_5Z_5--K4KjM-Y/Y=-Y-_/m85<-jjK5YZF/_EcYc/5M5_jc+FZ_+mcj8_M4FjYF5jZFK4jcJMFFYYjm_M__Mc+55_4/mK_+_/FIK8cK-YF8+K-cmF/4/c85c-jmF5c-8mM_/8_5x_Fm+mFK:Y5ZZMj+8ZZj4+5c4cMM/_/5bFF_Fm_5+_YmZi8-//jY++K8KK-Y+jj5M+MZYj4YYZYjZ_jZ8wKZMjFM448cmm_5K-Y/K_-m458-m/j!F-F/+D-Y4Z_Km+jZqK5++Z-j4F4_+cjFf4FcMF-_4m8V8YM/J5F-+/Ft4Y88mc4+Y8FK++-ZFj8M/4jc8MF_W/KF4_8mm54-Sm55+--8jq8Ym8jKKYF8+K-M-Z5jmMj4!ccM+4-c454_Zmj5K_F/c5--4/8jmYm8Lt5Y+8YK4+4ZmcmFjZFj5M-4Yc8Fm_jm&F5_+mY54-_/mxjYa/Fj8Y-84K8+mZjjj+FZ+c5M448cmFc_,c5F+_-/j58-m/j=K-F/+R-");local n=0;r.RuYmERTE(function()n=n+1 end)local function e(l,e)if e then return n end;n=l+n;end local l,n,f=o(0,o,e,u,r.yKImcKcl);local function c()local l,n=r.yKImcKcl(u,e(1,3),e(5,6)+2);e(2);return(n*256)+l;end;local j=true;local j=0 local function m()local e=n();local n=n();local d=1;local t=(l(n,1,20)*(2^32))+e;local e=l(n,21,31);local n=((-1)^l(n,32));if(e==0)then if(t==j)then return n*0;else e=1;d=0;end;elseif(e==2047)then return(t==0)and(n*(1/0))or(n*(0/0));end;return r.a_rIdqrG(n,e-1023)*(d+(t/(2^52)));end;local _=n;local function k(n)local l;if(not n)then n=_();if(n==0)then return'';end;end;l=r.inwrJMFZ(u,e(1,3),e(5,6)+n-1);e(n)local e=""for n=(1+j),#l do e=e..r.inwrJMFZ(l,n,n)end return e;end;local j=#r.A_DTskym(s('\49.\48'))~=1 local e=n;local function de(...)return{...},r.jMlZOAIE('#',...)end local function ee()local o={};local h={};local e={};local s={h,o,nil,e};local e=n()local u={}for t=1,e do local l=f();local e;if(l==0)then e=(f()~=#{});elseif(l==3)then local n=m();if j and r.KXmIRQZb(r.A_DTskym(n),'.(\48+)$')then n=r.nHvuieTE(n);end e=n;elseif(l==1)then e=k();end;u[t]=e;end;s[3]=f();for e=1,n()do o[e-(#{1})]=ee();end;for s=1,n()do local e=f();if(l(e,1,1)==0)then local o=l(e,2,3);local r=l(e,4,6);local e={c(),c(),nil,nil};if(o==0)then e[t]=c();e[a]=c();elseif(o==#{1})then e[t]=n();elseif(o==b[2])then e[t]=n()-(2^16)elseif(o==b[3])then e[t]=n()-(2^16)e[a]=c();end;if(l(r,1,1)==1)then e[d]=u[e[d]]end if(l(r,2,2)==1)then e[t]=u[e[t]]end if(l(r,3,3)==1)then e[a]=u[e[a]]end h[s]=e;end end;return s;end;local function ne(l,e,n)local t=e;local t=n;return s(r.KXmIRQZb(r.KXmIRQZb(({r.RuYmERTE(l)})[2],e),n))end local function te(_,e,f)local function ee(...)local c,g,s,z,j,n,u,k,b,m,y,l;local e=0;while-1<e do if 3>e then if e<1 then c=o(6,28,1,8,_);g=o(6,64,2,89,_);else if e~=-1 then for l=25,60 do if e<2 then s=o(6,91,3,13,_);j=de z=0;break;end;n=-41;u=-1;break;end;else n=-41;u=-1;end end else if 4>=e then if 3~=e then m=r.jMlZOAIE('#',...)-1;y={};else k={};b={...};end else if 4<=e then repeat if 5~=e then e=-2;break;end;l=o(7);until true;else l=o(7);end end end e=e+1;end;for e=0,m do if(e>=s)then k[e-s]=b[e+1];else l[e]=b[e+1];end;end;local e=m-s+1 local e;local o;local function r(...)while true do end end while true do if n<-40 then n=n+42 end e=c[n];o=e[p];if o>11 then if 17>=o then if o>=15 then if 16<=o then if 12<=o then repeat if o~=16 then l[e[d]]=(e[t]~=0);break;end;local n=e[d]local t,e=j(l[n](h(l,n+1,e[t])))u=e+n-1 local e=0;for n=n,u do e=e+1;l[n]=t[e];end;until true;else l[e[d]]=(e[t]~=0);end else f[e[t]]=l[e[d]];end else if o<13 then n=e[t];else if o>12 then repeat if o>13 then local o,c,f,r,a;local n=0;while n>-1 do if 3>n then if 1>n then o=e;else if-3<=n then for e=18,72 do if n<2 then c=d;break;end;f=t;break;end;else c=d;end end else if 5<=n then if n<6 then l(a,r);else n=-2;end else if 0<=n then repeat if n>3 then a=o[c];break;end;r=o[f];until true;else r=o[f];end end end n=n+1 end break;end;local d=e[d];local n=l[e[t]];l[d+1]=n;l[d]=n[e[a]];until true;else local n=e[d];local t=l[e[t]];l[n+1]=t;l[n]=t[e[a]];end end end else if o>=21 then if o<=21 then if(l[e[d]]~=e[a])then n=n+1;else n=e[t];end;else if 21~=o then for r=27,83 do if 23>o then local e=e[d]l[e]=l[e](h(l,e+1,u))break;end;n=e[t];break;end;else n=e[t];end end else if o>18 then if o>=16 then repeat if o~=19 then local n=e[d]local t,e=j(l[n](h(l,n+1,e[t])))u=e+n-1 local e=0;for n=n,u do e=e+1;l[n]=t[e];end;break;end;for o=0,3 do if 2>o then if o>0 then f[e[t]]=l[e[d]];n=n+1;e=c[n];else l[e[d]]=(e[t]~=0);n=n+1;e=c[n];end else if o>-1 then repeat if o~=2 then if(l[e[d]]~=e[a])then n=n+1;else n=e[t];end;break;end;l[e[d]]=f[e[t]];n=n+1;e=c[n];until true;else l[e[d]]=f[e[t]];n=n+1;e=c[n];end end end until true;else for o=0,3 do if 2>o then if o>0 then f[e[t]]=l[e[d]];n=n+1;e=c[n];else l[e[d]]=(e[t]~=0);n=n+1;e=c[n];end else if o>-1 then repeat if o~=2 then if(l[e[d]]~=e[a])then n=n+1;else n=e[t];end;break;end;l[e[d]]=f[e[t]];n=n+1;e=c[n];until true;else l[e[d]]=f[e[t]];n=n+1;e=c[n];end end end end else local d=e[d];local n=l[e[t]];l[d+1]=n;l[d]=n[e[a]];end end end else if o<=5 then if o<=2 then if 0<o then if 1<o then local o,a,r,c,f;local n=0;while n>-1 do if 2<n then if 4<n then if 4<=n then repeat if n~=6 then l(f,c);break;end;n=-2;until true;else n=-2;end else if n~=-1 then for e=49,62 do if n>3 then f=o[a];break;end;c=o[r];break;end;else c=o[r];end end else if n>=1 then if n>0 then for e=47,95 do if 1~=n then r=t;break;end;a=d;break;end;else r=t;end else o=e;end end n=n+1 end else if(l[e[d]]~=e[a])then n=n+1;else n=e[t];end;end else do return end;end else if o<4 then local r,_,b,k,z,p,m,o,y,g,s;l[e[d]]=f[e[t]];n=n+1;e=c[n];r=e[d];_=l[e[t]];l[r+1]=_;l[r]=_[e[a]];n=n+1;e=c[n];o=0;while o>-1 do if o<3 then if 1<=o then if 2~=o then k=d;else z=t;end else b=e;end else if o>4 then if 6~=o then l(m,p);else o=-2;end else if 2<=o then repeat if o~=3 then m=b[k];break;end;p=b[z];until true;else m=b[k];end end end o=o+1 end n=n+1;e=c[n];r=e[d]y,g=j(l[r](h(l,r+1,e[t])))u=g+r-1 s=0;for e=r,u do s=s+1;l[e]=y[s];end;n=n+1;e=c[n];r=e[d]l[r]=l[r](h(l,r+1,u))n=n+1;e=c[n];l[e[d]]();n=n+1;e=c[n];do return end;else if o>2 then for n=29,94 do if o~=4 then local e=e[d]l[e]=l[e](h(l,e+1,u))break;end;f[e[t]]=l[e[d]];break;end;else f[e[t]]=l[e[d]];end end end else if 9>o then if 7<=o then if o>5 then repeat if o>7 then l[e[d]]();break;end;l[e[d]]=f[e[t]];until true;else l[e[d]]=f[e[t]];end else l[e[d]]();end else if o<=9 then l[e[d]]=f[e[t]];else if 10<o then l[e[d]]=(e[t]~=0);else do return end;end end end end end n=1+n;end;end;return ee end;local t=0xff;local f={};local o=(1);local d='';(function(n)local l=n local r=0x00 local e=0x00 l={(function(d)if r>0x2c then return d end r=r+1 e=(e+0x92e-d)%0x13 return(e%0x03==0x1 and(function(l)if not n[l]then e=e+0x01 n[l]=(0x99);end return true end)'RMWcg'and l[0x2](0x3b6+d))or(e%0x03==0x0 and(function(l)if not n[l]then e=e+0x01 n[l]=(0x5f);f[o]=le();o=o+t;end return true end)'lLDIE'and l[0x1](d+0x1d6))or(e%0x03==0x2 and(function(l)if not n[l]then e=e+0x01 n[l]=(0x3c);end return true end)'VUzeg'and l[0x3](d+0xe3))or d end),(function(o)if r>0x2b then return o end r=r+1 e=(e+0xb10-o)%0x4c return(e%0x03==0x2 and(function(l)if not n[l]then e=e+0x01 n[l]=(0x28);end return true end)'dOaxv'and l[0x1](0x1e4+o))or(e%0x03==0x0 and(function(l)if not n[l]then e=e+0x01 n[l]=(0x99);d='\37';t={function()t()end};d=d..'\100\43';end return true end)'KqZVE'and l[0x3](o+0x3a7))or(e%0x03==0x1 and(function(l)if not n[l]then e=e+0x01 n[l]=(0xf5);end return true end)'TFzZv'and l[0x2](o+0x238))or o end),(function(c)if r>0x29 then return c end r=r+1 e=(e+0x6f4-c)%0x24 return(e%0x03==0x1 and(function(l)if not n[l]then e=e+0x01 n[l]=(0xb7);end return true end)'lMRFA'and l[0x2](0x146+c))or(e%0x03==0x2 and(function(l)if not n[l]then e=e+0x01 n[l]=(0x80);t[2]=(t[2]*(ne(function()f()end,h(d))-ne(t[1],h(d))))+1;f[o]={};t=t[2];o=o+t;end return true end)'tLSRY'and l[0x1](c+0x1c1))or(e%0x03==0x0 and(function(l)if not n[l]then e=e+0x01 n[l]=(0xa);d={d..'\58 a',d};f[o]=ee();o=o+(1);d[1]='\58'..d[1];t[2]=0xff;end return true end)'FUUsO'and l[0x3](c+0x29d))or c end)}l[0x2](0x2661)end){};local e=te(h(f));return e(...);end return ne((function()local n={}local e=0x01;local l;if r.UaROR_zt then l=r.UaROR_zt(ne)else l=''end if r.KXmIRQZb(l,r.VTUJZHnS)then e=e+0;else e=e+1;end n[e]=0x02;n[n[e]+0x01]=0x03;return n;end)(),...)end)((function(l,e,n,d,t,o)local o;if 4>l then if 1<l then if l>=-1 then repeat if l<3 then do return 16777216,65536,256 end;break;end;do return e(1),e(4,t,d,n,e),e(5,t,d,n)end;until true;else do return e(1),e(4,t,d,n,e),e(5,t,d,n)end;end else if l>=-3 then repeat if l<1 then do return e(1),e(4,t,d,n,e),e(5,t,d,n)end;break;end;do return function(l,e,n)if n then local e=(l/2^(e-1))%2^((n-1)-(e-1)+1);return e-e%1;else local e=2^(e-1);return(l%(e+e)>=e)and 1 or 0;end;end;end;until true;else do return e(1),e(4,t,d,n,e),e(5,t,d,n)end;end end else if 6>l then if l>1 then for o=10,60 do if l~=5 then local l=d;local o,d,t=t(2);do return function()local e,n,r,c=e(n,l(l,l),l(l,l)+3);l(4);return(c*o)+(r*d)+(n*t)+e;end;end;break;end;local l=d;do return function()local e=e(n,l(l,l),l(l,l));l(1);return e;end;end;break;end;else local l=d;local c,r,o=t(2);do return function()local d,n,e,t=e(n,l(l,l),l(l,l)+3);l(4);return(t*c)+(e*r)+(n*o)+d;end;end;end else if 6<l then if 5<l then for e=13,63 do if 7<l then do return n(l,nil,n);end break;end;do return setmetatable({},{['__\99\97\108\108']=function(e,t,l,d,n)if n then return e[n]elseif d then return e else e[t]=l end end})end break;end;else do return n(l,nil,n);end end else do return t[n]end;end end end end),...)
+--[[
+ .____                  ________ ___.    _____                           __                
+ |    |    __ _______   \_____  \\_ |___/ ____\_ __  ______ ____ _____ _/  |_  ___________ 
+ |    |   |  |  \__  \   /   |   \| __ \   __\  |  \/  ___// ___\\__  \\   __\/  _ \_  __ \
+ |    |___|  |  // __ \_/    |    \ \_\ \  | |  |  /\___ \\  \___ / __ \|  | (  <_> )  | \/
+ |_______ \____/(____  /\_______  /___  /__| |____//____  >\___  >____  /__|  \____/|__|   
+         \/          \/         \/    \/                \/     \/     \/                   
+          \_Welcome to LuaObfuscator.com   (Alpha 0.10.4) ~  Much Love, Ferib 
+
+]]--
+
+local ZZZZZZP = "LOL!043O00030A3O006C6F6164737472696E6703043O0067616D6503073O00482O747047657403713O00682O7470733A2O2F70617374652E2O672F702F4A75616E6B6F2532304D6F647325323059542F352O392O373263323632352O3439333039616433386563356533382O632O61382F66696C65732F34623166396538316361313334366366626637633865616361333834313831662F72617700083O0012043O00013O001204000100023O00200D00010001000300120A000300044O0001000100034O00055O00022O00033O000100012O00023O00017O00";
+local t = "rep";
+local e = "char";
+local v0 = tonumber;
+local v1 = string.byte;
+local v2 = string[e];
+local v3 = string.sub;
+local v4 = string.gsub;
+local v5 = string[t];
+local v6 = table.concat;
+local v7 = table.insert;
+local v8 = math.ldexp;
+local v9 = getfenv or function()
+	return _ENV;
+end;
+local v10 = setmetatable;
+local v11 = pcall;
+local v12 = select;
+local v13 = unpack or table.unpack;
+local v14 = tonumber;
+local function v15(v16, v17, ...)
+	local o = "..";
+	local a = 5;
+	local v18 = 1;
+	local v19;
+	v16 = v4(v3(v16, a), o, function(v30)
+		if (v1(v30, 2) == 79) then
+			local i = true;
+			local v70 = 0;
+			while i do
+				local n = 0;
+				if (v70 == n) then
+					local h = 1;
+					local s = 1;
+					v19 = v0(v3(v30, s, h));
+					return "";
+				end
+			end
+		else
+			local r = 16;
+			local v71 = v2(v0(v30, r));
+			if v19 then
+				local v78 = v5(v71, v19);
+				v19 = nil;
+				return v78;
+			else
+				return v71;
+			end
+		end
+	end);
+	local function v20(v31, v32, v33)
+		if v33 then
+			local c = true;
+			local l = 0;
+			local d = 0;
+			local v72 = d - (0 + l);
+			local v73;
+			while c do
+				local m = 713;
+				local u = 927;
+				if (v72 == (u - (214 + m))) then
+					local E = 997;
+					local z = 890;
+					local q = 1956;
+					local j = 0;
+					local x = 1;
+					local k = 114;
+					local v = 824;
+					local b = 1419;
+					local p = 219;
+					local y = 879;
+					local g = 892;
+					local f = 959;
+					local w = 1;
+					v73 = (v31 / ((1 + w) ^ (v32 - ((f - (g + 65)) - 1)))) % ((y - (63 + p + (b - v))) ^ (((v33 - (1638 - (1523 + k))) - (v32 - ((x - j) - 0))) + (2 - 1)));
+					return v73 - (v73 % ((q - z) - (68 + E)));
+				end
+			end
+		else
+			local H = 32;
+			local S = 117;
+			local N = 74;
+			local I = 857;
+			local O = 932;
+			local A = 64;
+			local T = 621;
+			local v74 = (T - ((905 - (87 + 263)) + A)) ^ (v32 - (4 - 3));
+			return (((v31 % (v74 + v74)) >= v74) and (O - (I + N))) or (S - (H + (265 - (67 + 113))));
+		end
+	end
+	local function v21()
+		local D = 0;
+		local R = 0;
+		local v34 = (952 - (802 + 150)) + (R - D);
+		local v35;
+		while true do
+			local U = 0;
+			local C = 0;
+			local L = 2;
+			if (v34 == (L - 1)) then
+				return v35;
+			end
+			if (v34 == (C + U)) then
+				local W = 2;
+				local M = 0;
+				v35 = v1(v16, v18, v18);
+				v18 = v18 + (1 - M);
+				v34 = (3 + 0) - W;
+			end
+		end
+	end
+	local function v22()
+		local G = 82;
+		local F = 997;
+		local v36 = F - (915 + G);
+		local v37;
+		local v38;
+		while true do
+			local Y = 0;
+			if (v36 == ((Y + 0) - 0)) then
+				local X = 118;
+				local K = 8;
+				local V = 0;
+				local B = 2;
+				local P = 0;
+				v37, v38 = v1(v16, v18, v18 + 2 + (0 - P));
+				v18 = v18 + (B - V);
+				v36 = 1188 - (1061 + K + X);
+			end
+			if (v36 == (2 - 1)) then
+				local J = 303;
+				return (v38 * (559 - J)) + v37;
+			end
+		end
+	end
+	local function v23()
+		local Zn = 728;
+		local Zi = 8;
+		local Zo = 65554;
+		local Za = 35948212;
+		local Zt = 416;
+		local Ze = 810;
+		local Z = 795;
+		local Q = 3;
+		local v39, v40, v41, v42 = v1(v16, v18, v18 + Q);
+		v18 = v18 + (Z - ((Ze - (Zt + 26)) + 423));
+		return (v42 * (52725428 - Za)) + (v41 * (Zo - (10 + Zi))) + (v40 * (984 - Zn)) + v39;
+	end
+	local function v24()
+		local ZY = 325;
+		local ZG = 5;
+		local ZF = 7;
+		local ZW = 2609;
+		local ZM = 3632;
+		local Zz = 0;
+		local Zq = 1;
+		local Zj = 488;
+		local Zx = 998;
+		local Zk = 1487;
+		local Zv = 386;
+		local Zb = 44;
+		local Zp = 431;
+		local Zy = 447;
+		local Zg = 1706;
+		local Zf = 145;
+		local Zw = 1062;
+		local Zm = 23;
+		local Zu = 54;
+		local Zc = 57;
+		local Zl = 1;
+		local Zd = 1;
+		local Zr = 87;
+		local Zh = 2;
+		local Zs = 3;
+		local v43 = v23();
+		local v44 = v23();
+		local v45 = Zs - 2;
+		local v46 = (v20(v44, (2 + 0) - 1, Zh + (1073 - (Zr + 968))) * ((Zd + Zl) ^ ((4036 - 3119) - (261 + 567 + Zc)))) + v43;
+		local v47 = v20(v44, 10 + 11, Zu - Zm);
+		local v48 = ((v20(v44, (Zw - 592) - (Zf + (Zg - (Zy + 966)))) == (Zp - (Zb + Zv))) and -(Zk - (Zx + Zj))) or ((2 - Zq) + Zz);
+		if (v47 == (0 + 0)) then
+			local ZT = 0;
+			local ZE = 0;
+			if (v46 == (ZE + ZT)) then
+				local ZA = 772;
+				return v48 * (ZA - (201 + 571));
+			else
+				local ZI = 0;
+				local ZO = 1022;
+				v47 = 1139 - (116 + ZO);
+				v45 = ZI - 0;
+			end
+		else
+			local ZR = 987;
+			local ZH = 760;
+			local ZS = 114;
+			local ZN = 1703;
+			if (v47 == ((5611 - (ZN + ZS)) - (ZH + ZR))) then
+				local ZU = 0;
+				local ZC = 3;
+				local ZL = 0;
+				local ZD = 0;
+				return ((v46 == (ZD + ZL)) and (v48 * ((ZC - 2) / (0 + ZU)))) or (v48 * NaN);
+			end
+		end
+		return v8(v48, v47 - (ZM - ZW)) * (v45 + (v46 / ((ZF - ZG) ^ ((702 - (376 + ZY)) + 51))));
+	end
+	local function v25(v49)
+		local ZB = true;
+		local ZP = 0;
+		local v50 = ZP - 0;
+		local v51;
+		local v52;
+		while ZB do
+			local ZZa = 1265;
+			local ZX = 163;
+			local ZK = 256;
+			local ZV = 3;
+			if (v50 == ZV) then
+				return v6(v52);
+			end
+			if (v50 == ((ZK - (ZX + 91)) - (1 + 0))) then
+				v51 = v3(v16, v18, (v18 + v49) - (1 + 0));
+				v18 = v18 + v49;
+				v50 = 2;
+			end
+			if (v50 == (4 - 2)) then
+				local ZZt = 291;
+				local ZZe = 379;
+				local ZZ = 9;
+				local ZQ = 61;
+				local ZJ = 1945;
+				v52 = {};
+				for v79 = (ZJ - (1869 + ZQ)) - (ZZ + 5), #v51 do
+					v52[v79] = v2(v1(v3(v51, v79, v79)));
+				end
+				v50 = ZZe - (85 + ZZt);
+			end
+			if (v50 == (ZZa - (243 + 1022))) then
+				v51 = nil;
+				if not v49 then
+					local ZZo = true;
+					local v95 = 0 - 0;
+					while ZZo do
+						local ZZi = 0;
+						if (v95 == (0 + ZZi)) then
+							local ZZn = 1123;
+							v49 = v23();
+							if (v49 == (1180 - (ZZn + 57))) then
+								return "";
+							end
+							break;
+						end
+					end
+				end
+				v50 = 1 + 0;
+			end
+		end
+	end
+	local v26 = v23;
+	local function v27(...)
+		return {...}, v12("#", ...);
+	end
+	local function v28()
+		local ZZh = true;
+		local ZZs = 0;
+		local v53 = ZZs;
+		local v54;
+		local v55;
+		local v56;
+		local v57;
+		local v58;
+		local v59;
+		local v60;
+		local v61;
+		local v62;
+		while ZZh do
+			local ZZZZZZa = 0;
+			local ZZZZZZe = 174;
+			local ZZZZZZ = 42;
+			if (v53 == 2) then
+				v58 = nil;
+				v59 = nil;
+				v53 = 3;
+			end
+			if (4 == v53) then
+				local ZZd = true;
+				local ZZr = nil;
+				v62 = ZZr;
+				while ZZd do
+					local ZZZZZK = 2;
+					local ZZp = 3;
+					local ZZy = 1;
+					local ZZm = 0;
+					if (v54 ~= 3) then
+					else
+						local ZZu = 152;
+						local ZZc = nil;
+						local ZZl = nil;
+						v61 = ZZl;
+						v62 = ZZc;
+						v54 = 610 - (454 + ZZu);
+					end
+					if (v54 ~= ZZm) then
+					else
+						local ZZw = 0;
+						local v98 = ZZw;
+						while true do
+							local ZZf = 1;
+							if (v98 == 0) then
+								v55 = 0;
+								v56 = nil;
+								v98 = 1;
+							end
+							if (v98 == (ZZf - 0)) then
+								local ZZg = 1289;
+								v54 = ZZg - (993 + 295);
+								break;
+							end
+						end
+					end
+					if (ZZy == v54) then
+						v57 = nil;
+						v58 = nil;
+						v54 = 2;
+					end
+					if (v54 == (1 + ZZp)) then
+						local ZZb = true;
+						while ZZb do
+							local ZZJ = 679;
+							local ZZX = 1148;
+							local ZZT = 0;
+							if (1 ~= v55) then
+							else
+								local ZZv = true;
+								local v105 = 1171 - (418 + 753);
+								local v106;
+								while ZZv do
+									if (v105 ~= 0) then
+									else
+										local ZZj = true;
+										local ZZx = 0;
+										local ZZk = 0;
+										v106 = ZZk + ZZx;
+										while ZZj do
+											if (v106 ~= 1) then
+											else
+												v55 = 2;
+												break;
+											end
+											if (v106 == 0) then
+												local ZZE = 1;
+												local ZZz = nil;
+												local ZZq = nil;
+												v58 = ZZq;
+												v59 = ZZz;
+												v106 = ZZE;
+											end
+										end
+										break;
+									end
+								end
+							end
+							if (v55 == ZZT) then
+								local ZZA = true;
+								local v107 = 0;
+								while ZZA do
+									local ZZS = 0;
+									local ZZI = 0;
+									local ZZO = 1;
+									if ((ZZO + ZZI) ~= v107) then
+									else
+										local ZZN = 1;
+										v55 = ZZN;
+										break;
+									end
+									if (ZZS == v107) then
+										local ZZH = 0;
+										local v112 = 0 + ZZH;
+										while true do
+											local ZZD = 406;
+											local ZZR = 1;
+											if ((ZZR + 0) ~= v112) then
+											else
+												v107 = 1;
+												break;
+											end
+											if (v112 == (529 - (ZZD + 123))) then
+												local ZZU = 1;
+												local ZZC = nil;
+												local ZZL = 1769;
+												v56 = ZZL - (1749 + 20);
+												v57 = ZZC;
+												v112 = ZZU;
+											end
+										end
+									end
+								end
+							end
+							if (v55 == 2) then
+								local ZZM = true;
+								local v108 = 0;
+								while ZZM do
+									local ZZY = 1249;
+									local ZZG = 1322;
+									if (v108 == 1) then
+										local ZZF = 2;
+										local ZZW = 1;
+										v55 = ZZW + ZZF;
+										break;
+									end
+									if (v108 ~= (ZZG - (ZZY + 73))) then
+									else
+										local ZZK = 0;
+										local ZZV = 1;
+										local ZZB = nil;
+										local ZZP = nil;
+										v60 = ZZP;
+										v61 = ZZB;
+										v108 = ZZV + ZZK;
+									end
+								end
+							end
+							if (v55 == (ZZX - (466 + ZZJ))) then
+								v62 = nil;
+								while true do
+									local ZZZ = true;
+									local ZZQ = 0;
+									local v109 = 0 - ZZQ;
+									local v110;
+									local v111;
+									while ZZZ do
+										local ZZZa = 1;
+										local ZZZt = 0;
+										local ZZZe = 0;
+										if (v109 == (ZZZe - ZZZt)) then
+											v110 = 0;
+											v111 = nil;
+											v109 = 1;
+										end
+										if (v109 == ZZZa) then
+											local ZZZo = true;
+											while ZZZo do
+												local ZZZi = 1794;
+												if (v110 ~= (1900 - (106 + ZZZi))) then
+												else
+													local ZZZs = true;
+													local ZZZn = 0;
+													v111 = ZZZn;
+													while ZZZs do
+														if ((0 + 0) ~= v111) then
+														else
+															local ZZZZZq = 1;
+															local ZZZk = 105;
+															if (v56 == 1) then
+																local ZZZr = true;
+																local ZZZh = 0;
+																local v151 = ZZZh;
+																local v152;
+																while ZZZr do
+																	local ZZZd = 0;
+																	if ((ZZZd + 0) ~= v151) then
+																	else
+																		v152 = 0;
+																		while true do
+																			local ZZZu = 0;
+																			local ZZZl = 1;
+																			if (v152 == ZZZl) then
+																				local ZZZc = 3;
+																				v62 = {};
+																				v56 = 5 - ZZZc;
+																				break;
+																			end
+																			if (v152 ~= ZZZu) then
+																			else
+																				local ZZZw = true;
+																				local ZZZm = 0;
+																				local v165 = ZZZm;
+																				while ZZZw do
+																					if (v165 == 1) then
+																						local ZZZf = 2;
+																						v152 = ZZZf - 1;
+																						break;
+																					end
+																					if (0 ~= v165) then
+																					else
+																						local ZZZv = 1386;
+																						local ZZZb = 1428;
+																						local ZZZp = 4;
+																						local ZZZy = nil;
+																						local ZZZg = 2;
+																						v60 = {v57,v58,ZZZy,v59};
+																						v61 = v23();
+																						v165 = ZZZb - (41 + ZZZv);
+																					end
+																				end
+																			end
+																		end
+																		break;
+																	end
+																end
+															end
+															if (v56 ~= (ZZZk - (17 + 86))) then
+															else
+																local ZZZx = 0;
+																local v153 = ZZZx;
+																while true do
+																	local ZZZM = 1;
+																	local ZZZj = 0;
+																	if (v153 == ZZZj) then
+																		local ZZZq = 0;
+																		local v159 = 0 + ZZZq;
+																		while true do
+																			local ZZZz = 1;
+																			if (v159 == (ZZZz - 0)) then
+																				v153 = 1;
+																				break;
+																			end
+																			if (v159 == (0 - 0)) then
+																				local ZZZU = 0;
+																				local ZZZC = 3;
+																				for v168 = 1, v61 do
+																					local ZZZT = true;
+																					local ZZZE = 44;
+																					local v169 = 166 - (122 + ZZZE);
+																					local v170;
+																					local v171;
+																					local v172;
+																					while ZZZT do
+																						local ZZZO = 1;
+																						if (v169 ~= (0 - 0)) then
+																						else
+																							local ZZZA = nil;
+																							v170 = 0 - 0;
+																							v171 = ZZZA;
+																							v169 = 1 + 0;
+																						end
+																						if (ZZZO == v169) then
+																							local ZZZI = true;
+																							v172 = nil;
+																							while ZZZI do
+																								local ZZZN = 0;
+																								if (v170 ~= (0 + ZZZN)) then
+																								else
+																									local ZZZR = 0;
+																									local ZZZH = 1;
+																									local ZZZS = nil;
+																									v171 = v21();
+																									v172 = ZZZS;
+																									v170 = ZZZH - ZZZR;
+																								end
+																								if (v170 == 1) then
+																									local ZZZD = 30;
+																									if (v171 == (66 - (ZZZD + 35))) then
+																										v172 = v21() ~= 0;
+																									elseif (v171 == 2) then
+																										v172 = v24();
+																									else
+																										local ZZZL = 3;
+																										if (v171 ~= ZZZL) then
+																										else
+																											v172 = v25();
+																										end
+																									end
+																									v62[v168] = v172;
+																									break;
+																								end
+																							end
+																							break;
+																						end
+																					end
+																				end
+																				v60[ZZZC] = v21();
+																				v159 = 1 + ZZZU;
+																			end
+																		end
+																	end
+																	if (v153 == ZZZM) then
+																		local ZZZZZj = 3;
+																		local ZZZF = 214;
+																		local ZZZW = 1043;
+																		for v160 = 1258 - (ZZZW + ZZZF), v23() do
+																			local ZZZY = true;
+																			local ZZZG = 0;
+																			local v161 = ZZZG;
+																			local v162;
+																			local v163;
+																			local v164;
+																			while ZZZY do
+																				local ZZZK = 889;
+																				if (v161 == 0) then
+																					local ZZZV = 1;
+																					local ZZZB = nil;
+																					local ZZZP = 0;
+																					v162 = ZZZP - 0;
+																					v163 = ZZZB;
+																					v161 = ZZZV;
+																				end
+																				if (v161 == (1213 - (323 + ZZZK))) then
+																					local ZZZX = nil;
+																					v164 = ZZZX;
+																					while true do
+																						local ZZZZl = 1;
+																						local ZZZJ = 0;
+																						if (v162 ~= (0 - ZZZJ)) then
+																						else
+																							local v174 = 0;
+																							while true do
+																								local ZZZZa = 53;
+																								local ZZZZt = 320;
+																								local ZZZQ = 1;
+																								if (v174 ~= ZZZQ) then
+																								else
+																									local ZZZZe = 361;
+																									local ZZZZ = 581;
+																									v162 = ZZZZ - (ZZZZe + 219);
+																									break;
+																								end
+																								if (v174 == (ZZZZt - (ZZZZa + 267))) then
+																									local ZZZZi = true;
+																									local ZZZZo = 0;
+																									local v176 = 0 + ZZZZo;
+																									while ZZZZi do
+																										if (v176 == (414 - (15 + 398))) then
+																											local ZZZZs = 964;
+																											local ZZZZn = 983;
+																											v174 = ZZZZn - (18 + ZZZZs);
+																											break;
+																										end
+																										if (v176 == 0) then
+																											local ZZZZd = 0;
+																											local ZZZZr = 0;
+																											local ZZZZh = 0;
+																											v163 = ZZZZh - ZZZZr;
+																											v164 = nil;
+																											v176 = 1 + ZZZZd;
+																										end
+																									end
+																								end
+																							end
+																						end
+																						if (v162 == ZZZZl) then
+																							while true do
+																								local ZZZZu = 0;
+																								local ZZZZc = 0;
+																								if (v163 == (ZZZZc + ZZZZu)) then
+																									local ZZZZw = 1;
+																									local ZZZZm = 1;
+																									v164 = v21();
+																									if (v20(v164, ZZZZm, ZZZZw) == (850 - (20 + 830))) then
+																										local ZZZZg = true;
+																										local ZZZZf = 0;
+																										local v179 = ZZZZf;
+																										local v180;
+																										local v181;
+																										local v182;
+																										while ZZZZg do
+																											local ZZZZZp = 2;
+																											local ZZZZZy = 1;
+																											local ZZZZF = 0;
+																											local ZZZZy = 1;
+																											if (v179 ~= ZZZZy) then
+																											else
+																												local ZZZZW = 407;
+																												local ZZZZk = 0;
+																												local ZZZZv = nil;
+																												local ZZZZb = nil;
+																												local ZZZZp = 1;
+																												v182 = {v22(),v22(),ZZZZb,ZZZZv};
+																												if (v180 == ZZZZk) then
+																													local ZZZZx = true;
+																													local v187 = 0;
+																													local v188;
+																													while ZZZZx do
+																														if (v187 ~= (0 + 0)) then
+																														else
+																															local ZZZZq = true;
+																															local ZZZZj = 0;
+																															v188 = ZZZZj;
+																															while ZZZZq do
+																																if (v188 == 0) then
+																																	local ZZZZT = 196;
+																																	local ZZZZE = 742;
+																																	local ZZZZz = 3;
+																																	v182[ZZZZz] = v22();
+																																	v182[ZZZZE - (542 + ZZZZT)] = v22();
+																																	break;
+																																end
+																															end
+																															break;
+																														end
+																													end
+																												else
+																													local ZZZZA = 1;
+																													if (v180 == ZZZZA) then
+																														v182[6 - 3] = v23();
+																													else
+																														local ZZZZO = 1;
+																														if (v180 == (1 + ZZZZO)) then
+																															local ZZZZN = 10;
+																															local ZZZZI = 0;
+																															v182[3] = v23() - ((2 + ZZZZI) ^ (6 + ZZZZN));
+																														else
+																															local ZZZZS = 3;
+																															if (v180 ~= ZZZZS) then
+																															else
+																																local ZZZZH = true;
+																																local v196 = 0;
+																																while ZZZZH do
+																																	local ZZZZD = 0;
+																																	local ZZZZR = 0;
+																																	if (v196 ~= (ZZZZR - ZZZZD)) then
+																																	else
+																																		local ZZZZM = 425;
+																																		local ZZZZU = 1126;
+																																		local ZZZZC = 4;
+																																		local ZZZZL = 3;
+																																		v182[ZZZZL] = v23() - ((ZZZZC - 2) ^ 16);
+																																		v182[1555 - (ZZZZU + ZZZZM)] = v22();
+																																		break;
+																																	end
+																																end
+																															end
+																														end
+																													end
+																												end
+																												v179 = ZZZZW - (118 + 287);
+																											end
+																											if (v179 == (0 - ZZZZF)) then
+																												local ZZZZG = true;
+																												local v183 = 0;
+																												while ZZZZG do
+																													local ZZZZV = 142;
+																													local ZZZZY = 1003;
+																													if (v183 == (1122 - (118 + ZZZZY))) then
+																														local ZZZZB = 1;
+																														local ZZZZP = 2;
+																														v179 = ZZZZP - ZZZZB;
+																														break;
+																													end
+																													if (v183 ~= (377 - (ZZZZV + 235))) then
+																													else
+																														local ZZZZZe = 1;
+																														local ZZZZZ = 553;
+																														local ZZZZQ = 983;
+																														local ZZZZJ = 1;
+																														local ZZZZX = 10;
+																														local ZZZZK = 2;
+																														v180 = v20(v164, ZZZZK, 13 - ZZZZX);
+																														v181 = v20(v164, ZZZZJ + 3, ZZZZQ - (ZZZZZ + 424));
+																														v183 = ZZZZZe;
+																													end
+																												end
+																											end
+																											if (v179 == 2) then
+																												local v184 = 0;
+																												local v185;
+																												while true do
+																													local ZZZZZt = 0;
+																													if (v184 == ZZZZZt) then
+																														local ZZZZZo = true;
+																														local ZZZZZa = 0;
+																														v185 = ZZZZZa - 0;
+																														while ZZZZZo do
+																															local ZZZZZf = 2;
+																															if (v185 ~= 0) then
+																															else
+																																local ZZZZZi = true;
+																																local v193 = 0;
+																																while ZZZZZi do
+																																	if (v193 == 1) then
+																																		local ZZZZZn = 1;
+																																		v185 = ZZZZZn;
+																																		break;
+																																	end
+																																	if (v193 == (0 + 0)) then
+																																		local ZZZZZm = 0;
+																																		local ZZZZZd = 1;
+																																		local ZZZZZr = 0;
+																																		local ZZZZZh = 1;
+																																		local ZZZZZs = 1;
+																																		if (v20(v181, ZZZZZs, ZZZZZh + ZZZZZr) == ZZZZZd) then
+																																			local ZZZZZu = 1;
+																																			local ZZZZZc = 1;
+																																			local ZZZZZl = 2;
+																																			v182[ZZZZZl + 0] = v62[v182[ZZZZZc + ZZZZZu]];
+																																		end
+																																		if (v20(v181, 2 + ZZZZZm, 2) ~= (2 - 1)) then
+																																		else
+																																			local ZZZZZw = 3;
+																																			v182[3] = v62[v182[ZZZZZw]];
+																																		end
+																																		v193 = 2 - 1;
+																																	end
+																																end
+																															end
+																															if ((ZZZZZf - 1) == v185) then
+																																local ZZZZZg = 3;
+																																v179 = ZZZZZg;
+																																break;
+																															end
+																														end
+																														break;
+																													end
+																												end
+																											end
+																											if (v179 == (ZZZZZy + ZZZZZp)) then
+																												if (v20(v181, 3, 14 - 11) ~= (754 - (239 + 514))) then
+																												else
+																													local ZZZZZx = 797;
+																													local ZZZZZk = 1333;
+																													local ZZZZZv = 2;
+																													local ZZZZZb = 2;
+																													v182[ZZZZZb + ZZZZZv] = v62[v182[ZZZZZk - (ZZZZZx + 532)]];
+																												end
+																												v57[v160] = v182;
+																												break;
+																											end
+																										end
+																									end
+																									break;
+																								end
+																							end
+																							break;
+																						end
+																					end
+																					break;
+																				end
+																			end
+																		end
+																		v56 = ZZZZZj;
+																		break;
+																	end
+																end
+															end
+															v111 = ZZZZZq;
+														end
+														if (v111 == 1) then
+															local ZZZZZz = 0;
+															if (ZZZZZz == v56) then
+																local ZZZZZE = 0;
+																local v154 = ZZZZZE;
+																local v155;
+																while true do
+																	local ZZZZZT = 0;
+																	if (v154 == (ZZZZZT + 0)) then
+																		local ZZZZZO = true;
+																		local ZZZZZA = 0;
+																		v155 = ZZZZZA;
+																		while ZZZZZO do
+																			local ZZZZZI = 0;
+																			if (v155 == (1 + ZZZZZI)) then
+																				local ZZZZZN = 1;
+																				v59 = {};
+																				v56 = ZZZZZN;
+																				break;
+																			end
+																			if (v155 ~= (0 - 0)) then
+																			else
+																				local v167 = 0;
+																				while true do
+																					local ZZZZZD = 476;
+																					local ZZZZZR = 732;
+																					local ZZZZZH = 829;
+																					local ZZZZZS = 1202;
+																					if (v167 ~= (ZZZZZS - (373 + ZZZZZH))) then
+																					else
+																						v57 = {};
+																						v58 = {};
+																						v167 = 1;
+																					end
+																					if (v167 ~= (ZZZZZR - (ZZZZZD + 255))) then
+																					else
+																						local ZZZZZL = 369;
+																						v155 = 1131 - (ZZZZZL + 761);
+																						break;
+																					end
+																				end
+																			end
+																		end
+																		break;
+																	end
+																end
+															end
+															if (v56 ~= 3) then
+															else
+																local v156 = 0;
+																local v157;
+																local v158;
+																while true do
+																	local ZZZZZP = 0;
+																	local ZZZZZC = 1;
+																	if (v156 == (ZZZZZC + 0)) then
+																		while true do
+																			local ZZZZZU = 0;
+																			if (v157 ~= (ZZZZZU - 0)) then
+																			else
+																				local ZZZZZM = true;
+																				v158 = 0 - 0;
+																				while ZZZZZM do
+																					if (v158 == 0) then
+																						local ZZZZZF = 64;
+																						local ZZZZZW = 238;
+																						local v173 = ZZZZZW - (ZZZZZF + 174);
+																						while true do
+																							if (v173 == 0) then
+																								for v177 = 1, v23() do
+																									local ZZZZZY = 0;
+																									local ZZZZZG = 1;
+																									v58[v177 - (ZZZZZG + ZZZZZY)] = v28();
+																								end
+																								return v60;
+																							end
+																						end
+																					end
+																				end
+																				break;
+																			end
+																		end
+																		break;
+																	end
+																	if (v156 ~= ZZZZZP) then
+																	else
+																		local ZZZZZV = nil;
+																		local ZZZZZB = 0;
+																		v157 = ZZZZZB;
+																		v158 = ZZZZZV;
+																		v156 = 1;
+																	end
+																end
+															end
+															break;
+														end
+													end
+													break;
+												end
+											end
+											break;
+										end
+									end
+								end
+								break;
+							end
+						end
+						break;
+					end
+					if (v54 ~= ZZZZZK) then
+					else
+						local ZZZZZJ = nil;
+						local ZZZZZX = nil;
+						v59 = ZZZZZX;
+						v60 = ZZZZZJ;
+						v54 = 3;
+					end
+				end
+				break;
+			end
+			if ((1 - 0) == v53) then
+				local ZZZZZQ = nil;
+				v56 = nil;
+				v57 = ZZZZZQ;
+				v53 = 338 - (144 + 192);
+			end
+			if (v53 == (219 - (ZZZZZZ + ZZZZZZe))) then
+				local ZZZZZZt = 4;
+				v60 = nil;
+				v61 = nil;
+				v53 = ZZZZZZt;
+			end
+			if (v53 ~= (0 + ZZZZZZa)) then
+			else
+				local ZZZZZZi = 0;
+				local ZZZZZZo = 0;
+				v54 = ZZZZZZo + ZZZZZZi;
+				v55 = nil;
+				v53 = 1 + 0;
+			end
+		end
+	end
+	local function v29(v63, v64, v65)
+		local ZZZZZZn = 0;
+		local v66 = ZZZZZZn;
+		local v67;
+		local v68;
+		local v69;
+		while true do
+			local ZZZZZZs = 0;
+			if (v66 == ZZZZZZs) then
+				local ZZZZZZr = 2;
+				local ZZZZZZh = 1;
+				v67 = v63[ZZZZZZh];
+				v68 = v63[ZZZZZZr];
+				v66 = 1;
+			end
+			if (v66 == 1) then
+				local ZZZZZZd = 3;
+				v69 = v63[ZZZZZZd];
+				return function(...)
+					local ZZZZZZf = 1;
+					local ZZZZZZm = 1;
+					local ZZZZZZu = 1;
+					local ZZZZZZc = 1;
+					local ZZZZZZl = 1;
+					local v81 = v67;
+					local v82 = v68;
+					local v83 = v69;
+					local v84 = v27;
+					local v85 = ZZZZZZl;
+					local v86 = -ZZZZZZc;
+					local v87 = {};
+					local v88 = {...};
+					local v89 = v12("#", ...) - ZZZZZZm;
+					local v90 = {};
+					local v91 = {};
+					for v96 = 0, v89 do
+						if (v96 >= v83) then
+							v87[v96 - v83] = v88[v96 + 1];
+						else
+							local ZZZZZZw = 1;
+							v91[v96] = v88[v96 + ZZZZZZw];
+						end
+					end
+					local v92 = (v89 - v83) + ZZZZZZf;
+					local v93;
+					local v94;
+					while true do
+						local v97 = 0;
+						while true do
+							if (v97 == 0) then
+								v93 = v81[v85];
+								v94 = v93[1];
+								v97 = 1;
+							end
+							if (v97 == 1) then
+								local ZZZZZZY = 1;
+								local ZZZZZZg = 6;
+								if (v94 <= ZZZZZZg) then
+									local ZZZZZZy = 2;
+									if (v94 <= ZZZZZZy) then
+										local ZZZZZZp = 0;
+										if (v94 <= ZZZZZZp) then
+											local ZZZZZZb = 2;
+											local v113 = v93[ZZZZZZb];
+											v91[v113] = v91[v113](v13(v91, v113 + 1, v86));
+										elseif (v94 > 1) then
+											do
+												return;
+											end
+										else
+											local ZZZZZZk = 0;
+											local ZZZZZZv = 2;
+											local v115 = v93[ZZZZZZv];
+											local v116, v117 = v84(v91[v115](v13(v91, v115 + 1, v93[3])));
+											v86 = (v117 + v115) - 1;
+											local v118 = ZZZZZZk;
+											for v143 = v115, v86 do
+												local ZZZZZZj = true;
+												local ZZZZZZx = 0;
+												local v144 = ZZZZZZx;
+												while ZZZZZZj do
+													local ZZZZZZq = 0;
+													if (v144 == ZZZZZZq) then
+														v118 = v118 + 1;
+														v91[v143] = v116[v118];
+														break;
+													end
+												end
+											end
+										end
+									else
+										local ZZZZZZz = 4;
+										if (v94 <= ZZZZZZz) then
+											if (v94 > 3) then
+												local ZZZZZZE = 3;
+												v91[v93[2]] = v65[v93[ZZZZZZE]];
+											else
+												local ZZZZZZT = 2;
+												v91[v93[ZZZZZZT]]();
+											end
+										elseif (v94 == 5) then
+											local v121 = v93[2];
+											v91[v121] = v91[v121](v13(v91, v121 + 1, v86));
+										else
+											do
+												return;
+											end
+										end
+									end
+								elseif (v94 <= 9) then
+									local ZZZZZZA = 7;
+									if (v94 <= ZZZZZZA) then
+										local ZZZZZZO = 2;
+										v91[v93[ZZZZZZO]]();
+									elseif (v94 == 8) then
+										local ZZZZZZI = 2;
+										v91[v93[ZZZZZZI]] = v93[3];
+									else
+										v91[v93[2]] = v65[v93[3]];
+									end
+								elseif (v94 <= 11) then
+									local ZZZZZZN = 10;
+									if (v94 > ZZZZZZN) then
+										local ZZZZZZD = 0;
+										local ZZZZZZR = 1;
+										local ZZZZZZH = 1;
+										local ZZZZZZS = 2;
+										local v127 = v93[ZZZZZZS];
+										local v128, v129 = v84(v91[v127](v13(v91, v127 + ZZZZZZH, v93[3])));
+										v86 = (v129 + v127) - ZZZZZZR;
+										local v130 = ZZZZZZD;
+										for v145 = v127, v86 do
+											local ZZZZZZL = true;
+											local v146 = 0;
+											while ZZZZZZL do
+												if (v146 == 0) then
+													local ZZZZZZC = 1;
+													v130 = v130 + ZZZZZZC;
+													v91[v145] = v128[v130];
+													break;
+												end
+											end
+										end
+									else
+										local ZZZZZZU = 3;
+										v91[v93[2]] = v93[ZZZZZZU];
+									end
+								elseif (v94 > 12) then
+									local ZZZZZZW = 4;
+									local ZZZZZZM = 3;
+									local v133 = v93[2];
+									local v134 = v91[v93[ZZZZZZM]];
+									v91[v133 + 1] = v134;
+									v91[v133] = v134[v93[ZZZZZZW]];
+								else
+									local ZZZZZZG = 3;
+									local ZZZZZZF = 2;
+									local v138 = v93[ZZZZZZF];
+									local v139 = v91[v93[ZZZZZZG]];
+									v91[v138 + 1] = v139;
+									v91[v138] = v139[v93[4]];
+								end
+								v85 = v85 + ZZZZZZY;
+								break;
+							end
+						end
+					end
+				end;
+			end
+		end
+	end
+	return v29(v28(), {}, v17)(...);
+end
+return v15(ZZZZZZP, v9(), ...);
