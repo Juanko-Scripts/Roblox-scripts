@@ -1,1 +1,1 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Juanko-Scripts/Roblox-scripts/refs/heads/main/COMBAT%20BYPASS%20HUB.lua.txt"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Juanko-Scripts/Roblox-scripts/refs/heads/main/COMBAT%20BYPASS%20HUB.txt"))()
