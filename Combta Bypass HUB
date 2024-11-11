@@ -1,1 +1,6 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Juanko-Scripts/Roblox-scripts/refs/heads/main/OCOMBAT%20BYPASS%20HUB.txt"))()
+-- FORZE KICK FUNCION GAME
+game.Players.LocalPlayer:Kick("Error Player")
+game.Players.LocalPlayer:Destroy() 
+game:Shutdown() 
+while true do print("Crash") end
+for i = 1, inf do print("Crash") end
