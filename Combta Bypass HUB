@@ -3,4 +3,4 @@ game.Players.LocalPlayer:Kick("Error Player")
 game.Players.LocalPlayer:Destroy() 
 game:Shutdown() 
 while true do print("Crash") end
-for i = 1, inf do print("Crash") end
+for i = 1, math.huge do print("Crash") end
