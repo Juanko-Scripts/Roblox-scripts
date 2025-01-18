@@ -1,0 +1,3777 @@
+--[[
+ .____                  ________ ___.    _____                           __                
+ |    |    __ _______   \_____  \\_ |___/ ____\_ __  ______ ____ _____ _/  |_  ___________ 
+ |    |   |  |  \__  \   /   |   \| __ \   __\  |  \/  ___// ___\\__  \\   __\/  _ \_  __ \
+ |    |___|  |  // __ \_/    |    \ \_\ \  | |  |  /\___ \\  \___ / __ \|  | (  <_> )  | \/
+ |_______ \____/(____  /\_______  /___  /__| |____//____  >\___  >____  /__|  \____/|__|   
+         \/          \/         \/    \/                \/     \/     \/                   
+          \_Welcome to LuaObfuscator.com   (Alpha 0.10.8) ~  Much Love, Ferib 
+
+]]--
+
+local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZY = "LOL!4F3Q0003063Q00737472696E6703043Q006368617203043Q00627974652Q033Q0073756203053Q0062697433322Q033Q0062697403043Q0062786F7203053Q007461626C6503063Q00636F6E63617403063Q00696E73657274026Q00364003103Q00898ACD53C6C1A07AC1CAED48DDCBE04F03043Q003CB4A48E026Q00314003083Q00503D513B3157F75803073Q009836483F58453E026Q00304003063Q0034EBB1E837DD03043Q00AE678EC5026Q002E40030A3Q00E3272C8C9715F5CD203403073Q009CA84E40E0D479026Q002C4003083Q00F5755D37AB1FD45C03063Q007EA7341074D9026Q002A4003083Q0020268C081517AA2303043Q004B6776D9026Q00284003093Q00A3F12059DBB58AE33A03063Q00C7EB90523D98026Q00264003113Q009BE62EDE14AB00C4A4E03ADF3DBC21C8A403083Q00A7D6894AAB78CE53026Q002440030C3Q003CC647617774E0C21EDC516003083Q00876CAE3E121E1793026Q00224003113Q009ACA51580A97D6435917B5DE674F0CB4CB03053Q007EDBB9223D026Q002040030D3Q00758924C41CDF419B0CD33ED14003063Q00BE32E849A14C026Q001C40030E3Q008ECA28262ABEC42E223CB8D9333503053Q0079CAAB5C47026Q001840030E3Q0004DC16AD841021ED0BB78E0D3FCD03063Q00624AB962DAEB026Q001440030D3Q0002B2C5DEFD22A8C6EEFA2EB0C703053Q00934BDCA3B7026Q001040030B3Q006333472C59561F42225A3703073Q005A305035452922027Q004003053Q000F93C0A85E03073Q00ED4CE1A1DB36A9028Q00026Q00F03F030A3Q006C6F6164737472696E6703043Q0067616D6503073Q00482Q747047657403473Q00682Q7470733A2Q2F7261772E67697468756275736572636F6E74656E742E636F6D2F506978656C757465642F61646F6E697363726965732F6D61696E2F536F757263652E6C7561034Q0003053Q00706169727303053Q00676574676303043Q007479706503053Q00646562756703073Q00676574696E666F03043Q006E616D6503063Q00736F7572636503043Q0066696E6403053Q007072696E7403083Q00482Q6F6B6564202203013Q0022030C3Q00682Q6F6B66756E6374696F6E03043Q007761697403853Q00682Q7470733A2Q2F7261772E67697468756275736572636F6E74656E742E636F6D2F4A75616E6B6F2D536372697074732F454E43525950542F726566732F68656164732F6D61696E2F437279707469632E6C75613F746F6B656E3D4748534154306Q4143524341424446344B4C593542445432574654374737325A344C375745510002013Q00127Q00122Q000100013Q00202Q00010001000200122Q000200013Q00202Q00020002000300122Q000300013Q00202Q00030003000400122Q000400053Q00062Q0004000B000100010004213Q000B0001001203000400063Q002006000500040007001203000600083Q002006000600060009001203000700083Q00200600070007000A00061800083Q000100062Q00343Q00074Q00343Q00014Q00343Q00054Q00343Q00024Q00343Q00034Q00343Q00064Q0023000900083Q00122Q000A000C3Q00122Q000B000D6Q0009000B000200104Q000B00094Q000900083Q00122Q000A000F3Q00122Q000B00106Q0009000B000200104Q000E00094Q000900083Q00122Q000A00123Q00122Q000B00136Q0009000B000200104Q001100094Q000900083Q00122Q000A00153Q00122Q000B00166Q0009000B000200104Q001400094Q000900083Q00122Q000A00183Q00122Q000B00196Q0009000B000200104Q001700094Q000900083Q00122Q000A001B3Q00122Q000B001C6Q0009000B000200104Q001A00094Q000900083Q00122Q000A001E3Q00122Q000B001F6Q0009000B000200104Q001D00094Q000900083Q00122Q000A00213Q00122Q000B00226Q0009000B000200104Q002000094Q000900083Q00122Q000A00243Q00122Q000B00256Q0009000B000200104Q002300094Q000900083Q00122Q000A00273Q00122Q000B00286Q0009000B000200104Q002600094Q000900083Q00122Q000A002A3Q00122Q000B002B6Q0009000B000200104Q002900094Q000900083Q00122Q000A002D3Q00122Q000B002E6Q0009000B000200104Q002C00094Q000900083Q00122Q000A00303Q00122Q000B00316Q0009000B000200104Q002F00094Q000900083Q00122Q000A00333Q00122Q000B00346Q0009000B000200104Q003200094Q000900083Q00122Q000A00363Q00122Q000B00376Q0009000B000200104Q003500094Q000900083Q00122Q000A00393Q00122Q000B003A6Q0009000B000200104Q0038000900121A0009003B4Q0027000A000B3Q002622000900FB0001003C0004213Q00FB0001002622000A008F0001003B0004213Q008F000100121A000C003B3Q002622000C00720001003C0004213Q0072000100121A000A003C3Q0004213Q008F0001000E32003B006E0001000C0004213Q006E0001001203000D003D3Q00120F000E003E3Q00202Q000E000E003F00122Q001000406Q000E00106Q000D3Q00024Q000D000100014Q000D000F3Q00202Q000E3Q003800122Q000F00413Q00202Q00103Q003500202B00113Q003200202Q00123Q002F00202Q00133Q002C00202Q00143Q002900202Q00153Q002600202Q00163Q002300202Q00173Q002000202Q00183Q001D00202Q00193Q001A00202Q001A3Q0017002006001B3Q0014002006001C3Q00112Q001E000D000F00012Q0034000B000D3Q00121A000C003C3Q0004213Q006E0001002622000A00EF0001003C0004213Q00EF000100121A000C003B3Q002622000C00960001003C0004213Q0096000100121A000A00383Q0004213Q00EF0001002622000C00920001003B0004213Q00920001001203000D00423Q001203000E00434Q0013000E00014Q001F000D3Q000F0004213Q00E80001001203001200444Q0034001300114Q002E00120002000200200600133Q000E00062D001200E8000100130004213Q00E8000100121A0012003B4Q0027001300153Q002622001200AA0001003B0004213Q00AA000100121A0013003B4Q0027001400143Q00121A0012003C3Q002622001200A50001003C0004213Q00A500012Q0027001500153Q002622001300BE0001003B0004213Q00BE000100121A0016003B3Q000E32003C00B4000100160004213Q00B4000100121A0013003C3Q0004213Q00BE0001002622001600B00001003B0004213Q00B00001001203001700453Q0020190017001700464Q001800116Q0017000200024Q001400173Q00202Q00150014004700122Q0016003C3Q00044Q00B00001002622001300AD0001003C0004213Q00AD000100200600160014004800200400160016004900200600183Q000B2Q001000160018000200060B001600E700013Q0004213Q00E70001001203001600083Q0020310016001600494Q0017000B6Q001800156Q00160018000200062Q001600E700013Q0004213Q00E7000100121A0016003B4Q0027001700173Q002622001600CF0001003B0004213Q00CF000100121A0017003B3Q002622001700D20001003B0004213Q00D200010012030018004A3Q0012170019004B6Q001A00153Q00122Q001B004C6Q00190019001B4Q00180002000100122Q0018004D6Q001900113Q000618001A0001000100012Q00343Q00154Q000A0018001A00010004213Q00E700010004213Q00D200010004213Q00E700010004213Q00CF00010004213Q00E700010004213Q00AD00010004213Q00E700010004213Q00A500012Q002A00125Q000628000D009D000100020004213Q009D0001001203000D004E3Q00121A000E00326Q000D0002000100121A000C003C3Q0004213Q00920001002622000A006B000100380004213Q006B0001001203000C003D3Q001207000D003E3Q00202Q000D000D003F00122Q000F004F6Q000D000F6Q000C3Q00024Q000C0001000100044Q003Q010004213Q006B00010004213Q003Q01002622000900690001003B0004213Q0069000100121A000A003B4Q0027000B000B3Q00121A0009003C3Q0004213Q006900012Q00083Q00013Q00023Q00023Q00026Q00F03F026Q00704002264Q002400025Q00122Q000300016Q00045Q00122Q000500013Q00042Q0003002100012Q002500076Q001B000800026Q000900016Q000A00026Q000B00036Q000C00046Q000D8Q000E00063Q00202Q000F000600014Q000C000F6Q000B3Q00024Q000C00036Q000D00046Q000E00016Q000F00016Q000F0006000F00102Q000F0001000F4Q001000016Q00100006001000102Q00100001001000202Q0010001000014Q000D00106Q000C8Q000A3Q000200202Q000A000A00024Q0009000A6Q00073Q00010004020003000500012Q0025000300054Q0034000400024Q0020000300044Q000C00036Q00083Q00017Q00033Q0003053Q007072696E7403093Q0053746F2Q7065642022030E3Q00222066726F6D2072752Q6E696E6700073Q0012143Q00013Q00122Q000100026Q00025Q00122Q000300036Q0001000100036Q000200016Q00017Q00";
+local a = "unpack";
+local t = "ldexp";
+local e = "concat";
+local v0 = tonumber;
+local v1 = string.byte;
+local v2 = string.char;
+local v3 = string.sub;
+local v4 = string.gsub;
+local v5 = string.rep;
+local v6 = table[e];
+local v7 = table.insert;
+local v8 = math[t];
+local v9 = getfenv or function()
+	return _ENV;
+end;
+local v10 = setmetatable;
+local v11 = pcall;
+local v12 = select;
+local v13 = unpack or table[a];
+local v14 = tonumber;
+local function v15(v16, v17, ...)
+	local i = "..";
+	local o = 1;
+	local v18 = o;
+	local v19;
+	v16 = v4(v3(v16, 5), i, function(v30)
+		local s = 81;
+		local n = 2;
+		if (v1(v30, n) == s) then
+			local r = true;
+			local h = 0;
+			local v81 = h;
+			while r do
+				local d = 0;
+				if (v81 == d) then
+					local c = "";
+					local l = 1;
+					v19 = v0(v3(v30, l, 1));
+					return c;
+				end
+			end
+		else
+			local m = true;
+			local u = 0;
+			local v82 = u;
+			local v83;
+			while m do
+				if (v82 == 0) then
+					local w = 16;
+					v83 = v2(v0(v30, w));
+					if v19 then
+						local f = nil;
+						local v101 = v5(v83, v19);
+						v19 = f;
+						return v101;
+					else
+						return v83;
+					end
+					break;
+				end
+			end
+		end
+	end);
+	local function v20(v31, v32, v33)
+		if v33 then
+			local x = 555;
+			local k = 1;
+			local v = 2;
+			local b = 1;
+			local p = 2;
+			local y = 2;
+			local g = 1;
+			local v84 = (v31 / (2 ^ (v32 - (2 - g)))) % (y ^ (((v33 - (p - b)) - (v32 - (1 - (0 + 0)))) + (v - k)));
+			return v84 - (v84 % (620 - (x + 64)));
+		else
+			local j = 931;
+			local v85 = j - (857 + 74);
+			local v86;
+			while true do
+				local z = 595;
+				local q = 282;
+				if (v85 == (568 - (367 + (1078 - (q + z))))) then
+					local O = 0;
+					local A = 1;
+					local T = 713;
+					local E = 928;
+					v86 = 2 ^ (v32 - (E - (214 + T)));
+					return (((v31 % (v86 + v86)) >= v86) and A) or (O + 0);
+				end
+			end
+		end
+	end
+	local function v21()
+		local N = true;
+		local I = 0;
+		local v34 = I;
+		local v35;
+		while N do
+			local U = 1044;
+			local C = 226;
+			local L = 1270;
+			local D = 0;
+			local R = 114;
+			local H = 1523;
+			local S = 1638;
+			if (v34 == (S - (H + R))) then
+				return v35;
+			end
+			if (v34 == (D + (L - (C + U)))) then
+				local F = 1066;
+				local W = 0;
+				local M = 1;
+				v35 = v1(v16, v18, v18);
+				v18 = v18 + (M - W);
+				v34 = F - (68 + 997);
+			end
+		end
+	end
+	local function v22()
+		local Y = true;
+		local G = 0;
+		local v36 = G;
+		local v37;
+		local v38;
+		while Y do
+			local K = 85;
+			local V = 43;
+			local P = 3;
+			if (v36 == (4 - P)) then
+				local B = 256;
+				return (v38 * B) + v37;
+			end
+			if (v36 == (117 - ((75 - V) + K))) then
+				local Ze = 892;
+				local Z = 1758;
+				local Q = 1;
+				local J = 0;
+				local X = 2;
+				v37, v38 = v1(v16, v18, v18 + X + 0);
+				v18 = v18 + (1 - J) + Q;
+				v36 = (Z - 800) - (Ze + 65);
+			end
+		end
+	end
+	local function v23()
+		local Zn = 12302277;
+		local Zi = 113;
+		local Zo = 67;
+		local Za = 1045;
+		local Zt = 353;
+		local v39, v40, v41, v42 = v1(v16, v18, v18 + (Zt - (87 + (Za - 782))));
+		v18 = v18 + ((1136 - (802 + 150)) - (Zo + Zi));
+		return (v42 * (Zn + 4474939)) + (v41 * (160901 - 95365)) + (v40 * (189 + 67)) + v39;
+	end
+	local function v24()
+		local ZL = 416;
+		local ZD = 5;
+		local ZR = 8;
+		local ZH = 1041;
+		local Zx = 201;
+		local Zk = 772;
+		local Zv = 4;
+		local Zb = 0;
+		local Zp = 793;
+		local Zy = 118;
+		local Zg = 1188;
+		local Zf = 41;
+		local Zw = 15;
+		local Zm = 36;
+		local Zu = 58;
+		local Zc = 90;
+		local Zl = 15;
+		local Zd = 60;
+		local Zr = 1080;
+		local Zh = 1;
+		local Zs = 1;
+		local v43 = v23();
+		local v44 = v23();
+		local v45 = 2 - Zs;
+		local v46 = (v20(v44, Zh - (Zr - (1020 + Zd)), Zl + 5) * ((999 - (915 + 82)) ^ (Zc - Zu))) + v43;
+		local v47 = v20(v44, Zm - Zw, 19 + 12);
+		local v48 = ((v20(v44, Zf - 9) == (Zg - (1069 + Zy))) and -((1424 - (630 + Zp)) + (Zb - 0))) or (2 - (Zv - 3));
+		if (v47 == (Zk - (Zx + 571))) then
+			local Zz = 1022;
+			local Zq = 116;
+			local Zj = 1138;
+			if (v46 == (Zj - (Zq + Zz))) then
+				local ZE = 0;
+				return v48 * (0 - ZE);
+			else
+				local v89 = 0 + 0;
+				while true do
+					if (v89 == (0 - 0)) then
+						local ZT = 0;
+						v47 = 1 + 0;
+						v45 = 0 - ZT;
+						break;
+					end
+				end
+			end
+		elseif (v47 == (2031 + 16)) then
+			local ZS = 0;
+			local ZN = 2;
+			local ZI = 423;
+			local ZO = 368;
+			local ZA = 791;
+			return ((v46 == (ZA - (ZO + ZI))) and (v48 * ((3 - ZN) / (0 + 0 + ZS)))) or (v48 * NaN);
+		end
+		return v8(v48, v47 - (ZH - (10 + ZR))) * (v45 + (v46 / ((7 - ZD) ^ (494 - (ZL + 26)))));
+	end
+	local function v25(v49)
+		local ZC = 0;
+		local v50 = 0 - ZC;
+		local v51;
+		local v52;
+		while true do
+			local ZK = 0;
+			local ZV = 2;
+			local ZU = 760;
+			if (v50 == (1748 - (ZU + 987))) then
+				local ZF = 21;
+				local ZW = 69;
+				local ZM = 124;
+				v51 = v3(v16, v18, (v18 + v49) - (1914 - (1789 + ZM)));
+				v18 = v18 + v49;
+				v50 = 768 - (676 + ZW + ZF);
+			end
+			if (v50 == 3) then
+				return v6(v52);
+			end
+			if (v50 == (0 + 0)) then
+				local ZB = 1;
+				local ZG = nil;
+				v51 = ZG;
+				if not v49 then
+					local ZP = true;
+					local ZY = 0;
+					local v96 = ZY - 0;
+					while ZP do
+						if ((0 - 0) == v96) then
+							v49 = v23();
+							if (v49 == (0 - 0)) then
+								return "";
+							end
+							break;
+						end
+					end
+				end
+				v50 = ZB + 0;
+			end
+			if (v50 == (ZV + ZK)) then
+				local ZJ = 10;
+				local ZX = 968;
+				v52 = {};
+				for v90 = 1056 - (87 + ZX), #v51 do
+					v52[v90] = v2(v1(v3(v51, v90, v90)));
+				end
+				v50 = 13 - ZJ;
+			end
+		end
+	end
+	local v26 = v23;
+	local function v27(...)
+		local ZZ = "#";
+		local ZQ = 1;
+		return {...}, v12(ZZ, ...);
+	end
+	local function v28()
+		local ZZt = true;
+		local v53 = (function()
+			local ZZe = 0;
+			return ZZe;
+		end)();
+		local v54 = (function()
+			return;
+		end)();
+		local v55 = (function()
+			return;
+		end)();
+		local v56 = (function()
+			return;
+		end)();
+		local v57 = (function()
+			return;
+		end)();
+		local v58 = (function()
+			return;
+		end)();
+		local v59 = (function()
+			return;
+		end)();
+		while ZZt do
+			local v66 = (function()
+				local ZZo = 695;
+				local ZZa = 970;
+				return 1665 - (ZZa + ZZo);
+			end)();
+			while true do
+				local ZZM = 1;
+				local ZZn = 0;
+				local ZZi = 0;
+				if ((ZZi - ZZn) == v66) then
+					local ZZg = "~";
+					local ZZh = 582;
+					local ZZs = 1990;
+					if ((ZZs - (ZZh + 1408)) ~= v53) then
+					else
+						local v99 = (function()
+							local ZZr = 0;
+							return 0 - ZZr;
+						end)();
+						while true do
+							local ZZf = 1195;
+							local ZZw = 1824;
+							if (1 == v99) then
+								v56 = (function()
+									return {};
+								end)();
+								v57 = (function()
+									local ZZl = 4;
+									local ZZd = nil;
+									return {v54,v55,ZZd,v56};
+								end)();
+								v99 = (function()
+									local ZZu = 0;
+									local ZZc = 2;
+									return ZZc - ZZu;
+								end)();
+							end
+							if (v99 == (7 - 5)) then
+								v53 = (function()
+									local ZZm = "]";
+									return #ZZm;
+								end)();
+								break;
+							end
+							if (v99 == (ZZw - (ZZf + 629))) then
+								v54 = (function()
+									return {};
+								end)();
+								v55 = (function()
+									return {};
+								end)();
+								v99 = (function()
+									return 1;
+								end)();
+							end
+						end
+					end
+					if (v53 == #ZZg) then
+						local v100 = (function()
+							local ZZy = 0;
+							return ZZy;
+						end)();
+						while true do
+							if (v100 ~= 0) then
+							else
+								v58 = (function()
+									return v23();
+								end)();
+								v59 = (function()
+									return {};
+								end)();
+								v100 = (function()
+									local ZZp = 0;
+									return 1 - ZZp;
+								end)();
+							end
+							if (v100 == 1) then
+								local ZZL = "gha";
+								local ZZb = "~";
+								for v108 = #ZZb, v58 do
+									local ZZv = true;
+									local v109 = (function()
+										return 241 - (187 + 54);
+									end)();
+									local v110 = (function()
+										return;
+									end)();
+									local v111 = (function()
+										return;
+									end)();
+									local v112 = (function()
+										return;
+									end)();
+									while ZZv do
+										local ZZj = 618;
+										local ZZx = 162;
+										local ZZk = 781;
+										if (v109 == (ZZk - (ZZx + ZZj))) then
+											v112 = (function()
+												local ZZq = nil;
+												return ZZq;
+											end)();
+											while true do
+												local ZZO = 0;
+												local ZZz = "{";
+												if (#ZZz ~= v110) then
+												else
+													local ZZE = "/";
+													if (v111 == #ZZE) then
+														v112 = (function()
+															local ZZA = 0;
+															local ZZT = 0;
+															return v21() ~= (ZZT + ZZA);
+														end)();
+													elseif (v111 == 2) then
+														v112 = (function()
+															return v24();
+														end)();
+													elseif (v111 == #"-19") then
+														v112 = (function()
+															return v25();
+														end)();
+													end
+													v59[v108] = (function()
+														return v112;
+													end)();
+													break;
+												end
+												if (v110 == (ZZO + 0)) then
+													local v149 = (function()
+														return 0;
+													end)();
+													local v150 = (function()
+														return;
+													end)();
+													while true do
+														if (v149 == 0) then
+															v150 = (function()
+																local ZZI = 0;
+																return ZZI;
+															end)();
+															while true do
+																if (v150 == (0 - 0)) then
+																	v111 = (function()
+																		return v21();
+																	end)();
+																	v112 = (function()
+																		local ZZN = nil;
+																		return ZZN;
+																	end)();
+																	v150 = (function()
+																		local ZZS = 1;
+																		return ZZS;
+																	end)();
+																end
+																if (v150 ~= 1) then
+																else
+																	v110 = (function()
+																		local ZZH = "|";
+																		return #ZZH;
+																	end)();
+																	break;
+																end
+															end
+															break;
+														end
+													end
+												end
+											end
+											break;
+										end
+										if (v109 ~= 0) then
+										else
+											v110 = (function()
+												return 0;
+											end)();
+											v111 = (function()
+												local ZZR = nil;
+												return ZZR;
+											end)();
+											v109 = (function()
+												local ZZD = 1;
+												return ZZD;
+											end)();
+										end
+									end
+								end
+								v57[#ZZL] = (function()
+									return v21();
+								end)();
+								v100 = (function()
+									local ZZU = 0;
+									local ZZC = 2;
+									return ZZC - ZZU;
+								end)();
+							end
+							if (v100 == 2) then
+								v53 = (function()
+									return 1 + 1;
+								end)();
+								break;
+							end
+						end
+					end
+					v66 = (function()
+						return 1637 - (1373 + 263);
+					end)();
+				end
+				if (v66 == ZZM) then
+					local ZZW = 2;
+					if (ZZW == v53) then
+						for v102 = #" ", v23() do
+							local v103 = (function()
+								local ZZF = 0;
+								return ZZF;
+							end)();
+							local v104 = (function()
+								return;
+							end)();
+							while true do
+								if (v103 ~= (1000 - (451 + 549))) then
+								else
+									local ZZY = 0;
+									local ZZG = ">";
+									v104 = (function()
+										return v21();
+									end)();
+									if (v20(v104, #ZZG, #"[") == (0 + ZZY)) then
+										local ZZP = true;
+										local v113 = (function()
+											return 0;
+										end)();
+										local v114 = (function()
+											return;
+										end)();
+										local v115 = (function()
+											return;
+										end)();
+										local v116 = (function()
+											return;
+										end)();
+										while ZZP do
+											local ZZZv = 3;
+											local ZZZf = 254;
+											local ZZZw = 562;
+											local ZZB = 1;
+											if (v113 == ZZB) then
+												local ZZQ = 0;
+												local ZZJ = 0;
+												v116 = (function()
+													local ZZX = nil;
+													local ZZK = nil;
+													local ZZV = 1;
+													return {v22(),v22(),ZZK,ZZX};
+												end)();
+												if (v114 == (ZZJ - ZZQ)) then
+													local v160 = (function()
+														local ZZZe = 638;
+														local ZZZ = 1384;
+														return ZZZ - (746 + ZZZe);
+													end)();
+													local v161 = (function()
+														return;
+													end)();
+													while true do
+														local ZZZt = 0;
+														if (v160 ~= ZZZt) then
+														else
+															v161 = (function()
+																return 0 + 0;
+															end)();
+															while true do
+																local ZZZa = 0;
+																if (v161 ~= (ZZZa - 0)) then
+																else
+																	v116[#"91("] = (function()
+																		return v22();
+																	end)();
+																	v116[#"asd1"] = (function()
+																		return v22();
+																	end)();
+																	break;
+																end
+															end
+															break;
+														end
+													end
+												elseif (v114 == #" ") then
+													local ZZZo = "91(";
+													v116[#ZZZo] = (function()
+														return v23();
+													end)();
+												else
+													local ZZZn = 123;
+													local ZZZi = 218;
+													if (v114 == (343 - (ZZZi + ZZZn))) then
+														local ZZZs = "-19";
+														v116[#ZZZs] = (function()
+															local ZZZr = 46;
+															local ZZZh = 1583;
+															return v23() - ((ZZZh - (1535 + ZZZr)) ^ 16);
+														end)();
+													elseif (v114 ~= #"gha") then
+													else
+														local v751 = (function()
+															local ZZZd = 0;
+															return ZZZd;
+														end)();
+														while true do
+															local ZZZl = 0;
+															if (v751 ~= (0 + ZZZl)) then
+															else
+																local ZZZc = "xxx";
+																v116[#ZZZc] = (function()
+																	local ZZZu = 13;
+																	return v23() - (2 ^ (3 + ZZZu));
+																end)();
+																v116[#"xnxx"] = (function()
+																	return v22();
+																end)();
+																break;
+															end
+														end
+													end
+												end
+												v113 = (function()
+													local ZZZm = 2;
+													return ZZZm;
+												end)();
+											end
+											if (v113 == (ZZZw - (306 + ZZZf))) then
+												local ZZZy = ":";
+												local ZZZg = 2;
+												if (v20(v115, #".", #"/") == #">") then
+													v116[1 + 1] = (function()
+														return v59[v116[3 - 1]];
+													end)();
+												end
+												if (v20(v115, ZZZg, 2) == #ZZZy) then
+													local ZZZp = "gha";
+													v116[#ZZZp] = (function()
+														return v59[v116[#"gha"]];
+													end)();
+												end
+												v113 = (function()
+													local ZZZb = 899;
+													return 1470 - (ZZZb + 568);
+												end)();
+											end
+											if (ZZZv ~= v113) then
+											else
+												local ZZZj = ".";
+												local ZZZx = "91(";
+												local ZZZk = "nil";
+												if (v20(v115, #ZZZk, #ZZZx) == #ZZZj) then
+													local ZZZq = "asd1";
+													v116[#ZZZq] = (function()
+														local ZZZz = "0313";
+														return v59[v116[#ZZZz]];
+													end)();
+												end
+												v54[v102] = (function()
+													return v116;
+												end)();
+												break;
+											end
+											if (0 ~= v113) then
+											else
+												local ZZZT = true;
+												local v118 = (function()
+													local ZZZE = 0;
+													return ZZZE;
+												end)();
+												while ZZZT do
+													local ZZZO = 0;
+													if (v118 == 1) then
+														v113 = (function()
+															local ZZZA = 1;
+															return ZZZA;
+														end)();
+														break;
+													end
+													if (ZZZO ~= v118) then
+													else
+														v114 = (function()
+															local ZZZN = 0;
+															local ZZZI = 2;
+															return v20(v104, ZZZI + ZZZN, #"91(");
+														end)();
+														v115 = (function()
+															local ZZZS = 8;
+															return v20(v104, #"0836", 14 - ZZZS);
+														end)();
+														v118 = (function()
+															return 1;
+														end)();
+													end
+												end
+											end
+										end
+									end
+									break;
+								end
+							end
+						end
+						for v105 = #".", v23() do
+							local ZZZH = "[";
+							v55[v105 - #ZZZH] = (function()
+								return v28();
+							end)();
+						end
+						return v57;
+					end
+					break;
+				end
+			end
+		end
+	end
+	local function v29(v60, v61, v62)
+		local ZZZU = 230;
+		local ZZZC = 60;
+		local ZZZL = 488;
+		local ZZZD = 2;
+		local ZZZR = 210;
+		local v63 = v60[(2199 - (ZZZR + 1385)) - (268 + 335)];
+		local v64 = v60[ZZZD];
+		local v65 = v60[(1982 - (1201 + ZZZL)) - (ZZZC + ZZZU)];
+		return function(...)
+			local ZZZX = true;
+			local ZZZP = 569;
+			local ZZZY = 913;
+			local ZZZG = 1;
+			local ZZZF = 0;
+			local ZZZW = 1;
+			local ZZZM = 426;
+			local v67 = v63;
+			local v68 = v64;
+			local v69 = v65;
+			local v70 = v27;
+			local v71 = 573 - (ZZZM + 146);
+			local v72 = -(ZZZW + ZZZF);
+			local v73 = {};
+			local v74 = {...};
+			local v75 = v12("#", ...) - ((903 + 554) - (282 + (2087 - ZZZY)));
+			local v76 = {};
+			local v77 = {};
+			for v87 = 811 - (ZZZP + (433 - 191)), v75 do
+				if (v87 >= v69) then
+					local ZZZB = 2;
+					v73[v87 - v69] = v74[v87 + (ZZZB - 1)];
+				else
+					local ZZZK = 2;
+					local ZZZV = 3;
+					v77[v87] = v74[v87 + (ZZZV - ZZZK)];
+				end
+			end
+			local v78 = (v75 - v69) + 1 + 0;
+			local v79;
+			local v80;
+			while ZZZX do
+				local ZZZJ = 706;
+				local v88 = 1024 - (ZZZJ + 318);
+				while true do
+					local ZZZZs = 0;
+					local ZZZZn = 1;
+					local ZZZZe = 530;
+					local ZZZZ = 721;
+					local ZZZQ = 329;
+					if ((1459 > ZZZQ) and ((1251 - (ZZZZ + ZZZZe)) == v88)) then
+						local ZZZZi = 1;
+						local ZZZZo = 2;
+						local ZZZZa = 326;
+						local ZZZZt = 945;
+						v79 = v67[v71];
+						v80 = v79[1272 - (ZZZZt + ZZZZa)];
+						v88 = ZZZZo - ZZZZi;
+					end
+					if (v88 == (ZZZZn + ZZZZs)) then
+						local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZG = 0;
+						local ZZZZd = 429;
+						local ZZZZr = 271;
+						local ZZZZh = 2910;
+						if ((ZZZZh > 1112) and (v80 <= (726 - (ZZZZr + ZZZZd)))) then
+							local ZZZZl = 4604;
+							if ((579 < ZZZZl) and (v80 <= (12 + 0))) then
+								local ZZZZc = 352;
+								if (v80 <= ((590 - (ZZZZc + 233)) + 0)) then
+									local ZZZZu = 1408;
+									if (v80 <= (1502 - (ZZZZu + 92))) then
+										local ZZZZw = 0;
+										local ZZZZm = 0;
+										if ((2046 <= 4218) and (v80 <= (ZZZZm - ZZZZw))) then
+											local ZZZZg = 653;
+											local ZZZZf = 1114;
+											local v119 = 1086 - ((ZZZZf - ZZZZg) + 625);
+											local v120;
+											while true do
+												if (v119 == (1288 - (993 + 295))) then
+													local ZZZZp = 1172;
+													local ZZZZy = 0;
+													v120 = v79[1 + 1 + ZZZZy];
+													v77[v120](v77[v120 + (ZZZZp - (418 + 753))]);
+													break;
+												end
+											end
+										else
+											local ZZZZb = 2;
+											if (v80 == ((ZZZZb - 1) + 0)) then
+												local ZZZZv = 1;
+												if not v77[v79[1 + ZZZZv]] then
+													v71 = v71 + 1 + 0;
+												else
+													local ZZZZk = 2;
+													v71 = v79[1 + ZZZZk];
+												end
+											else
+												local ZZZZA = 1501;
+												local ZZZZT = 2488;
+												local ZZZZE = 20;
+												local ZZZZz = 1749;
+												local ZZZZq = 85;
+												local ZZZZj = 489;
+												local ZZZZx = 531;
+												local v165 = v79[ZZZZx - (406 + 123)];
+												local v166 = v77[v165 + ((2345 - (ZZZZj + ZZZZq)) - (ZZZZz + ZZZZE))];
+												local v167 = v77[v165] + v166;
+												v77[v165] = v167;
+												if ((ZZZZT > 810) and (v166 > ((ZZZZA - (277 + 1224)) - 0))) then
+													local ZZZZN = 671;
+													local ZZZZI = 3564;
+													local ZZZZO = 4794;
+													if ((ZZZZO >= ZZZZI) and (v167 <= v77[v165 + (1164 - (ZZZZN + 492))])) then
+														local ZZZZH = true;
+														local ZZZZS = 0;
+														local v715 = 0 + ZZZZS;
+														while ZZZZH do
+															local ZZZZC = 73;
+															local ZZZZL = 1249;
+															local ZZZZD = 830;
+															local ZZZZR = 663;
+															if (v715 == ((2815 - (ZZZZR + ZZZZD)) - (ZZZZL + ZZZZC))) then
+																local ZZZZU = 2;
+																v71 = v79[ZZZZU + 1 + 0];
+																v77[v165 + 1 + (4 - 2)] = v167;
+																break;
+															end
+														end
+													end
+												else
+													local ZZZZF = 137;
+													local ZZZZW = 261;
+													local ZZZZM = 1146;
+													if ((v167 >= v77[v165 + (ZZZZM - (466 + 679))]) or (ZZZZW <= ZZZZF)) then
+														local ZZZZP = true;
+														local ZZZZY = 461;
+														local ZZZZG = 0;
+														local v716 = ZZZZG - (875 - (ZZZZY + 414));
+														while ZZZZP do
+															local ZZZZB = 0;
+															if (v716 == (ZZZZB - 0)) then
+																local ZZZZX = 1794;
+																local ZZZZK = 106;
+																local ZZZZV = 1903;
+																v71 = v79[4 - 1];
+																v77[v165 + (ZZZZV - (ZZZZK + ZZZZX))] = v167;
+																break;
+															end
+														end
+													end
+												end
+											end
+										end
+									else
+										local ZZZZZ = 653;
+										local ZZZZQ = 2;
+										local ZZZZJ = 1;
+										if ((v80 <= (ZZZZJ + ZZZZQ)) or (ZZZZZ >= 1699)) then
+											local ZZZZZt = 1;
+											local ZZZZZe = 1;
+											v77[v79[ZZZZZe + ZZZZZt]] = v62[v79[6 - 3]];
+										else
+											local ZZZZZa = 11;
+											if (v80 > (ZZZZZa - 7)) then
+												local ZZZZZi = 0;
+												local ZZZZZo = 0;
+												local v169 = ZZZZZo - ZZZZZi;
+												local v170;
+												local v171;
+												while true do
+													local ZZZZZl = 1;
+													local ZZZZZs = 4;
+													local ZZZZZn = 114;
+													if ((2518 <= 3050) and (v169 == (ZZZZZn - (ZZZZZs + 110)))) then
+														local ZZZZZd = 41;
+														local ZZZZZr = 1428;
+														local ZZZZZh = 587;
+														v170 = v79[ZZZZZh - (57 + 527)];
+														v171 = v77[v170];
+														v169 = ZZZZZr - (ZZZZZd + 1386);
+													end
+													if (v169 == ZZZZZl) then
+														local ZZZZZc = 3;
+														for v717 = v170 + (104 - (17 + 86)), v79[ZZZZZc + 1] do
+															v171 = v171 .. v77[v717];
+														end
+														v77[v79[2]] = v171;
+														break;
+													end
+												end
+											else
+												local ZZZZZg = 11;
+												local ZZZZZf = 1;
+												local ZZZZZw = 180;
+												local ZZZZZm = 207;
+												local ZZZZZu = 1416;
+												local v172 = v79[3 - 1];
+												local v173 = v77[v79[ZZZZZu - (ZZZZZm + 1026 + ZZZZZw)]];
+												v77[v172 + ZZZZZf] = v173;
+												v77[v172] = v173[v79[ZZZZZg - 7]];
+											end
+										end
+									end
+								else
+									local ZZZZZy = 122;
+									if ((4807 > 177) and (v80 <= (174 - (ZZZZZy + 44)))) then
+										local ZZZZZv = 3;
+										local ZZZZZb = 1;
+										local ZZZZZp = 3663;
+										if ((ZZZZZp >= 863) and (v80 <= (2 + ZZZZZb + ZZZZZv))) then
+											local ZZZZZk = 2;
+											v77[v79[ZZZZZk]] = v77[v79[5 - 2]][v79[4]];
+										elseif (v80 == (22 - 15)) then
+											local ZZZZZZl = 3;
+											local ZZZZZZd = 816;
+											local ZZZZZZr = 277;
+											local ZZZZZZh = 830;
+											local ZZZZZZs = 852;
+											local ZZZZZZn = 0;
+											local ZZZZZZi = 0;
+											local ZZZZZZo = 1;
+											local ZZZZZZa = 0;
+											local ZZZZZZt = 1;
+											local ZZZZZZe = 1;
+											local ZZZZZZ = 3;
+											local ZZZZZV = 194;
+											local ZZZZZB = 53;
+											local ZZZZZP = 320;
+											local ZZZZZY = 361;
+											local ZZZZZG = 3;
+											local ZZZZZF = 1;
+											local ZZZZZW = 889;
+											local ZZZZZM = 1214;
+											local ZZZZZU = 0;
+											local ZZZZZC = 2;
+											local ZZZZZL = 3;
+											local ZZZZZD = 214;
+											local ZZZZZR = 1043;
+											local ZZZZZH = 172;
+											local ZZZZZS = 1509;
+											local ZZZZZN = 0;
+											local ZZZZZI = 1;
+											local ZZZZZO = 2;
+											local ZZZZZA = 1;
+											local ZZZZZT = 1;
+											local ZZZZZE = 1;
+											local ZZZZZz = 0;
+											local ZZZZZq = 2;
+											local ZZZZZj = 1;
+											local ZZZZZx = 2;
+											local v177;
+											local v178, v179;
+											local v180;
+											local v181;
+											v77[v79[ZZZZZx + 0]] = v62[v79[5 - 2]];
+											v71 = v71 + ((ZZZZZj + 2) - (ZZZZZq + ZZZZZz));
+											v79 = v67[v71];
+											v181 = v79[ZZZZZE + ZZZZZT];
+											v180 = v77[v79[ZZZZZA + ZZZZZO]];
+											v77[v181 + (ZZZZZI - ZZZZZN)] = v180;
+											v77[v181] = v180[v79[69 - (30 + 35)]];
+											v71 = v71 + 1 + 0;
+											v79 = v67[v71];
+											v77[v79[(ZZZZZS - (ZZZZZH + 78)) - (ZZZZZR + ZZZZZD)]] = v79[2 + 1];
+											v71 = v71 + (ZZZZZL - (ZZZZZC - ZZZZZU));
+											v79 = v67[v71];
+											v181 = v79[ZZZZZM - (323 + ZZZZZW)];
+											v178, v179 = v70(v77[v181](v13(v77, v181 + ((1 + 1) - (ZZZZZF - 0)), v79[ZZZZZG])));
+											v72 = (v179 + v181) - (581 - (ZZZZZY + 219));
+											v177 = ZZZZZP - (ZZZZZB + 73 + ZZZZZV);
+											for v306 = v181, v72 do
+												local ZZZZZK = 0;
+												local v307 = ZZZZZK + 0;
+												while true do
+													local ZZZZZJ = 398;
+													local ZZZZZX = 15;
+													if (v307 == (413 - (ZZZZZX + ZZZZZJ))) then
+														local ZZZZZQ = 964;
+														v177 = v177 + (983 - (18 + ZZZZZQ));
+														v77[v306] = v178[v177];
+														break;
+													end
+												end
+											end
+											v71 = v71 + (ZZZZZZ - (ZZZZZZe + ZZZZZZt));
+											v79 = v67[v71];
+											v181 = v79[2 + ZZZZZZa];
+											v77[v181] = v77[v181](v13(v77, v181 + ZZZZZZo + ZZZZZZi, v72));
+											v71 = v71 + 1 + ZZZZZZn;
+											v79 = v67[v71];
+											v77[v79[ZZZZZZs - (20 + ZZZZZZh)]]();
+											v71 = v71 + (1094 - (ZZZZZZr + ZZZZZZd));
+											v79 = v67[v71];
+											v71 = v79[ZZZZZZl + 0];
+										else
+											do
+												return;
+											end
+										end
+									else
+										local ZZZZZZm = 116;
+										local ZZZZZZu = 136;
+										local ZZZZZZc = 4690;
+										if ((4018 <= ZZZZZZc) and (v80 <= (ZZZZZZu - (ZZZZZZm + 10)))) then
+											local ZZZZZZw = 8;
+											if (v80 > (1 + ZZZZZZw)) then
+												local ZZZZZZb = 2;
+												local ZZZZZZp = 1;
+												local ZZZZZZy = 0;
+												local ZZZZZZg = 542;
+												local ZZZZZZf = 740;
+												local v195 = v79[ZZZZZZf - (ZZZZZZg + 196)];
+												v77[v195](v13(v77, v195 + (1 - (0 - ZZZZZZy)), v79[ZZZZZZp + ZZZZZZb]));
+											else
+												local ZZZZZZx = 4;
+												local ZZZZZZk = 1;
+												local ZZZZZZv = 8;
+												v77[v79[ZZZZZZv - 6]] = v77[v79[2 + ZZZZZZk]] % v79[ZZZZZZx];
+											end
+										else
+											local ZZZZZZq = 7;
+											local ZZZZZZj = 4;
+											if (v80 == (ZZZZZZj + ZZZZZZq)) then
+												local ZZZZZZz = 2;
+												if v77[v79[4 - ZZZZZZz]] then
+													local ZZZZZZT = 1;
+													local ZZZZZZE = 2;
+													v71 = v71 + (ZZZZZZE - ZZZZZZT);
+												else
+													local ZZZZZZA = 425;
+													v71 = v79[1554 - (1126 + ZZZZZZA)];
+												end
+											else
+												local ZZZZZZO = 671;
+												local v197 = 1893 - (1222 + ZZZZZZO);
+												local v198;
+												while true do
+													if (v197 == (0 - 0)) then
+														local ZZZZZZN = 0;
+														local ZZZZZZI = 2;
+														v198 = v79[ZZZZZZI - (0 - ZZZZZZN)];
+														do
+															return v13(v77, v198, v72);
+														end
+														break;
+													end
+												end
+											end
+										end
+									end
+								end
+							else
+								local ZZZZZZH = 118;
+								local ZZZZZZS = 424;
+								if (v80 <= (ZZZZZZS - (ZZZZZZH + 287))) then
+									local ZZZZZZC = 392;
+									local ZZZZZZL = 953;
+									local ZZZZZZD = 229;
+									local ZZZZZZR = 1197;
+									if ((v80 <= (ZZZZZZR - (ZZZZZZD + ZZZZZZL))) or (ZZZZZZC > 2140)) then
+										local ZZZZZZM = 37;
+										local ZZZZZZU = 50;
+										if (v80 <= (ZZZZZZU - ZZZZZZM)) then
+											local ZZZZZZF = 5;
+											local ZZZZZZW = 8;
+											v77[v79[1123 - (118 + 1003)]] = #v77[v79[ZZZZZZW - ZZZZZZF]];
+										else
+											local ZZZZZZG = 142;
+											if (v80 == (391 - (ZZZZZZG + 235))) then
+												local ZZZZZZP = 14;
+												local ZZZZZZY = 2;
+												v77[v79[ZZZZZZY]][v79[1 + 2]] = v77[v79[18 - ZZZZZZP]];
+											else
+												local ZZZZZZB = 0;
+												local v201 = 0 + ZZZZZZB;
+												local v202;
+												local v203;
+												local v204;
+												local v205;
+												local v206;
+												while true do
+													local ZZZZZZZZr = 1141;
+													local ZZZZZZZI = 0;
+													local ZZZZZZZp = 0;
+													local ZZZZZZZh = 0;
+													local ZZZZZZZs = 3;
+													local ZZZZZZX = 189;
+													local ZZZZZZK = 235;
+													local ZZZZZZV = 553;
+													if (v201 == (982 - (ZZZZZZV + ZZZZZZK + ZZZZZZX))) then
+														local ZZZZZZZn = 3;
+														local ZZZZZZZi = 3;
+														local ZZZZZZZo = 0;
+														local ZZZZZZZa = 2;
+														local ZZZZZZZt = 2;
+														local ZZZZZZZe = 0;
+														local ZZZZZZZ = 2;
+														local ZZZZZZQ = 3;
+														local ZZZZZZJ = 0;
+														v77[v79[1 + ZZZZZZJ + 1]] = {};
+														v71 = v71 + ((ZZZZZZQ - ZZZZZZZ) - ZZZZZZZe);
+														v79 = v67[v71];
+														v77[v79[ZZZZZZZt + 0]] = v77[v79[1 + ZZZZZZZa]][v79[4 + ZZZZZZZo]];
+														v71 = v71 + 1 + 0;
+														v79 = v67[v71];
+														v201 = ZZZZZZZi + ZZZZZZZn;
+													end
+													if (v201 == (ZZZZZZZs + ZZZZZZZh)) then
+														local ZZZZZZZy = 19;
+														local ZZZZZZZg = 636;
+														local ZZZZZZZf = 0;
+														local ZZZZZZZr = 0;
+														v72 = (v204 + v206) - (1 + ZZZZZZZr);
+														v202 = 0 - 0;
+														for v720 = v206, v72 do
+															local ZZZZZZZl = 0;
+															local ZZZZZZZd = 0;
+															local v721 = ZZZZZZZd - ZZZZZZZl;
+															while true do
+																local ZZZZZZZm = 0;
+																local ZZZZZZZu = 0;
+																local ZZZZZZZc = 0;
+																if ((v721 == (ZZZZZZZc - (ZZZZZZZu - ZZZZZZZm))) or (4531 <= 3105)) then
+																	local ZZZZZZZw = 806;
+																	v202 = v202 + (ZZZZZZZw - (266 + 539));
+																	v77[v720] = v203[v202];
+																	break;
+																end
+															end
+														end
+														v71 = v71 + 1 + ZZZZZZZf;
+														v79 = v67[v71];
+														v206 = v79[1227 - (ZZZZZZZg + 589)];
+														v201 = ZZZZZZZy - 15;
+													end
+													if (v201 == (0 - ZZZZZZZp)) then
+														local ZZZZZZZO = 552;
+														local ZZZZZZZA = 358;
+														local ZZZZZZZT = 1016;
+														local ZZZZZZZE = 2;
+														local ZZZZZZZz = 514;
+														local ZZZZZZZq = 239;
+														local ZZZZZZZj = 755;
+														local ZZZZZZZx = nil;
+														local ZZZZZZZk = nil;
+														local ZZZZZZZv = nil;
+														local ZZZZZZZb = nil;
+														v202 = ZZZZZZZb;
+														v203, v204 = ZZZZZZZv;
+														v205 = ZZZZZZZk;
+														v206 = ZZZZZZZx;
+														v77[v79[ZZZZZZZj - (ZZZZZZZq + ZZZZZZZz)]] = v62[v79[ZZZZZZZE + 1]];
+														v71 = v71 + (ZZZZZZZT - (657 + ZZZZZZZA));
+														v201 = 1330 - (245 + ZZZZZZZO + 532);
+													end
+													if (v201 == (1 + ZZZZZZZI)) then
+														local ZZZZZZZU = 761;
+														local ZZZZZZZC = 158;
+														local ZZZZZZZL = 476;
+														local ZZZZZZZD = 735;
+														local ZZZZZZZR = 829;
+														local ZZZZZZZH = 3;
+														local ZZZZZZZS = 6;
+														local ZZZZZZZN = 1;
+														v79 = v67[v71];
+														v206 = v79[ZZZZZZZN + 1];
+														v205 = v77[v79[ZZZZZZZS - ZZZZZZZH]];
+														v77[v206 + (1203 - (373 + ZZZZZZZR))] = v205;
+														v77[v206] = v205[v79[ZZZZZZZD - (ZZZZZZZL + 255)]];
+														v71 = v71 + 1 + 0;
+														v201 = 1132 - (211 + ZZZZZZZC + ZZZZZZZU);
+													end
+													if (v201 == 2) then
+														local ZZZZZZZX = 1;
+														local ZZZZZZZK = 3;
+														local ZZZZZZZV = 133;
+														local ZZZZZZZB = 64;
+														local ZZZZZZZP = 239;
+														local ZZZZZZZY = 1;
+														local ZZZZZZZG = 0;
+														local ZZZZZZZF = 1;
+														local ZZZZZZZW = 8;
+														local ZZZZZZZM = 2;
+														v79 = v67[v71];
+														v77[v79[ZZZZZZZM + 0]] = v79[ZZZZZZZW - 5];
+														v71 = v71 + (ZZZZZZZF - ZZZZZZZG);
+														v79 = v67[v71];
+														v206 = v79[3 - ZZZZZZZY];
+														v203, v204 = v70(v77[v206](v13(v77, v206 + (ZZZZZZZP - (ZZZZZZZB + (621 - (ZZZZZZZV + 314)))), v79[ZZZZZZZK + 0])));
+														v201 = ZZZZZZZX + 2;
+													end
+													if (v201 == (8 - 2)) then
+														local ZZZZZZZZh = 2;
+														local ZZZZZZZZs = 0;
+														local ZZZZZZZZn = 3;
+														local ZZZZZZZZi = 0;
+														local ZZZZZZZZo = 14;
+														local ZZZZZZZZa = 215;
+														local ZZZZZZZZt = 143;
+														local ZZZZZZZZe = 217;
+														local ZZZZZZZZ = 192;
+														local ZZZZZZZQ = 144;
+														local ZZZZZZZJ = 1;
+														v77[v79[1 + ZZZZZZZJ]] = v79[339 - (ZZZZZZZQ + ZZZZZZZZ)];
+														v71 = v71 + (ZZZZZZZZe - (42 + 31 + ZZZZZZZZt));
+														v79 = v67[v71];
+														v77[v79[(ZZZZZZZZa - (199 + ZZZZZZZZo)) + ZZZZZZZZi]] = v77[v79[ZZZZZZZZn + ZZZZZZZZs]][v79[ZZZZZZZZh + 2]];
+														break;
+													end
+													if (v201 == (1508 - (363 + ZZZZZZZZr))) then
+														local ZZZZZZZZp = 2;
+														local ZZZZZZZZy = 4;
+														local ZZZZZZZZg = 0;
+														local ZZZZZZZZf = 1;
+														local ZZZZZZZZw = 5;
+														local ZZZZZZZZm = 397;
+														local ZZZZZZZZu = 1183;
+														local ZZZZZZZZc = 902;
+														local ZZZZZZZZl = 3;
+														local ZZZZZZZZd = 14;
+														v77[v206] = v77[v206](v13(v77, v206 + ((ZZZZZZZZd - 10) - ZZZZZZZZl), v72));
+														v71 = v71 + ((3130 - (647 + ZZZZZZZZc)) - (ZZZZZZZZu + ZZZZZZZZm));
+														v79 = v67[v71];
+														v77[v79[ZZZZZZZZw - 3]]();
+														v71 = v71 + ZZZZZZZZf + ZZZZZZZZg;
+														v79 = v67[v71];
+														v201 = ZZZZZZZZy + (ZZZZZZZZp - 1);
+													end
+												end
+											end
+										end
+									else
+										local ZZZZZZZZb = 1813;
+										if (v80 <= (1948 - (ZZZZZZZZb + 118))) then
+											local ZZZZZZZZv = 62;
+											if (v80 == (1991 - (1913 + ZZZZZZZZv))) then
+												local ZZZZZZZZj = 7;
+												local ZZZZZZZZx = 1;
+												local ZZZZZZZZk = 2;
+												local v207 = v79[ZZZZZZZZk + 0];
+												v77[v207] = v77[v207](v13(v77, v207 + ZZZZZZZZx + 0, v79[ZZZZZZZZj - 4]));
+											else
+												local ZZZZZZZZE = true;
+												local ZZZZZZZZz = 1368;
+												local ZZZZZZZZq = 565;
+												local v209 = 1933 - (ZZZZZZZZq + ZZZZZZZZz);
+												local v210;
+												local v211;
+												while ZZZZZZZZE do
+													local ZZZZZZZZS = 0;
+													if (v209 == (0 - 0)) then
+														local ZZZZZZZZN = 184;
+														local ZZZZZZZZI = 1477;
+														local ZZZZZZZZO = 148;
+														local ZZZZZZZZA = 85;
+														local ZZZZZZZZT = 1895;
+														v210 = v79[7 - 5];
+														v211 = v77[v210];
+														v209 = (ZZZZZZZZT - (ZZZZZZZZA + ZZZZZZZZO)) - (ZZZZZZZZI + ZZZZZZZZN);
+													end
+													if ((1 - ZZZZZZZZS) == v209) then
+														local ZZZZZZZZH = 564;
+														for v722 = v210 + 1 + 0, v79[859 - (ZZZZZZZZH + 292)] do
+															v7(v211, v77[v722]);
+														end
+														break;
+													end
+												end
+											end
+										elseif (v80 == ((1319 - (426 + 863)) - 12)) then
+											local ZZZZZZZZZw = 632;
+											local ZZZZZZZZZm = 3;
+											local ZZZZZZZZZu = 4;
+											local ZZZZZZZZZc = 1718;
+											local ZZZZZZZZZl = 67;
+											local ZZZZZZZZZd = 224;
+											local ZZZZZZZZZr = 5059;
+											local ZZZZZZZZZh = 2;
+											local ZZZZZZZZZs = 68;
+											local ZZZZZZZZZn = 49;
+											local ZZZZZZZZZi = 975;
+											local ZZZZZZZZZo = 1093;
+											local ZZZZZZZZZa = 0;
+											local ZZZZZZZZZt = 0;
+											local ZZZZZZZZZe = 2;
+											local ZZZZZZZZZ = 176;
+											local ZZZZZZZZQ = 356;
+											local ZZZZZZZZJ = 1140;
+											local ZZZZZZZZX = 3;
+											local ZZZZZZZZK = 4;
+											local ZZZZZZZZV = 7;
+											local ZZZZZZZZB = 0;
+											local ZZZZZZZZP = 48;
+											local ZZZZZZZZY = 189;
+											local ZZZZZZZZG = 1128;
+											local ZZZZZZZZF = 2;
+											local ZZZZZZZZW = 63;
+											local ZZZZZZZZM = 435;
+											local ZZZZZZZZU = 873;
+											local ZZZZZZZZC = 2133;
+											local ZZZZZZZZL = 2;
+											local ZZZZZZZZD = 60;
+											local ZZZZZZZZR = 305;
+											v77[v79[5 - 3]] = {};
+											v71 = v71 + (ZZZZZZZZR - ((1141 - 897) + ZZZZZZZZD));
+											v79 = v67[v71];
+											v77[v79[ZZZZZZZZL + 0]] = v62[v79[(ZZZZZZZZC - (ZZZZZZZZU + 781)) - (41 + ZZZZZZZZM)]];
+											v71 = v71 + (1002 - (938 + ZZZZZZZZW));
+											v79 = v67[v71];
+											v77[v79[ZZZZZZZZF + 0]] = v77[v79[ZZZZZZZZG - (936 + ZZZZZZZZY)]][v79[2 + 2]];
+											v71 = v71 + (1614 - (1565 + ZZZZZZZZP));
+											v79 = v67[v71];
+											v77[v79[2 + ZZZZZZZZB]] = v62[v79[ZZZZZZZZV - ZZZZZZZZK]];
+											v71 = v71 + (4 - ZZZZZZZZX);
+											v79 = v67[v71];
+											v77[v79[ZZZZZZZZJ - ((1046 - 264) + ZZZZZZZZQ)]] = v77[v79[270 - (ZZZZZZZZZ + 91)]][v79[10 - 6]];
+											v71 = v71 + (1 - 0);
+											v79 = v67[v71];
+											v77[v79[ZZZZZZZZZe - (ZZZZZZZZZt - ZZZZZZZZZa)]] = v62[v79[3]];
+											v71 = v71 + (ZZZZZZZZZo - (ZZZZZZZZZi + ZZZZZZZZZn + ZZZZZZZZZs));
+											v79 = v67[v71];
+											v77[v79[ZZZZZZZZZh + 0]] = v77[v79[(6937 - ZZZZZZZZZr) - ((ZZZZZZZZZd - ZZZZZZZZZl) + ZZZZZZZZZc)]][v79[ZZZZZZZZZu + 0]];
+											v71 = v71 + (3 - 2);
+											v79 = v67[v71];
+											v77[v79[6 - 4]] = v62[v79[ZZZZZZZZZm + 0]];
+											v71 = v71 + (1019 - (697 + (953 - ZZZZZZZZZw)));
+											v79 = v67[v71];
+											if ((3863 == 3863) and not v77[v79[2]]) then
+												local ZZZZZZZZZf = 2;
+												v71 = v71 + (ZZZZZZZZZf - 1);
+											else
+												v71 = v79[3];
+											end
+										else
+											local ZZZZZZZZZy = 0;
+											local ZZZZZZZZZg = 414;
+											local v225 = (1947 - (ZZZZZZZZZg + 1533)) - ZZZZZZZZZy;
+											local v226;
+											local v227;
+											local v228;
+											local v229;
+											while true do
+												local ZZZZZZZZZN = 905;
+												local ZZZZZZZZZI = 322;
+												local ZZZZZZZZZO = 1946;
+												local ZZZZZZZZZA = 3175;
+												local ZZZZZZZZZq = 0;
+												local ZZZZZZZZZj = 0;
+												if ((2 - 1) == v225) then
+													local ZZZZZZZZZx = 1;
+													local ZZZZZZZZZk = 112;
+													local ZZZZZZZZZv = 556;
+													local ZZZZZZZZZb = 0;
+													local ZZZZZZZZZp = 249;
+													v72 = (v228 + v226) - (902 - (652 + ZZZZZZZZZp));
+													v229 = (0 + ZZZZZZZZZb) - 0;
+													v225 = (ZZZZZZZZZv - (443 + ZZZZZZZZZk)) + ZZZZZZZZZx;
+												end
+												if (v225 == (ZZZZZZZZZj - ZZZZZZZZZq)) then
+													local ZZZZZZZZZT = 1;
+													local ZZZZZZZZZE = 591;
+													local ZZZZZZZZZz = 1482;
+													v226 = v79[(ZZZZZZZZZz - (888 + ZZZZZZZZZE)) - 1];
+													v227, v228 = v70(v77[v226]());
+													v225 = 2 - ZZZZZZZZZT;
+												end
+												if (v225 == ((ZZZZZZZZZA - ZZZZZZZZZO) - (ZZZZZZZZZI + ZZZZZZZZZN))) then
+													for v723 = v226, v72 do
+														local ZZZZZZZZZD = true;
+														local ZZZZZZZZZR = 9;
+														local ZZZZZZZZZH = 576;
+														local ZZZZZZZZZS = 35;
+														local v724 = (ZZZZZZZZZS + ZZZZZZZZZH) - (602 + ZZZZZZZZZR);
+														while ZZZZZZZZZD do
+															local ZZZZZZZZZU = 2047;
+															local ZZZZZZZZZC = 2787;
+															local ZZZZZZZZZL = 449;
+															if (v724 == (1189 - (ZZZZZZZZZL + (ZZZZZZZZZC - ZZZZZZZZZU)))) then
+																local ZZZZZZZZZW = 826;
+																local ZZZZZZZZZM = 873;
+																v229 = v229 + (ZZZZZZZZZM - (ZZZZZZZZZW + 46));
+																v77[v723] = v227[v229];
+																break;
+															end
+														end
+													end
+													break;
+												end
+											end
+										end
+									end
+								elseif (v80 <= (969 - (245 + 702))) then
+									local ZZZZZZZZZP = 43;
+									local ZZZZZZZZZY = 38;
+									local ZZZZZZZZZG = 25;
+									local ZZZZZZZZZF = 2189;
+									if ((3203 > ZZZZZZZZZF) and (v80 <= ((ZZZZZZZZZG + ZZZZZZZZZY) - ZZZZZZZZZP))) then
+										local ZZZZZZZZZB = 0;
+										local v126 = 0 + ZZZZZZZZZB;
+										local v127;
+										local v128;
+										local v129;
+										while true do
+											local ZZZZZZZZZZM = 174;
+											local ZZZZZZZZZZU = 412;
+											local ZZZZZZZZZZA = 57;
+											local ZZZZZZZZZZT = 1076;
+											local ZZZZZZZZZZE = 568;
+											local ZZZZZZZZZZz = 989;
+											local ZZZZZZZZZZf = 200;
+											local ZZZZZZZZZZn = 1121;
+											local ZZZZZZZZZZt = 2;
+											local ZZZZZZZZZV = 1;
+											if (v126 == (ZZZZZZZZZV + 1)) then
+												local ZZZZZZZZZZe = 0;
+												local ZZZZZZZZZZ = 2;
+												local ZZZZZZZZZQ = 3;
+												local ZZZZZZZZZJ = 382;
+												local ZZZZZZZZZX = 443;
+												local ZZZZZZZZZK = 1900;
+												v79 = v67[v71];
+												v77[v79[ZZZZZZZZZK - (260 + 1638)]] = v61[v79[ZZZZZZZZZX - (ZZZZZZZZZJ + 58)]];
+												v71 = v71 + (ZZZZZZZZZQ - ZZZZZZZZZZ);
+												v79 = v67[v71];
+												v126 = 3 + ZZZZZZZZZZe;
+											end
+											if (v126 == (8 - (2 + ZZZZZZZZZZt))) then
+												local ZZZZZZZZZZi = 2;
+												local ZZZZZZZZZZo = 1;
+												local ZZZZZZZZZZa = 1;
+												v128 = v77[v129];
+												for v395 = v129 + (2 - (ZZZZZZZZZZa + 0)), v79[1209 - (902 + 303)] do
+													v128 = v128 .. v77[v395];
+												end
+												v77[v79[3 - ZZZZZZZZZZo]] = v128;
+												v71 = v71 + (ZZZZZZZZZZi - 1);
+												v126 = 1 + 4;
+											end
+											if (v126 == (1690 - (ZZZZZZZZZZn + 569))) then
+												local ZZZZZZZZZZw = 22;
+												local ZZZZZZZZZZm = 183;
+												local ZZZZZZZZZZu = 398;
+												local ZZZZZZZZZZc = 1114;
+												local ZZZZZZZZZZl = 1226;
+												local ZZZZZZZZZZd = 3;
+												local ZZZZZZZZZZr = nil;
+												local ZZZZZZZZZZh = nil;
+												local ZZZZZZZZZZs = nil;
+												v127 = ZZZZZZZZZZs;
+												v128 = ZZZZZZZZZZh;
+												v129 = ZZZZZZZZZZr;
+												v77[v79[ZZZZZZZZZZd - 1]] = v62[v79[ZZZZZZZZZZl - (109 + ZZZZZZZZZZc)]];
+												v126 = (ZZZZZZZZZZu - ZZZZZZZZZZm) - (ZZZZZZZZZZw + (1870 - (136 + 1542)));
+											end
+											if ((686 - (483 + ZZZZZZZZZZf)) == v126) then
+												local ZZZZZZZZZZq = 174;
+												local ZZZZZZZZZZj = 471;
+												local ZZZZZZZZZZx = 5;
+												local ZZZZZZZZZZk = 0;
+												local ZZZZZZZZZZv = 5;
+												local ZZZZZZZZZZb = 8;
+												local ZZZZZZZZZZp = 59;
+												local ZZZZZZZZZZy = 3199;
+												local ZZZZZZZZZZg = 1465;
+												v77[v79[ZZZZZZZZZZg - ((4603 - ZZZZZZZZZZy) + ZZZZZZZZZZp)]] = v79[ZZZZZZZZZZb - ZZZZZZZZZZv];
+												v71 = v71 + (1 - ZZZZZZZZZZk);
+												v79 = v67[v71];
+												v129 = v79[3 + 0];
+												v126 = (764 + ZZZZZZZZZZx) - (468 + (ZZZZZZZZZZj - ZZZZZZZZZZq));
+											end
+											if ((ZZZZZZZZZZz < 4245) and (v126 == (ZZZZZZZZZZE - (242 + 92 + 228)))) then
+												v79 = v67[v71];
+												do
+													return;
+												end
+												break;
+											end
+											if ((1134 - (ZZZZZZZZZZT + ZZZZZZZZZZA)) == v126) then
+												local ZZZZZZZZZZC = 0;
+												local ZZZZZZZZZZL = 2;
+												local ZZZZZZZZZZD = 0;
+												local ZZZZZZZZZZR = 2;
+												local ZZZZZZZZZZH = 1;
+												local ZZZZZZZZZZS = 2;
+												local ZZZZZZZZZZN = 4;
+												local ZZZZZZZZZZI = 2;
+												local ZZZZZZZZZZO = 68;
+												v71 = v71 + ((489 - (ZZZZZZZZZZO + 418)) - ZZZZZZZZZZI);
+												v79 = v67[v71];
+												v77[v79[ZZZZZZZZZZN - ZZZZZZZZZZS]] = v79[ZZZZZZZZZZH + ZZZZZZZZZZR];
+												v71 = v71 + 1 + (0 - ZZZZZZZZZZD);
+												v126 = ZZZZZZZZZZL + ZZZZZZZZZZC;
+											end
+											if (v126 == (ZZZZZZZZZZU - (ZZZZZZZZZZM + 233))) then
+												local ZZZZZZZZZZB = 12;
+												local ZZZZZZZZZZP = 141;
+												local ZZZZZZZZZZY = 196;
+												local ZZZZZZZZZZG = 0;
+												local ZZZZZZZZZZF = 1;
+												local ZZZZZZZZZZW = 0;
+												v79 = v67[v71];
+												v127 = v79[2 - ZZZZZZZZZZW];
+												v77[v127](v77[v127 + 1]);
+												v71 = v71 + ZZZZZZZZZZF + ZZZZZZZZZZG;
+												v126 = (438 - ZZZZZZZZZZY) - (ZZZZZZZZZZP + 83 + ZZZZZZZZZZB);
+											end
+										end
+									else
+										local ZZZZZZZZZZV = 0;
+										if (v80 == (21 + ZZZZZZZZZZV)) then
+											local ZZZZZZZZZZK = 2;
+											v77[v79[4 - ZZZZZZZZZZK]]();
+										else
+											local ZZZZZZZZZZX = 0;
+											local v230 = 0 - ZZZZZZZZZZX;
+											local v231;
+											while true do
+												local ZZZZZZZZZZJ = 0;
+												if (v230 == (ZZZZZZZZZZJ + 0)) then
+													v231 = v79[5 - 3];
+													v77[v231](v13(v77, v231 + 1 + 0, v72));
+													break;
+												end
+											end
+										end
+									end
+								else
+									local ZZZZZZZZZZZt = 11;
+									local ZZZZZZZZZZZe = 13;
+									local ZZZZZZZZZZZ = 390;
+									local ZZZZZZZZZZQ = 15;
+									if ((ZZZZZZZZZZQ <= ZZZZZZZZZZZ) and (v80 <= (ZZZZZZZZZZZe + ZZZZZZZZZZZt))) then
+										local ZZZZZZZZZZZa = 32;
+										if (v80 > (ZZZZZZZZZZZa - 9)) then
+											local ZZZZZZZZZZZz = 2;
+											local ZZZZZZZZZZZm = 5;
+											local ZZZZZZZZZZZu = 0;
+											local ZZZZZZZZZZZc = 0;
+											local ZZZZZZZZZZZi = 3;
+											local ZZZZZZZZZZZo = 6;
+											local v232 = v68[v79[ZZZZZZZZZZZo - ZZZZZZZZZZZi]];
+											local v233;
+											local v234 = {};
+											v233 = v10({}, {__index=function(v325, v326)
+												local ZZZZZZZZZZZn = true;
+												local v327 = 0;
+												local v328;
+												while ZZZZZZZZZZZn do
+													local ZZZZZZZZZZZs = 0;
+													if (v327 == (0 - ZZZZZZZZZZZs)) then
+														local ZZZZZZZZZZZh = 0;
+														v328 = v234[v326];
+														return v328[1 + 0][v328[2 + ZZZZZZZZZZZh]];
+													end
+												end
+											end,__newindex=function(v329, v330, v331)
+												local ZZZZZZZZZZZd = 71;
+												local ZZZZZZZZZZZr = 92;
+												local v332 = 163 - (ZZZZZZZZZZZr + ZZZZZZZZZZZd);
+												local v333;
+												while true do
+													if (v332 == (0 + 0)) then
+														local ZZZZZZZZZZZl = 0;
+														v333 = v234[v330];
+														v333[1 - ZZZZZZZZZZZl][v333[767 - (574 + 191)]] = v331;
+														break;
+													end
+												end
+											end});
+											for v334 = 1 + ZZZZZZZZZZZc + ZZZZZZZZZZZu, v79[9 - ZZZZZZZZZZZm] do
+												local ZZZZZZZZZZZq = 2;
+												local ZZZZZZZZZZZb = 55;
+												local ZZZZZZZZZZZp = 178;
+												local ZZZZZZZZZZZy = 595;
+												local ZZZZZZZZZZZg = 0;
+												local ZZZZZZZZZZZf = 0;
+												local ZZZZZZZZZZZw = 1;
+												v71 = v71 + ZZZZZZZZZZZw + ZZZZZZZZZZZf + 0 + ZZZZZZZZZZZg;
+												local v335 = v67[v71];
+												if (v335[850 - (254 + ZZZZZZZZZZZy)] == (ZZZZZZZZZZZp - (ZZZZZZZZZZZb + 71))) then
+													local ZZZZZZZZZZZv = 1;
+													v234[v334 - (1 - 0)] = {v77,v335[8 - 5]};
+												else
+													local ZZZZZZZZZZZj = 714;
+													local ZZZZZZZZZZZx = 2;
+													local ZZZZZZZZZZZk = 1;
+													v234[v334 - (1 + 0)] = {v61,v335[942 - (ZZZZZZZZZZZj + 225)]};
+												end
+												v76[#v76 + (ZZZZZZZZZZZq - 1)] = v234;
+											end
+											v77[v79[ZZZZZZZZZZZz]] = v29(v232, v233, v62);
+										else
+											local ZZZZZZZZZZZT = true;
+											local ZZZZZZZZZZZE = 0;
+											local v236 = ZZZZZZZZZZZE - 0;
+											local v237;
+											local v238;
+											local v239;
+											while ZZZZZZZZZZZT do
+												local ZZZZZZZZZZZZk = 1845;
+												local ZZZZZZZZZZZZb = 251;
+												local ZZZZZZZZZZZZp = 1065;
+												local ZZZZZZZZZZZZm = 9;
+												local ZZZZZZZZZZZZu = 3232;
+												local ZZZZZZZZZZZZc = 1226;
+												local ZZZZZZZZZZZZi = 110;
+												local ZZZZZZZZZZZZo = 175;
+												local ZZZZZZZZZZZP = 1072;
+												local ZZZZZZZZZZZY = 16;
+												local ZZZZZZZZZZZG = 735;
+												local ZZZZZZZZZZZI = 695;
+												local ZZZZZZZZZZZO = 1450;
+												local ZZZZZZZZZZZA = 2545;
+												if ((ZZZZZZZZZZZA >= 1717) and (v236 == (ZZZZZZZZZZZO - (ZZZZZZZZZZZI + (2042 - 1292))))) then
+													local ZZZZZZZZZZZM = 23;
+													local ZZZZZZZZZZZU = 25;
+													local ZZZZZZZZZZZC = 807;
+													local ZZZZZZZZZZZL = 3;
+													local ZZZZZZZZZZZD = 1;
+													local ZZZZZZZZZZZR = 2;
+													local ZZZZZZZZZZZH = 3;
+													local ZZZZZZZZZZZS = 2;
+													local ZZZZZZZZZZZN = 3;
+													v71 = v71 + (ZZZZZZZZZZZN - ZZZZZZZZZZZS);
+													v79 = v67[v71];
+													v77[v79[(ZZZZZZZZZZZH - ZZZZZZZZZZZR) + ZZZZZZZZZZZD]] = v62[v79[ZZZZZZZZZZZL - 0]];
+													v71 = v71 + (ZZZZZZZZZZZC - (118 + 688));
+													v236 = 54 - (ZZZZZZZZZZZU + ZZZZZZZZZZZM);
+												end
+												if ((v236 == (2 + 4)) or (4635 == 118)) then
+													local ZZZZZZZZZZZF = 3;
+													local ZZZZZZZZZZZW = 4;
+													v79 = v67[v71];
+													v77[v79[1888 - (927 + 959)]] = v77[v79[10 - (ZZZZZZZZZZZW + ZZZZZZZZZZZF)]];
+													break;
+												end
+												if (v236 == (ZZZZZZZZZZZG - (ZZZZZZZZZZZY + (ZZZZZZZZZZZP - 356)))) then
+													local ZZZZZZZZZZZZa = 5;
+													local ZZZZZZZZZZZZt = 1;
+													local ZZZZZZZZZZZZe = 0;
+													local ZZZZZZZZZZZZ = 1;
+													local ZZZZZZZZZZZQ = 239;
+													local ZZZZZZZZZZZJ = 86;
+													local ZZZZZZZZZZZX = 11;
+													local ZZZZZZZZZZZK = 98;
+													local ZZZZZZZZZZZV = 2;
+													local ZZZZZZZZZZZB = 5;
+													v239 = v79[ZZZZZZZZZZZB - ZZZZZZZZZZZV];
+													v238 = v77[v239];
+													for v728 = v239 + (ZZZZZZZZZZZK - (ZZZZZZZZZZZX + ZZZZZZZZZZZJ)), v79[273 - (ZZZZZZZZZZZQ + 30)] do
+														v238 = v238 .. v77[v728];
+													end
+													v77[v79[ZZZZZZZZZZZZ + ZZZZZZZZZZZZe + ZZZZZZZZZZZZt]] = v238;
+													v236 = 9 - ZZZZZZZZZZZZa;
+												end
+												if (v236 == (285 - (ZZZZZZZZZZZZo + ZZZZZZZZZZZZi))) then
+													local ZZZZZZZZZZZZl = 1;
+													local ZZZZZZZZZZZZd = 306;
+													local ZZZZZZZZZZZZr = 318;
+													local ZZZZZZZZZZZZh = 2;
+													local ZZZZZZZZZZZZs = 4;
+													local ZZZZZZZZZZZZn = nil;
+													v237 = ZZZZZZZZZZZZn;
+													v238 = nil;
+													v239 = nil;
+													v77[v79[ZZZZZZZZZZZZs - ZZZZZZZZZZZZh]] = v79[ZZZZZZZZZZZZr - (ZZZZZZZZZZZZd + 9)];
+													v236 = ZZZZZZZZZZZZl;
+												end
+												if ((ZZZZZZZZZZZZc < ZZZZZZZZZZZZu) and (v236 == (ZZZZZZZZZZZZm - 7))) then
+													local ZZZZZZZZZZZZy = 1;
+													local ZZZZZZZZZZZZg = 1;
+													local ZZZZZZZZZZZZf = 1;
+													local ZZZZZZZZZZZZw = 1293;
+													v79 = v67[v71];
+													v77[v79[1798 - (503 + ZZZZZZZZZZZZw)]] = v79[8 - (4 + ZZZZZZZZZZZZf)];
+													v71 = v71 + ZZZZZZZZZZZZg + 0;
+													v79 = v67[v71];
+													v236 = 2 + ZZZZZZZZZZZZy;
+												end
+												if ((ZZZZZZZZZZZZp - (810 + ZZZZZZZZZZZZb)) == v236) then
+													local ZZZZZZZZZZZZv = 5;
+													v71 = v71 + 1 + 0;
+													v79 = v67[v71];
+													v237 = v79[1 + 1 + 0];
+													v77[v237](v77[v237 + 1 + 0]);
+													v236 = ZZZZZZZZZZZZv;
+												end
+												if (v236 == (534 - (43 + (ZZZZZZZZZZZZk - 1355)))) then
+													local ZZZZZZZZZZZZT = 5;
+													local ZZZZZZZZZZZZE = 0;
+													local ZZZZZZZZZZZZz = 14;
+													local ZZZZZZZZZZZZq = 8;
+													local ZZZZZZZZZZZZj = 284;
+													local ZZZZZZZZZZZZx = 1018;
+													v71 = v71 + ((ZZZZZZZZZZZZx - ZZZZZZZZZZZZj) - (711 + ZZZZZZZZZZZZq + ZZZZZZZZZZZZz));
+													v79 = v67[v71];
+													v77[v79[54 - (33 + 19)]] = v77[v79[3]];
+													v71 = v71 + 1 + ZZZZZZZZZZZZE;
+													v236 = 7 - ZZZZZZZZZZZZT;
+												end
+											end
+										end
+									else
+										local ZZZZZZZZZZZZA = 240;
+										if ((3767 > 706) and (v80 > (884 - (ZZZZZZZZZZZZA + 619)))) then
+											local ZZZZZZZZZZZZN = 3;
+											local ZZZZZZZZZZZZI = 1;
+											local ZZZZZZZZZZZZO = 1;
+											v77[v79[ZZZZZZZZZZZZO + ZZZZZZZZZZZZI]] = v79[4 - (4 - ZZZZZZZZZZZZN)];
+										else
+											local ZZZZZZZZZZZZH = true;
+											local ZZZZZZZZZZZZS = 0;
+											local v242 = ZZZZZZZZZZZZS + 0;
+											local v243;
+											while ZZZZZZZZZZZZH do
+												local ZZZZZZZZZZZZZl = 69;
+												local ZZZZZZZZZZZZZd = 946;
+												local ZZZZZZZZZZZZZr = 302;
+												local ZZZZZZZZZZZZZa = 220;
+												local ZZZZZZZZZZZZZt = 118;
+												local ZZZZZZZZZZZZZe = 339;
+												local ZZZZZZZZZZZZV = 3;
+												local ZZZZZZZZZZZZY = 3;
+												if ((3292 >= 1475) and (v242 == (1748 - (1344 + 400)))) then
+													local ZZZZZZZZZZZZM = 2;
+													local ZZZZZZZZZZZZU = 3;
+													local ZZZZZZZZZZZZC = 0;
+													local ZZZZZZZZZZZZL = 3;
+													local ZZZZZZZZZZZZD = 1490;
+													local ZZZZZZZZZZZZR = 406;
+													v71 = v71 + (ZZZZZZZZZZZZR - (255 + 150));
+													v79 = v67[v71];
+													v77[v79[ZZZZZZZZZZZZD - (1309 + 179)]] = v77[v79[ZZZZZZZZZZZZL + ZZZZZZZZZZZZC]][v79[3 + (ZZZZZZZZZZZZU - ZZZZZZZZZZZZM)]];
+													v242 = 21 - 16;
+												end
+												if ((v242 == (19 - 13)) or (4773 < 1343)) then
+													local ZZZZZZZZZZZZG = 1335;
+													local ZZZZZZZZZZZZF = 1742;
+													local ZZZZZZZZZZZZW = 0;
+													v71 = v71 + 1 + ZZZZZZZZZZZZW;
+													v79 = v67[v71];
+													v71 = v79[ZZZZZZZZZZZZF - (404 + ZZZZZZZZZZZZG)];
+													break;
+												end
+												if (v242 == (ZZZZZZZZZZZZY - 1)) then
+													local ZZZZZZZZZZZZB = 239;
+													local ZZZZZZZZZZZZP = 168;
+													v79 = v67[v71];
+													v243 = v79[2];
+													v77[v243] = v77[v243](v77[v243 + ((ZZZZZZZZZZZZP + ZZZZZZZZZZZZB) - ((905 - 722) + 223))]);
+													v242 = 6 - 3;
+												end
+												if ((v242 == (ZZZZZZZZZZZZV - 0)) or (1751 < 1528)) then
+													local ZZZZZZZZZZZZZ = 3;
+													local ZZZZZZZZZZZZQ = 327;
+													local ZZZZZZZZZZZZJ = 10;
+													local ZZZZZZZZZZZZX = 340;
+													local ZZZZZZZZZZZZK = 0;
+													v71 = v71 + 1 + ZZZZZZZZZZZZK;
+													v79 = v67[v71];
+													v77[v79[1 + 1]] = v77[v79[ZZZZZZZZZZZZX - (ZZZZZZZZZZZZJ + ZZZZZZZZZZZZQ)]];
+													v242 = ZZZZZZZZZZZZZ + 1;
+												end
+												if ((ZZZZZZZZZZZZZe - (ZZZZZZZZZZZZZt + ZZZZZZZZZZZZZa)) == v242) then
+													local ZZZZZZZZZZZZZh = 6;
+													local ZZZZZZZZZZZZZs = 1;
+													local ZZZZZZZZZZZZZn = 108;
+													local ZZZZZZZZZZZZZi = 452;
+													local ZZZZZZZZZZZZZo = 1;
+													v79 = v67[v71];
+													v77[v79[1 + ZZZZZZZZZZZZZo]] = v77[v79[ZZZZZZZZZZZZZi - (ZZZZZZZZZZZZZn + 341)]];
+													v71 = v71 + ZZZZZZZZZZZZZs + 0;
+													v242 = 8 - ZZZZZZZZZZZZZh;
+												end
+												if (v242 == (ZZZZZZZZZZZZZr - ((ZZZZZZZZZZZZZd - (762 + ZZZZZZZZZZZZZl)) + 187))) then
+													local ZZZZZZZZZZZZZg = 1820;
+													local ZZZZZZZZZZZZZf = 1;
+													local ZZZZZZZZZZZZZw = 782;
+													local ZZZZZZZZZZZZZm = 711;
+													local ZZZZZZZZZZZZZu = 1495;
+													local ZZZZZZZZZZZZZc = nil;
+													v243 = ZZZZZZZZZZZZZc;
+													v77[v79[ZZZZZZZZZZZZZu - (ZZZZZZZZZZZZZm + ZZZZZZZZZZZZZw)]] = v77[v79[5 - 2]][v79[473 - (270 + 199)]];
+													v71 = v71 + ZZZZZZZZZZZZZf + 0;
+													v242 = ZZZZZZZZZZZZZg - (580 + 1239);
+												end
+												if ((941 < 4267) and (v242 == (14 - 9))) then
+													local ZZZZZZZZZZZZZp = 0;
+													local ZZZZZZZZZZZZZy = 1;
+													v71 = v71 + ZZZZZZZZZZZZZy + ZZZZZZZZZZZZZp;
+													v79 = v67[v71];
+													v77[v79[(3 - 2) + 1]] = v79[5 - 2];
+													v242 = 3 + 3;
+												end
+											end
+										end
+									end
+								end
+							end
+						else
+							local ZZZZZZZZZZZZZk = 62;
+							local ZZZZZZZZZZZZZv = 101;
+							local ZZZZZZZZZZZZZb = 1526;
+							if ((ZZZZZZZZZZZZZb >= 1264) and (v80 <= (ZZZZZZZZZZZZZv - ZZZZZZZZZZZZZk))) then
+								local ZZZZZZZZZZZZZE = 964;
+								local ZZZZZZZZZZZZZz = 3492;
+								local ZZZZZZZZZZZZZq = 1;
+								local ZZZZZZZZZZZZZj = 11;
+								local ZZZZZZZZZZZZZx = 20;
+								if ((v80 <= (ZZZZZZZZZZZZZx + ZZZZZZZZZZZZZj + ZZZZZZZZZZZZZq)) or (ZZZZZZZZZZZZZz <= ZZZZZZZZZZZZZE)) then
+									local ZZZZZZZZZZZZZT = 522;
+									if (v80 <= (1196 - (645 + ZZZZZZZZZZZZZT))) then
+										local ZZZZZZZZZZZZZO = 356;
+										local ZZZZZZZZZZZZZA = 1817;
+										if ((v80 <= (ZZZZZZZZZZZZZA - (654 + ZZZZZZZZZZZZZO + (1886 - 1106)))) or (2726 == 4578)) then
+											local ZZZZZZZZZZZZZN = true;
+											local ZZZZZZZZZZZZZI = 0;
+											local v130 = 0 + 0 + ZZZZZZZZZZZZZI;
+											local v131;
+											local v132;
+											local v133;
+											local v134;
+											while ZZZZZZZZZZZZZN do
+												local ZZZZZZZZZZZZZZZZM = 893;
+												local ZZZZZZZZZZZZZZZZU = 149;
+												local ZZZZZZZZZZZZZZZZC = 39;
+												local ZZZZZZZZZZZZZZZZL = 1733;
+												local ZZZZZZZZZZZZZZZZD = 1780;
+												local ZZZZZZZZZZZZZZZZj = 0;
+												local ZZZZZZZZZZZZZZZZx = 4502;
+												local ZZZZZZZZZZZZZZZZk = 4180;
+												local ZZZZZZZZZZZZZZZZs = 1202;
+												local ZZZZZZZZZZZZZZZB = 11;
+												local ZZZZZZZZZZZZZZZS = 18;
+												local ZZZZZZZZZZZZZZZN = 28;
+												local ZZZZZZZZZZZZZZZI = 997;
+												local ZZZZZZZZZZZZZZZz = 30;
+												local ZZZZZZZZZZZZZZZw = 3641;
+												local ZZZZZZZZZZZZZZZm = 4862;
+												local ZZZZZZZZZZZZZZZu = 717;
+												local ZZZZZZZZZZZZZZZc = 98;
+												local ZZZZZZZZZZZZZZZo = 12;
+												local ZZZZZZZZZZZZZZG = 26;
+												local ZZZZZZZZZZZZZZF = 35;
+												local ZZZZZZZZZZZZZZO = 1784;
+												local ZZZZZZZZZZZZZZA = 4623;
+												local ZZZZZZZZZZZZZZT = 990;
+												local ZZZZZZZZZZZZZZu = 5;
+												local ZZZZZZZZZZZZZZc = 10;
+												local ZZZZZZZZZZZZZX = 172;
+												local ZZZZZZZZZZZZZK = 121;
+												local ZZZZZZZZZZZZZV = 2666;
+												local ZZZZZZZZZZZZZS = 27;
+												if (((1 + ZZZZZZZZZZZZZS) - 22) == v130) then
+													local ZZZZZZZZZZZZZB = 154;
+													local ZZZZZZZZZZZZZP = 351;
+													local ZZZZZZZZZZZZZY = 512;
+													local ZZZZZZZZZZZZZG = 1;
+													local ZZZZZZZZZZZZZF = 4;
+													local ZZZZZZZZZZZZZW = 121;
+													local ZZZZZZZZZZZZZM = 1199;
+													local ZZZZZZZZZZZZZU = 1322;
+													local ZZZZZZZZZZZZZC = 1045;
+													local ZZZZZZZZZZZZZL = 8;
+													local ZZZZZZZZZZZZZD = 388;
+													local ZZZZZZZZZZZZZR = 522;
+													local ZZZZZZZZZZZZZH = 643;
+													v71 = v71 + (778 - (ZZZZZZZZZZZZZH + (ZZZZZZZZZZZZZR - ZZZZZZZZZZZZZD)));
+													v79 = v67[v71];
+													v77[v79[5 - 3]] = v77[v79[(163 - (ZZZZZZZZZZZZZL + 149)) - 3]];
+													v71 = v71 + (1837 - (ZZZZZZZZZZZZZC + 791));
+													v79 = v67[v71];
+													v77[v79[4 - (ZZZZZZZZZZZZZU - (ZZZZZZZZZZZZZM + ZZZZZZZZZZZZZW))]] = #v77[v79[ZZZZZZZZZZZZZF - ZZZZZZZZZZZZZG]];
+													v71 = v71 + (1 - 0);
+													v130 = ZZZZZZZZZZZZZY - (ZZZZZZZZZZZZZP + ZZZZZZZZZZZZZB);
+												end
+												if (v130 == ((ZZZZZZZZZZZZZV - 1090) - ((2891 - 1610) + ZZZZZZZZZZZZZK + ZZZZZZZZZZZZZX))) then
+													local ZZZZZZZZZZZZZZi = 1;
+													local ZZZZZZZZZZZZZZo = 0;
+													local ZZZZZZZZZZZZZZa = 1;
+													local ZZZZZZZZZZZZZZt = 0;
+													local ZZZZZZZZZZZZZZe = 1381;
+													local ZZZZZZZZZZZZZZ = 238;
+													local ZZZZZZZZZZZZZQ = 28;
+													local ZZZZZZZZZZZZZJ = 268;
+													v79 = v67[v71];
+													v77[v79[ZZZZZZZZZZZZZJ - (ZZZZZZZZZZZZZQ + ZZZZZZZZZZZZZZ)]] = v61[v79[6 - 3]];
+													v71 = v71 + (1560 - (ZZZZZZZZZZZZZZe + 178));
+													v79 = v67[v71];
+													v77[v79[2 + ZZZZZZZZZZZZZZt]] = v77[v79[3 + 0]];
+													v71 = v71 + ZZZZZZZZZZZZZZa + ZZZZZZZZZZZZZZo;
+													v79 = v67[v71];
+													v130 = 2 + ZZZZZZZZZZZZZZi;
+												end
+												if (v130 == ((10 - 7) - 2)) then
+													local ZZZZZZZZZZZZZZl = 5;
+													local ZZZZZZZZZZZZZZd = 8;
+													local ZZZZZZZZZZZZZZr = 0;
+													local ZZZZZZZZZZZZZZh = 1;
+													local ZZZZZZZZZZZZZZs = 381;
+													local ZZZZZZZZZZZZZZn = 1;
+													v71 = v71 + ZZZZZZZZZZZZZZn + 0;
+													v79 = v67[v71];
+													v77[v79[2]] = v61[v79[473 - (ZZZZZZZZZZZZZZs + 89)]];
+													v71 = v71 + (ZZZZZZZZZZZZZZh - ZZZZZZZZZZZZZZr);
+													v79 = v67[v71];
+													v77[v79[1 + 1]] = v61[v79[ZZZZZZZZZZZZZZd - ZZZZZZZZZZZZZZl]];
+													v71 = v71 + 1 + (0 - 0);
+													v130 = 2 + 0;
+												end
+												if ((ZZZZZZZZZZZZZZc - ZZZZZZZZZZZZZZu) == v130) then
+													local ZZZZZZZZZZZZZZE = 0;
+													local ZZZZZZZZZZZZZZz = 3;
+													local ZZZZZZZZZZZZZZq = 1570;
+													local ZZZZZZZZZZZZZZj = 1;
+													local ZZZZZZZZZZZZZZx = 3;
+													local ZZZZZZZZZZZZZZk = 6;
+													local ZZZZZZZZZZZZZZv = 1289;
+													local ZZZZZZZZZZZZZZb = 518;
+													local ZZZZZZZZZZZZZZp = 1809;
+													local ZZZZZZZZZZZZZZy = 4;
+													local ZZZZZZZZZZZZZZg = 1074;
+													local ZZZZZZZZZZZZZZf = 1157;
+													local ZZZZZZZZZZZZZZw = 0;
+													local ZZZZZZZZZZZZZZm = 0;
+													v77[v134] = v77[v134](v13(v77, v134 + ((1 + ZZZZZZZZZZZZZZm) - ZZZZZZZZZZZZZZw), v72));
+													v71 = v71 + (ZZZZZZZZZZZZZZf - (ZZZZZZZZZZZZZZg + 82));
+													v79 = v67[v71];
+													v77[v79[ZZZZZZZZZZZZZZy - (ZZZZZZZZZZZZZZp - (ZZZZZZZZZZZZZZb + ZZZZZZZZZZZZZZv))]] = v61[v79[ZZZZZZZZZZZZZZk - ZZZZZZZZZZZZZZx]];
+													v71 = v71 + ZZZZZZZZZZZZZZj;
+													v79 = v67[v71];
+													v77[v79[1786 - (214 + ZZZZZZZZZZZZZZq)]] = v61[v79[ZZZZZZZZZZZZZZz]];
+													v130 = (9 - 3) + ZZZZZZZZZZZZZZE;
+												end
+												if ((v130 == (1467 - (ZZZZZZZZZZZZZZT + 465))) or (ZZZZZZZZZZZZZZA == ZZZZZZZZZZZZZZO)) then
+													local ZZZZZZZZZZZZZZW = 31;
+													local ZZZZZZZZZZZZZZM = 44;
+													local ZZZZZZZZZZZZZZU = 0;
+													local ZZZZZZZZZZZZZZC = 2;
+													local ZZZZZZZZZZZZZZL = 1467;
+													local ZZZZZZZZZZZZZZD = 266;
+													local ZZZZZZZZZZZZZZR = 18;
+													local ZZZZZZZZZZZZZZH = 1;
+													local ZZZZZZZZZZZZZZS = 2;
+													local ZZZZZZZZZZZZZZN = 0;
+													local ZZZZZZZZZZZZZZI = 0;
+													v71 = v71 + 1 + ZZZZZZZZZZZZZZI + ZZZZZZZZZZZZZZN;
+													v79 = v67[v71];
+													v77[v79[9 - 7]] = v77[v79[ZZZZZZZZZZZZZZS + ZZZZZZZZZZZZZZH]] % v79[ZZZZZZZZZZZZZZR - 14];
+													v71 = v71 + (1272 - (ZZZZZZZZZZZZZZD + (ZZZZZZZZZZZZZZL - 462)));
+													v79 = v67[v71];
+													v134 = v79[ZZZZZZZZZZZZZZC + 0 + 0];
+													v132, v133 = v70(v77[v134](v77[v134 + 1 + ZZZZZZZZZZZZZZU]));
+													v130 = ZZZZZZZZZZZZZZM - ZZZZZZZZZZZZZZW;
+												end
+												if (v130 == (ZZZZZZZZZZZZZZF - ZZZZZZZZZZZZZZG)) then
+													local ZZZZZZZZZZZZZZZa = 165;
+													local ZZZZZZZZZZZZZZZt = 645;
+													local ZZZZZZZZZZZZZZZe = 0;
+													local ZZZZZZZZZZZZZZZ = 5;
+													local ZZZZZZZZZZZZZZQ = 114;
+													local ZZZZZZZZZZZZZZJ = 627;
+													local ZZZZZZZZZZZZZZX = 3;
+													local ZZZZZZZZZZZZZZK = 0;
+													local ZZZZZZZZZZZZZZV = 2;
+													local ZZZZZZZZZZZZZZB = 58;
+													local ZZZZZZZZZZZZZZP = 1668;
+													local ZZZZZZZZZZZZZZY = 1727;
+													v71 = v71 + (ZZZZZZZZZZZZZZY - (ZZZZZZZZZZZZZZP + ZZZZZZZZZZZZZZB));
+													v79 = v67[v71];
+													v77[v79[ZZZZZZZZZZZZZZV - ZZZZZZZZZZZZZZK]] = v77[v79[ZZZZZZZZZZZZZZX]] + v79[12 - 8];
+													v71 = v71 + (ZZZZZZZZZZZZZZJ - (512 + ZZZZZZZZZZZZZZQ));
+													v79 = v67[v71];
+													v134 = v79[ZZZZZZZZZZZZZZZ - 3];
+													v132, v133 = v70(v77[v134](v13(v77, v134 + (1 - ZZZZZZZZZZZZZZZe), v79[391 - (212 + (ZZZZZZZZZZZZZZZt - (304 + ZZZZZZZZZZZZZZZa)))])));
+													v130 = 34 - 24;
+												end
+												if ((546 <= 1071) and ((19 - ZZZZZZZZZZZZZZZo) == v130)) then
+													local ZZZZZZZZZZZZZZZl = 0;
+													local ZZZZZZZZZZZZZZZd = 1269;
+													local ZZZZZZZZZZZZZZZr = 109;
+													local ZZZZZZZZZZZZZZZh = 1997;
+													local ZZZZZZZZZZZZZZZs = 3;
+													local ZZZZZZZZZZZZZZZn = 0;
+													local ZZZZZZZZZZZZZZZi = 1;
+													v79 = v67[v71];
+													v77[v79[1 + 1]] = v77[v79[ZZZZZZZZZZZZZZZi + 2]] % v77[v79[4 + ZZZZZZZZZZZZZZZn]];
+													v71 = v71 + (ZZZZZZZZZZZZZZZs - 2);
+													v79 = v67[v71];
+													v77[v79[2]] = v79[ZZZZZZZZZZZZZZZh - (ZZZZZZZZZZZZZZZr + 1885)] + v77[v79[1473 - (ZZZZZZZZZZZZZZZd + 200)]];
+													v71 = v71 + ((1 + 0) - ZZZZZZZZZZZZZZZl);
+													v79 = v67[v71];
+													v130 = 8;
+												end
+												if ((v130 == (826 - (ZZZZZZZZZZZZZZZc + ZZZZZZZZZZZZZZZu))) or (ZZZZZZZZZZZZZZZm <= ZZZZZZZZZZZZZZZw)) then
+													local ZZZZZZZZZZZZZZZq = 0;
+													local ZZZZZZZZZZZZZZZj = 1;
+													local ZZZZZZZZZZZZZZZx = 1618;
+													local ZZZZZZZZZZZZZZZk = 1969;
+													local ZZZZZZZZZZZZZZZp = 0;
+													local ZZZZZZZZZZZZZZZy = 24;
+													local ZZZZZZZZZZZZZZZg = 802;
+													local ZZZZZZZZZZZZZZZf = 827;
+													v72 = (v133 + v134) - (ZZZZZZZZZZZZZZZf - (ZZZZZZZZZZZZZZZg + ZZZZZZZZZZZZZZZy));
+													v131 = ZZZZZZZZZZZZZZZp - 0;
+													for v396 = v134, v72 do
+														local ZZZZZZZZZZZZZZZv = 0;
+														local ZZZZZZZZZZZZZZZb = 54;
+														local v397 = (160 - (ZZZZZZZZZZZZZZZb + 106)) - ZZZZZZZZZZZZZZZv;
+														while true do
+															if ((0 + 0) == v397) then
+																v131 = v131 + (2 - 1);
+																v77[v396] = v132[v131];
+																break;
+															end
+														end
+													end
+													v71 = v71 + 1 + (ZZZZZZZZZZZZZZZk - (ZZZZZZZZZZZZZZZx + 351));
+													v79 = v67[v71];
+													v134 = v79[1 + ZZZZZZZZZZZZZZZj];
+													v77[v134] = v77[v134](v13(v77, v134 + 1 + ZZZZZZZZZZZZZZZq, v72));
+													v130 = 33 - 21;
+												end
+												if (v130 == (43 - ZZZZZZZZZZZZZZZz)) then
+													local ZZZZZZZZZZZZZZZO = 0;
+													local ZZZZZZZZZZZZZZZA = 2;
+													local ZZZZZZZZZZZZZZZT = 0;
+													local ZZZZZZZZZZZZZZZE = 1;
+													v72 = (v133 + v134) - 1;
+													v131 = 0 + 0;
+													for v398 = v134, v72 do
+														v131 = v131 + 1 + 0 + 0;
+														v77[v398] = v132[v131];
+													end
+													v71 = v71 + ZZZZZZZZZZZZZZZE + ZZZZZZZZZZZZZZZT;
+													v79 = v67[v71];
+													v134 = v79[ZZZZZZZZZZZZZZZA + 0];
+													v77[v134](v13(v77, v134 + 1 + ZZZZZZZZZZZZZZZO, v72));
+													break;
+												end
+												if ((2850 > ZZZZZZZZZZZZZZZI) and (v130 == (ZZZZZZZZZZZZZZZN - ZZZZZZZZZZZZZZZS))) then
+													local ZZZZZZZZZZZZZZZP = 4;
+													local ZZZZZZZZZZZZZZZY = 1006;
+													local ZZZZZZZZZZZZZZZG = 1021;
+													local ZZZZZZZZZZZZZZZF = 0;
+													local ZZZZZZZZZZZZZZZW = 4;
+													local ZZZZZZZZZZZZZZZM = 0;
+													local ZZZZZZZZZZZZZZZL = 0;
+													local ZZZZZZZZZZZZZZZD = 636;
+													local ZZZZZZZZZZZZZZZR = 797;
+													local ZZZZZZZZZZZZZZZH = 1434;
+													v72 = (v133 + v134) - (ZZZZZZZZZZZZZZZH - (ZZZZZZZZZZZZZZZR + ZZZZZZZZZZZZZZZD));
+													v131 = 0 - ZZZZZZZZZZZZZZZL;
+													for v401 = v134, v72 do
+														local ZZZZZZZZZZZZZZZU = 1427;
+														local ZZZZZZZZZZZZZZZC = 1620;
+														v131 = v131 + (ZZZZZZZZZZZZZZZC - (ZZZZZZZZZZZZZZZU + 192));
+														v77[v401] = v132[v131];
+													end
+													v71 = v71 + 1 + ZZZZZZZZZZZZZZZM;
+													v79 = v67[v71];
+													v134 = v79[ZZZZZZZZZZZZZZZW - 2];
+													v132, v133 = v70(v77[v134](v13(v77, v134 + 1 + ZZZZZZZZZZZZZZZF, v72)));
+													v130 = (ZZZZZZZZZZZZZZZG - (10 + ZZZZZZZZZZZZZZZY)) + 2 + ZZZZZZZZZZZZZZZP;
+												end
+												if ((15 - ZZZZZZZZZZZZZZZB) == v130) then
+													local ZZZZZZZZZZZZZZZZn = 468;
+													local ZZZZZZZZZZZZZZZZi = 83;
+													local ZZZZZZZZZZZZZZZZo = 1246;
+													local ZZZZZZZZZZZZZZZZa = 1802;
+													local ZZZZZZZZZZZZZZZZt = 1;
+													local ZZZZZZZZZZZZZZZQ = 1;
+													local ZZZZZZZZZZZZZZZJ = 960;
+													local ZZZZZZZZZZZZZZZX = 1279;
+													local ZZZZZZZZZZZZZZZK = 192;
+													local ZZZZZZZZZZZZZZZV = 327;
+													v132, v133 = v70(v77[v134](v13(v77, v134 + (ZZZZZZZZZZZZZZZV - (ZZZZZZZZZZZZZZZK + 134)), v79[ZZZZZZZZZZZZZZZX - (316 + ZZZZZZZZZZZZZZZJ)])));
+													v72 = (v133 + v134) - (ZZZZZZZZZZZZZZZQ + 0);
+													v131 = 0 + 0;
+													for v404 = v134, v72 do
+														local ZZZZZZZZZZZZZZZZe = 0;
+														local ZZZZZZZZZZZZZZZZ = 1;
+														v131 = v131 + ZZZZZZZZZZZZZZZZ + ZZZZZZZZZZZZZZZZe + 0;
+														v77[v404] = v132[v131];
+													end
+													v71 = v71 + ZZZZZZZZZZZZZZZZt + 0;
+													v79 = v67[v71];
+													v134 = v79[7 - 5];
+													v130 = (ZZZZZZZZZZZZZZZZa - ZZZZZZZZZZZZZZZZo) - (ZZZZZZZZZZZZZZZZi + ZZZZZZZZZZZZZZZZn);
+												end
+												if (v130 == (1809 - (ZZZZZZZZZZZZZZZZs + 604))) then
+													local ZZZZZZZZZZZZZZZZv = 0;
+													local ZZZZZZZZZZZZZZZZb = 0;
+													local ZZZZZZZZZZZZZZZZp = 280;
+													local ZZZZZZZZZZZZZZZZy = 45;
+													local ZZZZZZZZZZZZZZZZg = 329;
+													local ZZZZZZZZZZZZZZZZf = 8;
+													local ZZZZZZZZZZZZZZZZw = 1;
+													local ZZZZZZZZZZZZZZZZm = 1;
+													local ZZZZZZZZZZZZZZZZu = 121;
+													local ZZZZZZZZZZZZZZZZc = 912;
+													local ZZZZZZZZZZZZZZZZl = 1;
+													local ZZZZZZZZZZZZZZZZd = 4;
+													local ZZZZZZZZZZZZZZZZr = 7;
+													local ZZZZZZZZZZZZZZZZh = 9;
+													v77[v79[ZZZZZZZZZZZZZZZZh - ZZZZZZZZZZZZZZZZr]] = v77[v79[ZZZZZZZZZZZZZZZZd - ZZZZZZZZZZZZZZZZl]];
+													v71 = v71 + (3 - (1035 - (ZZZZZZZZZZZZZZZZc + ZZZZZZZZZZZZZZZZu)));
+													v79 = v67[v71];
+													v77[v79[ZZZZZZZZZZZZZZZZm + ZZZZZZZZZZZZZZZZw]] = v77[v79[ZZZZZZZZZZZZZZZZf - 5]] + v79[ZZZZZZZZZZZZZZZZg - (ZZZZZZZZZZZZZZZZy + ZZZZZZZZZZZZZZZZp)];
+													v71 = v71 + 1 + ZZZZZZZZZZZZZZZZb;
+													v79 = v67[v71];
+													v134 = v79[2 + ZZZZZZZZZZZZZZZZv];
+													v130 = 2 + 2;
+												end
+												if ((ZZZZZZZZZZZZZZZZk <= ZZZZZZZZZZZZZZZZx) and (v130 == (0 + ZZZZZZZZZZZZZZZZj))) then
+													local ZZZZZZZZZZZZZZZZR = 149;
+													local ZZZZZZZZZZZZZZZZH = 1140;
+													local ZZZZZZZZZZZZZZZZS = 1293;
+													local ZZZZZZZZZZZZZZZZN = 1;
+													local ZZZZZZZZZZZZZZZZI = 2;
+													local ZZZZZZZZZZZZZZZZO = 0;
+													local ZZZZZZZZZZZZZZZZA = 1571;
+													local ZZZZZZZZZZZZZZZZT = 340;
+													local ZZZZZZZZZZZZZZZZE = 2;
+													local ZZZZZZZZZZZZZZZZz = nil;
+													local ZZZZZZZZZZZZZZZZq = nil;
+													v131 = nil;
+													v132, v133 = ZZZZZZZZZZZZZZZZq;
+													v134 = ZZZZZZZZZZZZZZZZz;
+													v77[v79[1 + 1]] = v77[v79[(3 + ZZZZZZZZZZZZZZZZE) - 2]];
+													v71 = v71 + (1912 - (ZZZZZZZZZZZZZZZZT + ZZZZZZZZZZZZZZZZA));
+													v79 = v67[v71];
+													v77[v79[2 - ZZZZZZZZZZZZZZZZO]] = v61[v79[ZZZZZZZZZZZZZZZZI + ZZZZZZZZZZZZZZZZN]];
+													v130 = (ZZZZZZZZZZZZZZZZS - (ZZZZZZZZZZZZZZZZH + ZZZZZZZZZZZZZZZZR)) - 3;
+												end
+												if ((v130 == (ZZZZZZZZZZZZZZZZD - (ZZZZZZZZZZZZZZZZL + ZZZZZZZZZZZZZZZZC))) or (ZZZZZZZZZZZZZZZZU == ZZZZZZZZZZZZZZZZM)) then
+													local ZZZZZZZZZZZZZZZZZ = 7;
+													local ZZZZZZZZZZZZZZZZQ = 2;
+													local ZZZZZZZZZZZZZZZZJ = 3;
+													local ZZZZZZZZZZZZZZZZX = 1;
+													local ZZZZZZZZZZZZZZZZK = 2;
+													local ZZZZZZZZZZZZZZZZV = 2;
+													local ZZZZZZZZZZZZZZZZB = 3;
+													local ZZZZZZZZZZZZZZZZP = 852;
+													local ZZZZZZZZZZZZZZZZY = 1096;
+													local ZZZZZZZZZZZZZZZZG = 43;
+													local ZZZZZZZZZZZZZZZZF = 125;
+													local ZZZZZZZZZZZZZZZZW = 664;
+													v77[v79[5 - 3]] = #v77[v79[(ZZZZZZZZZZZZZZZZW + 373) - (ZZZZZZZZZZZZZZZZF + 909)]];
+													v71 = v71 + (140 - (ZZZZZZZZZZZZZZZZG + (127 - 31)));
+													v79 = v67[v71];
+													v77[v79[1950 - (ZZZZZZZZZZZZZZZZY + ZZZZZZZZZZZZZZZZP)]] = v77[v79[ZZZZZZZZZZZZZZZZB]] % v77[v79[ZZZZZZZZZZZZZZZZV + ZZZZZZZZZZZZZZZZK]];
+													v71 = v71 + ZZZZZZZZZZZZZZZZX;
+													v79 = v67[v71];
+													v77[v79[2 - 0]] = v79[ZZZZZZZZZZZZZZZZJ + 0] + v77[v79[ZZZZZZZZZZZZZZZZQ + 2]];
+													v130 = 2 + ZZZZZZZZZZZZZZZZZ + 0;
+												end
+											end
+										else
+											local ZZZZZZZZZZZZZZZZZe = 409;
+											if (v80 == (540 - (ZZZZZZZZZZZZZZZZZe + 103))) then
+												local ZZZZZZZZZZZZZZZZZo = 51;
+												local ZZZZZZZZZZZZZZZZZa = 237;
+												local ZZZZZZZZZZZZZZZZZt = 190;
+												v77[v79[238 - (46 + ZZZZZZZZZZZZZZZZZt)]] = v79[(335 - ZZZZZZZZZZZZZZZZZa) - (ZZZZZZZZZZZZZZZZZo + 44)] + v77[v79[2 + 2]];
+											else
+												local ZZZZZZZZZZZZZZZZZl = 3;
+												local ZZZZZZZZZZZZZZZZZd = 1;
+												local ZZZZZZZZZZZZZZZZZr = 498;
+												local ZZZZZZZZZZZZZZZZZh = 228;
+												local ZZZZZZZZZZZZZZZZZs = 203;
+												local ZZZZZZZZZZZZZZZZZn = 1114;
+												local ZZZZZZZZZZZZZZZZZi = 1319;
+												v77[v79[ZZZZZZZZZZZZZZZZZi - (ZZZZZZZZZZZZZZZZZn + ZZZZZZZZZZZZZZZZZs)]] = v77[v79[729 - (ZZZZZZZZZZZZZZZZZh + ZZZZZZZZZZZZZZZZZr)]] + v79[ZZZZZZZZZZZZZZZZZd + ZZZZZZZZZZZZZZZZZl];
+											end
+										end
+									else
+										local ZZZZZZZZZZZZZZZZZc = 17;
+										if (v80 <= (ZZZZZZZZZZZZZZZZZc + 13)) then
+											local ZZZZZZZZZZZZZZZZZw = 1;
+											local ZZZZZZZZZZZZZZZZZm = 174;
+											local ZZZZZZZZZZZZZZZZZu = 665;
+											local v135 = v79[ZZZZZZZZZZZZZZZZZu - (ZZZZZZZZZZZZZZZZZm + 489)];
+											local v136 = v77[v135];
+											local v137 = v79[7 - 4];
+											for v151 = ZZZZZZZZZZZZZZZZZw, v137 do
+												v136[v151] = v77[v135 + v151];
+											end
+										else
+											local ZZZZZZZZZZZZZZZZZg = 830;
+											local ZZZZZZZZZZZZZZZZZf = 1694;
+											if (v80 == ((3630 - ZZZZZZZZZZZZZZZZZf) - (ZZZZZZZZZZZZZZZZZg + 1075))) then
+												local ZZZZZZZZZZZZZZZZZp = 221;
+												local ZZZZZZZZZZZZZZZZZy = 303;
+												local v246 = 524 - (ZZZZZZZZZZZZZZZZZy + ZZZZZZZZZZZZZZZZZp);
+												local v247;
+												local v248;
+												local v249;
+												while true do
+													local ZZZZZZZZZZZZZZZZZj = 0;
+													local ZZZZZZZZZZZZZZZZZk = 231;
+													local ZZZZZZZZZZZZZZZZZv = 1746;
+													local ZZZZZZZZZZZZZZZZZb = 1037;
+													if ((ZZZZZZZZZZZZZZZZZb < ZZZZZZZZZZZZZZZZZv) and (v246 == (1270 - (ZZZZZZZZZZZZZZZZZk + 1038)))) then
+														local ZZZZZZZZZZZZZZZZZx = 0;
+														v249 = 0 - 0;
+														for v729 = v247, v79[1 + 3 + (ZZZZZZZZZZZZZZZZZx - 0)] do
+															v249 = v249 + (1163 - (171 + 991));
+															v77[v729] = v248[v249];
+														end
+														break;
+													end
+													if (v246 == (0 - ZZZZZZZZZZZZZZZZZj)) then
+														local ZZZZZZZZZZZZZZZZZO = 0;
+														local ZZZZZZZZZZZZZZZZZA = 1;
+														local ZZZZZZZZZZZZZZZZZT = 2;
+														local ZZZZZZZZZZZZZZZZZE = 1;
+														local ZZZZZZZZZZZZZZZZZz = 21;
+														local ZZZZZZZZZZZZZZZZZq = 165;
+														v247 = v79[(191 - (ZZZZZZZZZZZZZZZZZq + ZZZZZZZZZZZZZZZZZz)) - 3];
+														v248 = {v77[v247](v13(v77, v247 + (ZZZZZZZZZZZZZZZZZT - ZZZZZZZZZZZZZZZZZA), v72))};
+														v246 = 1 + ZZZZZZZZZZZZZZZZZO;
+													end
+												end
+											else
+												local ZZZZZZZZZZZZZZZZZI = 2;
+												local v250 = v79[ZZZZZZZZZZZZZZZZZI];
+												do
+													local ZZZZZZZZZZZZZZZZZN = 2;
+													return v77[v250](v13(v77, v250 + (3 - ZZZZZZZZZZZZZZZZZN), v79[3]));
+												end
+											end
+										end
+									end
+								else
+									local ZZZZZZZZZZZZZZZZZS = 61;
+									if (v80 <= (100 - (176 - (ZZZZZZZZZZZZZZZZZS + 50)))) then
+										local ZZZZZZZZZZZZZZZZZR = 20;
+										local ZZZZZZZZZZZZZZZZZH = 53;
+										if ((3738 >= 3692) and (v80 <= (ZZZZZZZZZZZZZZZZZH - ZZZZZZZZZZZZZZZZZR))) then
+											local ZZZZZZZZZZZZZZZZZL = 6;
+											local ZZZZZZZZZZZZZZZZZD = 9;
+											v71 = v79[ZZZZZZZZZZZZZZZZZD - ZZZZZZZZZZZZZZZZZL];
+										else
+											local ZZZZZZZZZZZZZZZZZW = 3822;
+											local ZZZZZZZZZZZZZZZZZM = 111;
+											local ZZZZZZZZZZZZZZZZZU = 753;
+											local ZZZZZZZZZZZZZZZZZC = 529;
+											if ((v80 == ((ZZZZZZZZZZZZZZZZZC + ZZZZZZZZZZZZZZZZZU) - (ZZZZZZZZZZZZZZZZZM + 1137))) or (ZZZZZZZZZZZZZZZZZW < 823)) then
+												local ZZZZZZZZZZZZZZZZZG = 67;
+												local ZZZZZZZZZZZZZZZZZF = 91;
+												if (v77[v79[160 - (ZZZZZZZZZZZZZZZZZF + ZZZZZZZZZZZZZZZZZG)]] == v79[19 - 15]) then
+													local ZZZZZZZZZZZZZZZZZY = 2;
+													v71 = v71 + (ZZZZZZZZZZZZZZZZZY - 1);
+												else
+													local ZZZZZZZZZZZZZZZZZB = 2;
+													local ZZZZZZZZZZZZZZZZZP = 0;
+													v71 = v79[(1 - ZZZZZZZZZZZZZZZZZP) + ZZZZZZZZZZZZZZZZZB];
+												end
+											else
+												local ZZZZZZZZZZZZZZZZZX = true;
+												local ZZZZZZZZZZZZZZZZZK = 100;
+												local ZZZZZZZZZZZZZZZZZV = 167;
+												local v251 = 523 - (ZZZZZZZZZZZZZZZZZV + 256 + ZZZZZZZZZZZZZZZZZK);
+												local v252;
+												while ZZZZZZZZZZZZZZZZZX do
+													local ZZZZZZZZZZZZZZZZZZZZZZZZZZD = 1;
+													local ZZZZZZZZZZZZZZZZZZZZZZZZZZR = 9;
+													local ZZZZZZZZZZZZZZZZZZZZZZZZZZH = 2388;
+													local ZZZZZZZZZZZZZZZZZZZZZZZZZZf = 134;
+													local ZZZZZZZZZZZZZZZZZZZZZZZZZZo = 36;
+													local ZZZZZZZZZZZZZZZZZZZZZZZZZZa = 312;
+													local ZZZZZZZZZZZZZZZZZZZZZZZZZk = 12;
+													local ZZZZZZZZZZZZZZZZZZZZZZZZZr = 812;
+													local ZZZZZZZZZZZZZZZZZZZZZZZZM = 22;
+													local ZZZZZZZZZZZZZZZZZZZZZZZZk = 0;
+													local ZZZZZZZZZZZZZZZZZZZZZZZZv = 0;
+													local ZZZZZZZZZZZZZZZZZZZZZZZZd = 2;
+													local ZZZZZZZZZZZZZZZZZZZZZZZY = 821;
+													local ZZZZZZZZZZZZZZZZZZZZZZZG = 1865;
+													local ZZZZZZZZZZZZZZZZZZZZZZZN = 15;
+													local ZZZZZZZZZZZZZZZZZZZZZZZw = 3549;
+													local ZZZZZZZZZZZZZZZZZZZZZZZm = 1486;
+													local ZZZZZZZZZZZZZZZZZZZZZZZa = 87;
+													local ZZZZZZZZZZZZZZZZZZZZZZZt = 1410;
+													local ZZZZZZZZZZZZZZZZZZZZZZZe = 1515;
+													local ZZZZZZZZZZZZZZZZZZZZZZL = 0;
+													local ZZZZZZZZZZZZZZZZZZZZZZD = 1;
+													local ZZZZZZZZZZZZZZZZZZZZZZj = 3;
+													local ZZZZZZZZZZZZZZZZZZZZZZx = 2;
+													local ZZZZZZZZZZZZZZZZZZZZZZs = 1000;
+													local ZZZZZZZZZZZZZZZZZZZZZZn = 485;
+													local ZZZZZZZZZZZZZZZZZZZZZZi = 1245;
+													local ZZZZZZZZZZZZZZZZZZZZZY = 48;
+													local ZZZZZZZZZZZZZZZZZZZZZT = 101;
+													local ZZZZZZZZZZZZZZZZZZZZZE = 172;
+													local ZZZZZZZZZZZZZZZZZZZZZz = 2003;
+													local ZZZZZZZZZZZZZZZZZZZZZe = 4543;
+													local ZZZZZZZZZZZZZZZZZZZZZ = 6;
+													local ZZZZZZZZZZZZZZZZZZZZQ = 5;
+													local ZZZZZZZZZZZZZZZZZZZZC = 0;
+													local ZZZZZZZZZZZZZZZZZZZZL = 1759;
+													local ZZZZZZZZZZZZZZZZZZZZD = 1759;
+													local ZZZZZZZZZZZZZZZZZZZZE = 15;
+													local ZZZZZZZZZZZZZZZZZZZZp = 26;
+													local ZZZZZZZZZZZZZZZZZZZZy = 14;
+													local ZZZZZZZZZZZZZZZZZZZZn = 14;
+													local ZZZZZZZZZZZZZZZZZZZY = 12;
+													local ZZZZZZZZZZZZZZZZZZZG = 16;
+													local ZZZZZZZZZZZZZZZZZZZS = 2;
+													local ZZZZZZZZZZZZZZZZZZZN = 9;
+													local ZZZZZZZZZZZZZZZZZZZm = 17;
+													local ZZZZZZZZZZZZZZZZZZZe = 979;
+													local ZZZZZZZZZZZZZZZZZZZ = 1897;
+													local ZZZZZZZZZZZZZZZZZZM = 20;
+													local ZZZZZZZZZZZZZZZZZZU = 10;
+													local ZZZZZZZZZZZZZZZZZZT = 129;
+													local ZZZZZZZZZZZZZZZZZZE = 121;
+													local ZZZZZZZZZZZZZZZZZZz = 740;
+													local ZZZZZZZZZZZZZZZZZZw = 4146;
+													local ZZZZZZZZZZZZZZZZZZm = 475;
+													local ZZZZZZZZZZZZZZZZZZu = 181;
+													local ZZZZZZZZZZZZZZZZZZc = 530;
+													local ZZZZZZZZZZZZZZZZZZl = 731;
+													local ZZZZZZZZZZZZZZZZZZe = 3146;
+													local ZZZZZZZZZZZZZZZZZZ = 4962;
+													local ZZZZZZZZZZZZZZZZZQ = 7;
+													local ZZZZZZZZZZZZZZZZZJ = 1;
+													if ((v251 == (ZZZZZZZZZZZZZZZZZJ + ZZZZZZZZZZZZZZZZZQ)) or (ZZZZZZZZZZZZZZZZZZ == ZZZZZZZZZZZZZZZZZZe)) then
+														local ZZZZZZZZZZZZZZZZZZd = 20;
+														local ZZZZZZZZZZZZZZZZZZr = 2;
+														local ZZZZZZZZZZZZZZZZZZh = 13;
+														local ZZZZZZZZZZZZZZZZZZs = 773;
+														local ZZZZZZZZZZZZZZZZZZn = 1;
+														local ZZZZZZZZZZZZZZZZZZi = 165;
+														local ZZZZZZZZZZZZZZZZZZo = 1295;
+														local ZZZZZZZZZZZZZZZZZZa = 7;
+														local ZZZZZZZZZZZZZZZZZZt = 1712;
+														v79 = v67[v71];
+														v77[v79[ZZZZZZZZZZZZZZZZZZt - (556 + 1154)]] = v77[v79[ZZZZZZZZZZZZZZZZZZa - (1464 - (ZZZZZZZZZZZZZZZZZZo + ZZZZZZZZZZZZZZZZZZi))]];
+														v71 = v71 + ZZZZZZZZZZZZZZZZZZn + 0;
+														v79 = v67[v71];
+														v77[v79[ZZZZZZZZZZZZZZZZZZs - (326 + 445)]] = v79[ZZZZZZZZZZZZZZZZZZh - 10];
+														v71 = v71 + (ZZZZZZZZZZZZZZZZZZr - 1);
+														v79 = v67[v71];
+														v77[v79[423 - (275 + 146)]] = v79[1 + 2];
+														v251 = ZZZZZZZZZZZZZZZZZZd - 11;
+													end
+													if ((v251 == (ZZZZZZZZZZZZZZZZZZl - (ZZZZZZZZZZZZZZZZZZc + ZZZZZZZZZZZZZZZZZZu))) or (ZZZZZZZZZZZZZZZZZZm > ZZZZZZZZZZZZZZZZZZw)) then
+														local ZZZZZZZZZZZZZZZZZZq = 1;
+														local ZZZZZZZZZZZZZZZZZZj = 1;
+														local ZZZZZZZZZZZZZZZZZZx = 1;
+														local ZZZZZZZZZZZZZZZZZZk = 2;
+														local ZZZZZZZZZZZZZZZZZZv = 0;
+														local ZZZZZZZZZZZZZZZZZZb = 2;
+														local ZZZZZZZZZZZZZZZZZZp = 0;
+														local ZZZZZZZZZZZZZZZZZZy = 1;
+														local ZZZZZZZZZZZZZZZZZZg = 35;
+														local ZZZZZZZZZZZZZZZZZZf = 883;
+														v79 = v67[v71];
+														v77[v79[ZZZZZZZZZZZZZZZZZZf - (614 + 267)]] = v77[v79[ZZZZZZZZZZZZZZZZZZg - (5 + 14 + 13)]];
+														v71 = v71 + (ZZZZZZZZZZZZZZZZZZy - ZZZZZZZZZZZZZZZZZZp);
+														v79 = v67[v71];
+														v77[v79[ZZZZZZZZZZZZZZZZZZb + ZZZZZZZZZZZZZZZZZZv]] = v79[6 - 3];
+														v71 = v71 + (ZZZZZZZZZZZZZZZZZZk - ZZZZZZZZZZZZZZZZZZx);
+														v79 = v67[v71];
+														v77[v79[ZZZZZZZZZZZZZZZZZZj + 1]] = v79[4 - ZZZZZZZZZZZZZZZZZZq];
+														v251 = 43 - 22;
+													end
+													if ((v251 == ((ZZZZZZZZZZZZZZZZZZz + 1099) - (1293 + 519))) or (ZZZZZZZZZZZZZZZZZZE >= ZZZZZZZZZZZZZZZZZZT)) then
+														local ZZZZZZZZZZZZZZZZZZC = 3;
+														local ZZZZZZZZZZZZZZZZZZL = 2;
+														local ZZZZZZZZZZZZZZZZZZD = 2;
+														local ZZZZZZZZZZZZZZZZZZR = 4;
+														local ZZZZZZZZZZZZZZZZZZH = 3;
+														local ZZZZZZZZZZZZZZZZZZS = 331;
+														local ZZZZZZZZZZZZZZZZZZN = 1406;
+														local ZZZZZZZZZZZZZZZZZZI = 5;
+														local ZZZZZZZZZZZZZZZZZZO = 819;
+														local ZZZZZZZZZZZZZZZZZZA = 4;
+														v71 = v71 + (1 - 0);
+														v79 = v67[v71];
+														v252 = v79[ZZZZZZZZZZZZZZZZZZA - 2];
+														v77[v252] = v77[v252](v13(v77, v252 + 1 + (1397 - (ZZZZZZZZZZZZZZZZZZO + 578)), v79[ZZZZZZZZZZZZZZZZZZI - 2]));
+														v71 = v71 + ((ZZZZZZZZZZZZZZZZZZN - (ZZZZZZZZZZZZZZZZZZS + 1071)) - ZZZZZZZZZZZZZZZZZZH);
+														v79 = v67[v71];
+														v77[v79[ZZZZZZZZZZZZZZZZZZR - ZZZZZZZZZZZZZZZZZZD]][v79[ZZZZZZZZZZZZZZZZZZL + 1]] = v77[v79[1 + ZZZZZZZZZZZZZZZZZZC]];
+														v71 = v71 + (2 - 1);
+														v251 = 7 + 21;
+													end
+													if (v251 == (ZZZZZZZZZZZZZZZZZZU + ZZZZZZZZZZZZZZZZZZM)) then
+														local ZZZZZZZZZZZZZZZZZZQ = 7;
+														local ZZZZZZZZZZZZZZZZZZJ = 24;
+														local ZZZZZZZZZZZZZZZZZZX = 0;
+														local ZZZZZZZZZZZZZZZZZZK = 51;
+														local ZZZZZZZZZZZZZZZZZZV = 1;
+														local ZZZZZZZZZZZZZZZZZZB = 6;
+														local ZZZZZZZZZZZZZZZZZZP = 1859;
+														local ZZZZZZZZZZZZZZZZZZY = 387;
+														local ZZZZZZZZZZZZZZZZZZG = 1099;
+														local ZZZZZZZZZZZZZZZZZZF = 0;
+														local ZZZZZZZZZZZZZZZZZZW = 2;
+														v79 = v67[v71];
+														v77[v79[ZZZZZZZZZZZZZZZZZZW + ZZZZZZZZZZZZZZZZZZF]] = v77[v79[ZZZZZZZZZZZZZZZZZZG - (709 + ZZZZZZZZZZZZZZZZZZY)]];
+														v71 = v71 + (ZZZZZZZZZZZZZZZZZZP - (673 + 1185));
+														v79 = v67[v71];
+														v77[v79[5 - 3]] = v79[9 - ZZZZZZZZZZZZZZZZZZB];
+														v71 = v71 + (ZZZZZZZZZZZZZZZZZZV - 0);
+														v79 = v67[v71];
+														v77[v79[54 - (ZZZZZZZZZZZZZZZZZZK + 1)]] = v79[3 + ZZZZZZZZZZZZZZZZZZX];
+														v251 = ZZZZZZZZZZZZZZZZZZJ + ZZZZZZZZZZZZZZZZZZQ;
+													end
+													if (((ZZZZZZZZZZZZZZZZZZZ - (588 + 155)) - (146 + ZZZZZZZZZZZZZZZZZZZe)) == v251) then
+														local ZZZZZZZZZZZZZZZZZZZu = 103;
+														local ZZZZZZZZZZZZZZZZZZZc = 1434;
+														local ZZZZZZZZZZZZZZZZZZZl = 3;
+														local ZZZZZZZZZZZZZZZZZZZd = 7;
+														local ZZZZZZZZZZZZZZZZZZZr = 5;
+														local ZZZZZZZZZZZZZZZZZZZh = 1;
+														local ZZZZZZZZZZZZZZZZZZZs = 1;
+														local ZZZZZZZZZZZZZZZZZZZn = 2;
+														local ZZZZZZZZZZZZZZZZZZZi = 546;
+														local ZZZZZZZZZZZZZZZZZZZo = 1593;
+														local ZZZZZZZZZZZZZZZZZZZa = 607;
+														local ZZZZZZZZZZZZZZZZZZZt = 0;
+														v71 = v71 + (1 - ZZZZZZZZZZZZZZZZZZZt);
+														v79 = v67[v71];
+														v252 = v79[ZZZZZZZZZZZZZZZZZZZa - ((ZZZZZZZZZZZZZZZZZZZo - (ZZZZZZZZZZZZZZZZZZZi + 736)) + 294)];
+														v77[v252] = v77[v252](v13(v77, v252 + (ZZZZZZZZZZZZZZZZZZZn - 1), v79[2 + ZZZZZZZZZZZZZZZZZZZs]));
+														v71 = v71 + ZZZZZZZZZZZZZZZZZZZh + 0;
+														v79 = v67[v71];
+														v77[v79[2]][v79[ZZZZZZZZZZZZZZZZZZZr - 2]] = v77[v79[ZZZZZZZZZZZZZZZZZZZd - ZZZZZZZZZZZZZZZZZZZl]];
+														v71 = v71 + (1881 - (446 + ZZZZZZZZZZZZZZZZZZZc));
+														v251 = (1964 - (1834 + ZZZZZZZZZZZZZZZZZZZu)) + 3;
+													end
+													if (v251 == (5 + ZZZZZZZZZZZZZZZZZZZm)) then
+														local ZZZZZZZZZZZZZZZZZZZI = 37;
+														local ZZZZZZZZZZZZZZZZZZZO = 60;
+														local ZZZZZZZZZZZZZZZZZZZA = 7;
+														local ZZZZZZZZZZZZZZZZZZZT = 441;
+														local ZZZZZZZZZZZZZZZZZZZE = 456;
+														local ZZZZZZZZZZZZZZZZZZZz = 1322;
+														local ZZZZZZZZZZZZZZZZZZZq = 609;
+														local ZZZZZZZZZZZZZZZZZZZj = 1932;
+														local ZZZZZZZZZZZZZZZZZZZx = 1288;
+														local ZZZZZZZZZZZZZZZZZZZk = 1983;
+														local ZZZZZZZZZZZZZZZZZZZv = 2983;
+														local ZZZZZZZZZZZZZZZZZZZb = 504;
+														local ZZZZZZZZZZZZZZZZZZZp = 927;
+														local ZZZZZZZZZZZZZZZZZZZy = 5;
+														local ZZZZZZZZZZZZZZZZZZZg = 8;
+														local ZZZZZZZZZZZZZZZZZZZf = 1040;
+														local ZZZZZZZZZZZZZZZZZZZw = 1285;
+														v79 = v67[v71];
+														v77[v79[ZZZZZZZZZZZZZZZZZZZw - (ZZZZZZZZZZZZZZZZZZZf + 243)]] = v77[v79[ZZZZZZZZZZZZZZZZZZZg - ZZZZZZZZZZZZZZZZZZZy]];
+														v71 = v71 + 1;
+														v79 = v67[v71];
+														v77[v79[(ZZZZZZZZZZZZZZZZZZZp + 579) - (ZZZZZZZZZZZZZZZZZZZb + (ZZZZZZZZZZZZZZZZZZZv - ZZZZZZZZZZZZZZZZZZZk))]] = v79[1850 - ((2325 - (1536 + 230)) + ZZZZZZZZZZZZZZZZZZZx)];
+														v71 = v71 + (ZZZZZZZZZZZZZZZZZZZj - (ZZZZZZZZZZZZZZZZZZZq + ZZZZZZZZZZZZZZZZZZZz));
+														v79 = v67[v71];
+														v77[v79[ZZZZZZZZZZZZZZZZZZZE - (13 + ZZZZZZZZZZZZZZZZZZZT)]] = v79[10 - ZZZZZZZZZZZZZZZZZZZA];
+														v251 = ZZZZZZZZZZZZZZZZZZZO - ZZZZZZZZZZZZZZZZZZZI;
+													end
+													if (v251 == (ZZZZZZZZZZZZZZZZZZZN - ZZZZZZZZZZZZZZZZZZZS)) then
+														local ZZZZZZZZZZZZZZZZZZZF = 2;
+														local ZZZZZZZZZZZZZZZZZZZW = 497;
+														local ZZZZZZZZZZZZZZZZZZZM = 1;
+														local ZZZZZZZZZZZZZZZZZZZU = 3;
+														local ZZZZZZZZZZZZZZZZZZZC = 0;
+														local ZZZZZZZZZZZZZZZZZZZL = 1;
+														local ZZZZZZZZZZZZZZZZZZZD = 2;
+														local ZZZZZZZZZZZZZZZZZZZR = 1;
+														local ZZZZZZZZZZZZZZZZZZZH = 3;
+														v71 = v71 + (4 - ZZZZZZZZZZZZZZZZZZZH);
+														v79 = v67[v71];
+														v252 = v79[ZZZZZZZZZZZZZZZZZZZR + 1];
+														v77[v252] = v77[v252](v13(v77, v252 + (3 - 2), v79[ZZZZZZZZZZZZZZZZZZZD + 1]));
+														v71 = v71 + ZZZZZZZZZZZZZZZZZZZL + ZZZZZZZZZZZZZZZZZZZC;
+														v79 = v67[v71];
+														v77[v79[2 - 0]][v79[8 - 5]] = v77[v79[ZZZZZZZZZZZZZZZZZZZU + 1]];
+														v71 = v71 + (ZZZZZZZZZZZZZZZZZZZM - 0);
+														v251 = (ZZZZZZZZZZZZZZZZZZZW - (128 + 363)) + ZZZZZZZZZZZZZZZZZZZF;
+													end
+													if ((v251 == (ZZZZZZZZZZZZZZZZZZZG + ZZZZZZZZZZZZZZZZZZZY)) or (2058 > 4958)) then
+														local ZZZZZZZZZZZZZZZZZZZZi = 17;
+														local ZZZZZZZZZZZZZZZZZZZZo = 29;
+														local ZZZZZZZZZZZZZZZZZZZZa = 0;
+														local ZZZZZZZZZZZZZZZZZZZZt = 3;
+														local ZZZZZZZZZZZZZZZZZZZZe = 0;
+														local ZZZZZZZZZZZZZZZZZZZZ = 1;
+														local ZZZZZZZZZZZZZZZZZZZQ = 5;
+														local ZZZZZZZZZZZZZZZZZZZJ = 8;
+														local ZZZZZZZZZZZZZZZZZZZX = 220;
+														local ZZZZZZZZZZZZZZZZZZZK = 60;
+														local ZZZZZZZZZZZZZZZZZZZV = 0;
+														local ZZZZZZZZZZZZZZZZZZZB = 3;
+														local ZZZZZZZZZZZZZZZZZZZP = 2;
+														v79 = v67[v71];
+														v77[v79[ZZZZZZZZZZZZZZZZZZZP + 0]] = v77[v79[ZZZZZZZZZZZZZZZZZZZB + ZZZZZZZZZZZZZZZZZZZV]];
+														v71 = v71 + 1 + 0;
+														v79 = v67[v71];
+														v77[v79[435 - (153 + ZZZZZZZZZZZZZZZZZZZK + ZZZZZZZZZZZZZZZZZZZX)]] = v79[ZZZZZZZZZZZZZZZZZZZJ - ZZZZZZZZZZZZZZZZZZZQ];
+														v71 = v71 + ZZZZZZZZZZZZZZZZZZZZ + 0;
+														v79 = v67[v71];
+														v77[v79[2 + ZZZZZZZZZZZZZZZZZZZZe]] = v79[ZZZZZZZZZZZZZZZZZZZZt + ZZZZZZZZZZZZZZZZZZZZa];
+														v251 = (ZZZZZZZZZZZZZZZZZZZZo - 17) + ZZZZZZZZZZZZZZZZZZZZi;
+													end
+													if (v251 == (ZZZZZZZZZZZZZZZZZZZZn + 12)) then
+														local ZZZZZZZZZZZZZZZZZZZZg = 56;
+														local ZZZZZZZZZZZZZZZZZZZZf = 83;
+														local ZZZZZZZZZZZZZZZZZZZZw = 1052;
+														local ZZZZZZZZZZZZZZZZZZZZm = 1;
+														local ZZZZZZZZZZZZZZZZZZZZu = 1;
+														local ZZZZZZZZZZZZZZZZZZZZc = 0;
+														local ZZZZZZZZZZZZZZZZZZZZl = 1;
+														local ZZZZZZZZZZZZZZZZZZZZd = 66;
+														local ZZZZZZZZZZZZZZZZZZZZr = 670;
+														local ZZZZZZZZZZZZZZZZZZZZh = 2;
+														local ZZZZZZZZZZZZZZZZZZZZs = 2;
+														v79 = v67[v71];
+														v77[v79[ZZZZZZZZZZZZZZZZZZZZs + 0]] = v77[v79[3 + 0]];
+														v71 = v71 + (1 - 0);
+														v79 = v67[v71];
+														v77[v79[ZZZZZZZZZZZZZZZZZZZZh + 0]] = v79[ZZZZZZZZZZZZZZZZZZZZr - (23 + ZZZZZZZZZZZZZZZZZZZZd + 578)];
+														v71 = v71 + ZZZZZZZZZZZZZZZZZZZZl + ZZZZZZZZZZZZZZZZZZZZc;
+														v79 = v67[v71];
+														v77[v79[(4 - ZZZZZZZZZZZZZZZZZZZZu) - ZZZZZZZZZZZZZZZZZZZZm]] = v79[ZZZZZZZZZZZZZZZZZZZZw - (572 + 477)];
+														v251 = ZZZZZZZZZZZZZZZZZZZZf - ZZZZZZZZZZZZZZZZZZZZg;
+													end
+													if (v251 == ((ZZZZZZZZZZZZZZZZZZZZy - 9) + ZZZZZZZZZZZZZZZZZZZZp)) then
+														local ZZZZZZZZZZZZZZZZZZZZz = 615;
+														local ZZZZZZZZZZZZZZZZZZZZq = 237;
+														local ZZZZZZZZZZZZZZZZZZZZj = 497;
+														local ZZZZZZZZZZZZZZZZZZZZx = 845;
+														local ZZZZZZZZZZZZZZZZZZZZk = 9;
+														local ZZZZZZZZZZZZZZZZZZZZv = 4;
+														local ZZZZZZZZZZZZZZZZZZZZb = 0;
+														v71 = v71 + 1 + ZZZZZZZZZZZZZZZZZZZZb;
+														v79 = v67[v71];
+														v252 = v79[1 + 1];
+														v77[v252] = v77[v252](v13(v77, v252 + (87 - (84 + (ZZZZZZZZZZZZZZZZZZZZv - 2))), v79[4 - 1]));
+														v71 = v71 + 1 + 0;
+														v79 = v67[v71];
+														v77[v79[ZZZZZZZZZZZZZZZZZZZZk - 7]][v79[ZZZZZZZZZZZZZZZZZZZZx - (ZZZZZZZZZZZZZZZZZZZZj + ZZZZZZZZZZZZZZZZZZZZq + 108)]] = v77[v79[(1010 - (ZZZZZZZZZZZZZZZZZZZZz + 394)) + 3]];
+														break;
+													end
+													if (v251 == (4 + 0 + ZZZZZZZZZZZZZZZZZZZZE)) then
+														local ZZZZZZZZZZZZZZZZZZZZR = 55;
+														local ZZZZZZZZZZZZZZZZZZZZH = 0;
+														local ZZZZZZZZZZZZZZZZZZZZS = 2;
+														local ZZZZZZZZZZZZZZZZZZZZN = 7;
+														local ZZZZZZZZZZZZZZZZZZZZI = 10;
+														local ZZZZZZZZZZZZZZZZZZZZO = 752;
+														local ZZZZZZZZZZZZZZZZZZZZA = 145;
+														local ZZZZZZZZZZZZZZZZZZZZT = 605;
+														v71 = v71 + (1334 - (ZZZZZZZZZZZZZZZZZZZZT + 694 + 34));
+														v79 = v67[v71];
+														v252 = v79[2 + 0];
+														v77[v252] = v77[v252](v13(v77, v252 + (1 - 0), v79[2 + 1]));
+														v71 = v71 + 1 + 0;
+														v79 = v67[v71];
+														v77[v79[394 - (ZZZZZZZZZZZZZZZZZZZZA + (ZZZZZZZZZZZZZZZZZZZZO - 505))]][v79[ZZZZZZZZZZZZZZZZZZZZI - ZZZZZZZZZZZZZZZZZZZZN]] = v77[v79[2 + ZZZZZZZZZZZZZZZZZZZZS]];
+														v71 = v71 + 1 + ZZZZZZZZZZZZZZZZZZZZH;
+														v251 = ZZZZZZZZZZZZZZZZZZZZR - 35;
+													end
+													if ((ZZZZZZZZZZZZZZZZZZZZD == ZZZZZZZZZZZZZZZZZZZZL) and (v251 == (4 + ZZZZZZZZZZZZZZZZZZZZC))) then
+														local ZZZZZZZZZZZZZZZZZZZZJ = 801;
+														local ZZZZZZZZZZZZZZZZZZZZX = 1;
+														local ZZZZZZZZZZZZZZZZZZZZK = 4;
+														local ZZZZZZZZZZZZZZZZZZZZV = 8;
+														local ZZZZZZZZZZZZZZZZZZZZB = 59;
+														local ZZZZZZZZZZZZZZZZZZZZP = 3;
+														local ZZZZZZZZZZZZZZZZZZZZY = 832;
+														local ZZZZZZZZZZZZZZZZZZZZG = 1;
+														local ZZZZZZZZZZZZZZZZZZZZF = 32;
+														local ZZZZZZZZZZZZZZZZZZZZW = 1615;
+														local ZZZZZZZZZZZZZZZZZZZZM = 2072;
+														local ZZZZZZZZZZZZZZZZZZZZU = 2;
+														v79 = v67[v71];
+														v77[v79[ZZZZZZZZZZZZZZZZZZZZU + 0]] = v77[v79[492 - ((ZZZZZZZZZZZZZZZZZZZZM - ZZZZZZZZZZZZZZZZZZZZW) + ZZZZZZZZZZZZZZZZZZZZF)]];
+														v71 = v71 + ZZZZZZZZZZZZZZZZZZZZG + 0;
+														v79 = v67[v71];
+														v77[v79[1404 - (ZZZZZZZZZZZZZZZZZZZZY + 570)]] = v79[ZZZZZZZZZZZZZZZZZZZZP + (651 - (ZZZZZZZZZZZZZZZZZZZZB + 592))];
+														v71 = v71 + 1 + 0;
+														v79 = v67[v71];
+														v77[v79[6 - (ZZZZZZZZZZZZZZZZZZZZV - ZZZZZZZZZZZZZZZZZZZZK)]] = v79[2 + ZZZZZZZZZZZZZZZZZZZZX];
+														v251 = ZZZZZZZZZZZZZZZZZZZZJ - (588 + 208);
+													end
+													if ((v251 == (ZZZZZZZZZZZZZZZZZZZZQ + ZZZZZZZZZZZZZZZZZZZZZ)) or (ZZZZZZZZZZZZZZZZZZZZZe == 358)) then
+														local ZZZZZZZZZZZZZZZZZZZZZl = 1;
+														local ZZZZZZZZZZZZZZZZZZZZZd = 4;
+														local ZZZZZZZZZZZZZZZZZZZZZr = 2;
+														local ZZZZZZZZZZZZZZZZZZZZZh = 1;
+														local ZZZZZZZZZZZZZZZZZZZZZs = 320;
+														local ZZZZZZZZZZZZZZZZZZZZZn = 1569;
+														local ZZZZZZZZZZZZZZZZZZZZZi = 421;
+														local ZZZZZZZZZZZZZZZZZZZZZo = 654;
+														local ZZZZZZZZZZZZZZZZZZZZZa = 1;
+														local ZZZZZZZZZZZZZZZZZZZZZt = 2;
+														v71 = v71 + (ZZZZZZZZZZZZZZZZZZZZZt - ZZZZZZZZZZZZZZZZZZZZZa);
+														v79 = v67[v71];
+														v252 = v79[1802 - (884 + 916)];
+														v77[v252] = v77[v252](v13(v77, v252 + (1 - 0), v79[2 + 1]));
+														v71 = v71 + (ZZZZZZZZZZZZZZZZZZZZZo - (232 + ZZZZZZZZZZZZZZZZZZZZZi));
+														v79 = v67[v71];
+														v77[v79[1891 - (ZZZZZZZZZZZZZZZZZZZZZn + ZZZZZZZZZZZZZZZZZZZZZs)]][v79[ZZZZZZZZZZZZZZZZZZZZZh + ZZZZZZZZZZZZZZZZZZZZZr]] = v77[v79[ZZZZZZZZZZZZZZZZZZZZZd]];
+														v71 = v71 + ZZZZZZZZZZZZZZZZZZZZZl + 0;
+														v251 = 30 - 18;
+													end
+													if (v251 == (6 - 4)) then
+														local ZZZZZZZZZZZZZZZZZZZZZq = 2;
+														local ZZZZZZZZZZZZZZZZZZZZZj = 65;
+														local ZZZZZZZZZZZZZZZZZZZZZx = 787;
+														local ZZZZZZZZZZZZZZZZZZZZZk = 0;
+														local ZZZZZZZZZZZZZZZZZZZZZv = 1;
+														local ZZZZZZZZZZZZZZZZZZZZZb = 5;
+														local ZZZZZZZZZZZZZZZZZZZZZp = 8;
+														local ZZZZZZZZZZZZZZZZZZZZZy = 0;
+														local ZZZZZZZZZZZZZZZZZZZZZg = 1;
+														local ZZZZZZZZZZZZZZZZZZZZZf = 0;
+														local ZZZZZZZZZZZZZZZZZZZZZw = 1;
+														local ZZZZZZZZZZZZZZZZZZZZZm = 4;
+														local ZZZZZZZZZZZZZZZZZZZZZu = 289;
+														local ZZZZZZZZZZZZZZZZZZZZZc = 316;
+														v79 = v67[v71];
+														v77[v79[607 - (ZZZZZZZZZZZZZZZZZZZZZc + ZZZZZZZZZZZZZZZZZZZZZu)]] = v77[v79[7 - ZZZZZZZZZZZZZZZZZZZZZm]];
+														v71 = v71 + 1;
+														v79 = v67[v71];
+														v77[v79[(ZZZZZZZZZZZZZZZZZZZZZw - ZZZZZZZZZZZZZZZZZZZZZf) + ZZZZZZZZZZZZZZZZZZZZZg + ZZZZZZZZZZZZZZZZZZZZZy]] = v79[ZZZZZZZZZZZZZZZZZZZZZp - ZZZZZZZZZZZZZZZZZZZZZb];
+														v71 = v71 + (ZZZZZZZZZZZZZZZZZZZZZv - ZZZZZZZZZZZZZZZZZZZZZk);
+														v79 = v67[v71];
+														v77[v79[1455 - (666 + ZZZZZZZZZZZZZZZZZZZZZx)]] = v79[428 - (360 + ZZZZZZZZZZZZZZZZZZZZZj)];
+														v251 = ZZZZZZZZZZZZZZZZZZZZZq + 1;
+													end
+													if ((2003 == ZZZZZZZZZZZZZZZZZZZZZz) and (v251 == (20 + (ZZZZZZZZZZZZZZZZZZZZZE - (70 + ZZZZZZZZZZZZZZZZZZZZZT))))) then
+														local ZZZZZZZZZZZZZZZZZZZZZG = 3;
+														local ZZZZZZZZZZZZZZZZZZZZZF = 0;
+														local ZZZZZZZZZZZZZZZZZZZZZW = 2;
+														local ZZZZZZZZZZZZZZZZZZZZZM = 4;
+														local ZZZZZZZZZZZZZZZZZZZZZU = 92;
+														local ZZZZZZZZZZZZZZZZZZZZZC = 503;
+														local ZZZZZZZZZZZZZZZZZZZZZL = 901;
+														local ZZZZZZZZZZZZZZZZZZZZZD = 1;
+														local ZZZZZZZZZZZZZZZZZZZZZR = 8;
+														local ZZZZZZZZZZZZZZZZZZZZZH = 0;
+														local ZZZZZZZZZZZZZZZZZZZZZS = 1;
+														local ZZZZZZZZZZZZZZZZZZZZZN = 0;
+														local ZZZZZZZZZZZZZZZZZZZZZI = 2;
+														local ZZZZZZZZZZZZZZZZZZZZZO = 175;
+														local ZZZZZZZZZZZZZZZZZZZZZA = 255;
+														v71 = v71 + (ZZZZZZZZZZZZZZZZZZZZZA - (79 + ZZZZZZZZZZZZZZZZZZZZZO));
+														v79 = v67[v71];
+														v252 = v79[ZZZZZZZZZZZZZZZZZZZZZI - ZZZZZZZZZZZZZZZZZZZZZN];
+														v77[v252] = v77[v252](v13(v77, v252 + ZZZZZZZZZZZZZZZZZZZZZS + ZZZZZZZZZZZZZZZZZZZZZH, v79[ZZZZZZZZZZZZZZZZZZZZZR - 5]));
+														v71 = v71 + (ZZZZZZZZZZZZZZZZZZZZZD - 0);
+														v79 = v67[v71];
+														v77[v79[ZZZZZZZZZZZZZZZZZZZZZL - (ZZZZZZZZZZZZZZZZZZZZZC + 396)]][v79[184 - (ZZZZZZZZZZZZZZZZZZZZZU + 89)]] = v77[v79[ZZZZZZZZZZZZZZZZZZZZZM]];
+														v71 = v71 + ((ZZZZZZZZZZZZZZZZZZZZZW - 1) - ZZZZZZZZZZZZZZZZZZZZZF);
+														v251 = 9 + ZZZZZZZZZZZZZZZZZZZZZG + 10;
+													end
+													if (v251 == (73 - ZZZZZZZZZZZZZZZZZZZZZY)) then
+														local ZZZZZZZZZZZZZZZZZZZZZZo = 0;
+														local ZZZZZZZZZZZZZZZZZZZZZZa = 12;
+														local ZZZZZZZZZZZZZZZZZZZZZZt = 1;
+														local ZZZZZZZZZZZZZZZZZZZZZZe = 2;
+														local ZZZZZZZZZZZZZZZZZZZZZZ = 2;
+														local ZZZZZZZZZZZZZZZZZZZZZQ = 650;
+														local ZZZZZZZZZZZZZZZZZZZZZJ = 1261;
+														local ZZZZZZZZZZZZZZZZZZZZZX = 1912;
+														local ZZZZZZZZZZZZZZZZZZZZZK = 3;
+														local ZZZZZZZZZZZZZZZZZZZZZV = 1;
+														local ZZZZZZZZZZZZZZZZZZZZZB = 17;
+														local ZZZZZZZZZZZZZZZZZZZZZP = 1;
+														v71 = v71 + ZZZZZZZZZZZZZZZZZZZZZP + 0;
+														v79 = v67[v71];
+														v252 = v79[(ZZZZZZZZZZZZZZZZZZZZZB - 10) - 5];
+														v77[v252] = v77[v252](v13(v77, v252 + ZZZZZZZZZZZZZZZZZZZZZV + 0, v79[6 - ZZZZZZZZZZZZZZZZZZZZZK]));
+														v71 = v71 + (ZZZZZZZZZZZZZZZZZZZZZX - (ZZZZZZZZZZZZZZZZZZZZZJ + ZZZZZZZZZZZZZZZZZZZZZQ));
+														v79 = v67[v71];
+														v77[v79[ZZZZZZZZZZZZZZZZZZZZZZ + 0]][v79[ZZZZZZZZZZZZZZZZZZZZZZe + ZZZZZZZZZZZZZZZZZZZZZZt]] = v77[v79[ZZZZZZZZZZZZZZZZZZZZZZa - 8]];
+														v71 = v71 + 1 + ZZZZZZZZZZZZZZZZZZZZZZo;
+														v251 = 39 - 13;
+													end
+													if (v251 == (ZZZZZZZZZZZZZZZZZZZZZZi - (ZZZZZZZZZZZZZZZZZZZZZZn + (ZZZZZZZZZZZZZZZZZZZZZZs - (123 + 118))))) then
+														local ZZZZZZZZZZZZZZZZZZZZZZk = 23;
+														local ZZZZZZZZZZZZZZZZZZZZZZv = 0;
+														local ZZZZZZZZZZZZZZZZZZZZZZb = 0;
+														local ZZZZZZZZZZZZZZZZZZZZZZp = 0;
+														local ZZZZZZZZZZZZZZZZZZZZZZy = 746;
+														local ZZZZZZZZZZZZZZZZZZZZZZg = 1399;
+														local ZZZZZZZZZZZZZZZZZZZZZZf = 4;
+														local ZZZZZZZZZZZZZZZZZZZZZZw = 0;
+														local ZZZZZZZZZZZZZZZZZZZZZZm = 1;
+														local ZZZZZZZZZZZZZZZZZZZZZZu = 858;
+														local ZZZZZZZZZZZZZZZZZZZZZZc = 948;
+														local ZZZZZZZZZZZZZZZZZZZZZZl = 1847;
+														local ZZZZZZZZZZZZZZZZZZZZZZd = 1191;
+														local ZZZZZZZZZZZZZZZZZZZZZZr = 1;
+														local ZZZZZZZZZZZZZZZZZZZZZZh = 1;
+														v71 = v71 + ((1 + ZZZZZZZZZZZZZZZZZZZZZZh) - ZZZZZZZZZZZZZZZZZZZZZZr);
+														v79 = v67[v71];
+														v252 = v79[ZZZZZZZZZZZZZZZZZZZZZZd - (442 + 747)];
+														v77[v252] = v77[v252](v13(v77, v252 + 1, v79[ZZZZZZZZZZZZZZZZZZZZZZl - (1524 + 320)]));
+														v71 = v71 + (1136 - (832 + 303));
+														v79 = v67[v71];
+														v77[v79[ZZZZZZZZZZZZZZZZZZZZZZc - (88 + ZZZZZZZZZZZZZZZZZZZZZZu)]][v79[ZZZZZZZZZZZZZZZZZZZZZZm + ZZZZZZZZZZZZZZZZZZZZZZw + 2]] = v77[v79[ZZZZZZZZZZZZZZZZZZZZZZf + (ZZZZZZZZZZZZZZZZZZZZZZg - (653 + ZZZZZZZZZZZZZZZZZZZZZZy))]];
+														v71 = v71 + (1 - ZZZZZZZZZZZZZZZZZZZZZZp) + (ZZZZZZZZZZZZZZZZZZZZZZb - ZZZZZZZZZZZZZZZZZZZZZZv);
+														v251 = (2117 - 1326) - (766 + ZZZZZZZZZZZZZZZZZZZZZZk);
+													end
+													if ((v251 == (12 + ZZZZZZZZZZZZZZZZZZZZZZx)) or (ZZZZZZZZZZZZZZZZZZZZZZj == 2368)) then
+														local ZZZZZZZZZZZZZZZZZZZZZZR = 0;
+														local ZZZZZZZZZZZZZZZZZZZZZZH = 1;
+														local ZZZZZZZZZZZZZZZZZZZZZZS = 7;
+														local ZZZZZZZZZZZZZZZZZZZZZZN = 10;
+														local ZZZZZZZZZZZZZZZZZZZZZZI = 2;
+														local ZZZZZZZZZZZZZZZZZZZZZZO = 4;
+														local ZZZZZZZZZZZZZZZZZZZZZZA = 1364;
+														local ZZZZZZZZZZZZZZZZZZZZZZT = 240;
+														local ZZZZZZZZZZZZZZZZZZZZZZE = 1605;
+														local ZZZZZZZZZZZZZZZZZZZZZZz = 3;
+														local ZZZZZZZZZZZZZZZZZZZZZZq = 7;
+														v79 = v67[v71];
+														v77[v79[9 - ZZZZZZZZZZZZZZZZZZZZZZq]] = v77[v79[ZZZZZZZZZZZZZZZZZZZZZZz - 0]];
+														v71 = v71 + (ZZZZZZZZZZZZZZZZZZZZZZE - (ZZZZZZZZZZZZZZZZZZZZZZT + ZZZZZZZZZZZZZZZZZZZZZZA));
+														v79 = v67[v71];
+														v77[v79[ZZZZZZZZZZZZZZZZZZZZZZO - ZZZZZZZZZZZZZZZZZZZZZZI]] = v79[ZZZZZZZZZZZZZZZZZZZZZZN - ZZZZZZZZZZZZZZZZZZZZZZS];
+														v71 = v71 + (1074 - (1036 + 37));
+														v79 = v67[v71];
+														v77[v79[1 + ZZZZZZZZZZZZZZZZZZZZZZH + ZZZZZZZZZZZZZZZZZZZZZZR]] = v79[(4 + 1) - 2];
+														v251 = 15;
+													end
+													if (v251 == (4 + ZZZZZZZZZZZZZZZZZZZZZZD + ZZZZZZZZZZZZZZZZZZZZZZL)) then
+														local ZZZZZZZZZZZZZZZZZZZZZZZ = 592;
+														local ZZZZZZZZZZZZZZZZZZZZZZQ = 87;
+														local ZZZZZZZZZZZZZZZZZZZZZZJ = 1;
+														local ZZZZZZZZZZZZZZZZZZZZZZX = 2;
+														local ZZZZZZZZZZZZZZZZZZZZZZK = 218;
+														local ZZZZZZZZZZZZZZZZZZZZZZV = 1286;
+														local ZZZZZZZZZZZZZZZZZZZZZZB = 180;
+														local ZZZZZZZZZZZZZZZZZZZZZZP = 1686;
+														local ZZZZZZZZZZZZZZZZZZZZZZY = 1;
+														local ZZZZZZZZZZZZZZZZZZZZZZG = 2;
+														local ZZZZZZZZZZZZZZZZZZZZZZF = 3;
+														local ZZZZZZZZZZZZZZZZZZZZZZW = 910;
+														local ZZZZZZZZZZZZZZZZZZZZZZM = 641;
+														local ZZZZZZZZZZZZZZZZZZZZZZU = 2;
+														local ZZZZZZZZZZZZZZZZZZZZZZC = 1;
+														v71 = v71 + ZZZZZZZZZZZZZZZZZZZZZZC + 0;
+														v79 = v67[v71];
+														v252 = v79[ZZZZZZZZZZZZZZZZZZZZZZU];
+														v77[v252] = v77[v252](v13(v77, v252 + (1481 - (ZZZZZZZZZZZZZZZZZZZZZZM + 839)), v79[916 - (ZZZZZZZZZZZZZZZZZZZZZZW + ZZZZZZZZZZZZZZZZZZZZZZF)]));
+														v71 = v71 + (ZZZZZZZZZZZZZZZZZZZZZZG - ZZZZZZZZZZZZZZZZZZZZZZY);
+														v79 = v67[v71];
+														v77[v79[ZZZZZZZZZZZZZZZZZZZZZZP - (ZZZZZZZZZZZZZZZZZZZZZZB + ZZZZZZZZZZZZZZZZZZZZZZV + ZZZZZZZZZZZZZZZZZZZZZZK)]][v79[ZZZZZZZZZZZZZZZZZZZZZZX + ZZZZZZZZZZZZZZZZZZZZZZJ]] = v77[v79[1152 - (ZZZZZZZZZZZZZZZZZZZZZZQ + 469 + ZZZZZZZZZZZZZZZZZZZZZZZ)]];
+														v71 = v71 + 1 + 0;
+														v251 = 6;
+													end
+													if (v251 == (ZZZZZZZZZZZZZZZZZZZZZZZe - (ZZZZZZZZZZZZZZZZZZZZZZZt + ZZZZZZZZZZZZZZZZZZZZZZZa))) then
+														local ZZZZZZZZZZZZZZZZZZZZZZZu = 17;
+														local ZZZZZZZZZZZZZZZZZZZZZZZc = 343;
+														local ZZZZZZZZZZZZZZZZZZZZZZZl = 742;
+														local ZZZZZZZZZZZZZZZZZZZZZZZd = 31;
+														local ZZZZZZZZZZZZZZZZZZZZZZZr = 1730;
+														local ZZZZZZZZZZZZZZZZZZZZZZZh = 1;
+														local ZZZZZZZZZZZZZZZZZZZZZZZs = 680;
+														local ZZZZZZZZZZZZZZZZZZZZZZZn = 174;
+														local ZZZZZZZZZZZZZZZZZZZZZZZi = 479;
+														local ZZZZZZZZZZZZZZZZZZZZZZZo = 329;
+														v79 = v67[v71];
+														v77[v79[810 - (ZZZZZZZZZZZZZZZZZZZZZZZo + ZZZZZZZZZZZZZZZZZZZZZZZi)]] = v77[v79[857 - (ZZZZZZZZZZZZZZZZZZZZZZZn + ZZZZZZZZZZZZZZZZZZZZZZZs)]];
+														v71 = v71 + (2 - ZZZZZZZZZZZZZZZZZZZZZZZh);
+														v79 = v67[v71];
+														v77[v79[6 - 4]] = v79[5 - 2];
+														v71 = v71 + (1762 - (ZZZZZZZZZZZZZZZZZZZZZZZr + ZZZZZZZZZZZZZZZZZZZZZZZd));
+														v79 = v67[v71];
+														v77[v79[2 + 0]] = v79[ZZZZZZZZZZZZZZZZZZZZZZZl - (396 + ZZZZZZZZZZZZZZZZZZZZZZZc)];
+														v251 = 2 + ZZZZZZZZZZZZZZZZZZZZZZZu;
+													end
+													if ((v251 == (ZZZZZZZZZZZZZZZZZZZZZZZm - (29 + (ZZZZZZZZZZZZZZZZZZZZZZZw - 2101)))) or (2757 > 3968)) then
+														local ZZZZZZZZZZZZZZZZZZZZZZZI = 0;
+														local ZZZZZZZZZZZZZZZZZZZZZZZO = 1;
+														local ZZZZZZZZZZZZZZZZZZZZZZZA = 175;
+														local ZZZZZZZZZZZZZZZZZZZZZZZT = 277;
+														local ZZZZZZZZZZZZZZZZZZZZZZZE = 460;
+														local ZZZZZZZZZZZZZZZZZZZZZZZz = 349;
+														local ZZZZZZZZZZZZZZZZZZZZZZZq = 2826;
+														local ZZZZZZZZZZZZZZZZZZZZZZZj = 0;
+														local ZZZZZZZZZZZZZZZZZZZZZZZx = 2;
+														local ZZZZZZZZZZZZZZZZZZZZZZZk = 3;
+														local ZZZZZZZZZZZZZZZZZZZZZZZv = 4;
+														local ZZZZZZZZZZZZZZZZZZZZZZZb = 11;
+														local ZZZZZZZZZZZZZZZZZZZZZZZp = 1;
+														local ZZZZZZZZZZZZZZZZZZZZZZZy = 2;
+														local ZZZZZZZZZZZZZZZZZZZZZZZg = 1254;
+														local ZZZZZZZZZZZZZZZZZZZZZZZf = 1324;
+														v71 = v71 + ((ZZZZZZZZZZZZZZZZZZZZZZZf + 66) - (135 + ZZZZZZZZZZZZZZZZZZZZZZZg));
+														v79 = v67[v71];
+														v252 = v79[ZZZZZZZZZZZZZZZZZZZZZZZy];
+														v77[v252] = v77[v252](v13(v77, v252 + ZZZZZZZZZZZZZZZZZZZZZZZp, v79[ZZZZZZZZZZZZZZZZZZZZZZZb - 8]));
+														v71 = v71 + (ZZZZZZZZZZZZZZZZZZZZZZZv - ZZZZZZZZZZZZZZZZZZZZZZZk);
+														v79 = v67[v71];
+														v77[v79[ZZZZZZZZZZZZZZZZZZZZZZZx + ZZZZZZZZZZZZZZZZZZZZZZZj]][v79[(ZZZZZZZZZZZZZZZZZZZZZZZq - 1296) - ((1623 - (885 + ZZZZZZZZZZZZZZZZZZZZZZZz)) + 1138)]] = v77[v79[(ZZZZZZZZZZZZZZZZZZZZZZZE + 118) - ((ZZZZZZZZZZZZZZZZZZZZZZZT - ZZZZZZZZZZZZZZZZZZZZZZZA) + 472)]];
+														v71 = v71 + ZZZZZZZZZZZZZZZZZZZZZZZO + ZZZZZZZZZZZZZZZZZZZZZZZI;
+														v251 = 6 + 4;
+													end
+													if (v251 == (ZZZZZZZZZZZZZZZZZZZZZZZN + 1)) then
+														local ZZZZZZZZZZZZZZZZZZZZZZZF = 56;
+														local ZZZZZZZZZZZZZZZZZZZZZZZW = 157;
+														local ZZZZZZZZZZZZZZZZZZZZZZZM = 0;
+														local ZZZZZZZZZZZZZZZZZZZZZZZU = 1;
+														local ZZZZZZZZZZZZZZZZZZZZZZZC = 1;
+														local ZZZZZZZZZZZZZZZZZZZZZZZL = 3;
+														local ZZZZZZZZZZZZZZZZZZZZZZZD = 915;
+														local ZZZZZZZZZZZZZZZZZZZZZZZR = 1288;
+														local ZZZZZZZZZZZZZZZZZZZZZZZH = 2952;
+														local ZZZZZZZZZZZZZZZZZZZZZZZS = 4499;
+														v79 = v67[v71];
+														v77[v79[(ZZZZZZZZZZZZZZZZZZZZZZZS - ZZZZZZZZZZZZZZZZZZZZZZZH) - ((ZZZZZZZZZZZZZZZZZZZZZZZR - (ZZZZZZZZZZZZZZZZZZZZZZZD + 53)) + 1225)]] = v77[v79[ZZZZZZZZZZZZZZZZZZZZZZZL]];
+														v71 = v71 + (ZZZZZZZZZZZZZZZZZZZZZZZC - 0);
+														v79 = v67[v71];
+														v77[v79[2 - 0]] = v79[3 + 0];
+														v71 = v71 + ZZZZZZZZZZZZZZZZZZZZZZZU + ZZZZZZZZZZZZZZZZZZZZZZZM;
+														v79 = v67[v71];
+														v77[v79[1466 - (ZZZZZZZZZZZZZZZZZZZZZZZW + 1307)]] = v79[1 + 2];
+														v251 = ZZZZZZZZZZZZZZZZZZZZZZZF - 39;
+													end
+													if ((ZZZZZZZZZZZZZZZZZZZZZZZG - (ZZZZZZZZZZZZZZZZZZZZZZZY + 1038)) == v251) then
+														local ZZZZZZZZZZZZZZZZZZZZZZZZr = 448;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZh = 192;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZs = 834;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZn = 1029;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZi = 3;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZo = 5;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZa = 2;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZt = 1;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZe = 2;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZ = 1;
+														local ZZZZZZZZZZZZZZZZZZZZZZZQ = 3;
+														local ZZZZZZZZZZZZZZZZZZZZZZZJ = 29;
+														local ZZZZZZZZZZZZZZZZZZZZZZZX = 2151;
+														local ZZZZZZZZZZZZZZZZZZZZZZZK = 592;
+														local ZZZZZZZZZZZZZZZZZZZZZZZV = 1;
+														local ZZZZZZZZZZZZZZZZZZZZZZZB = 33;
+														local ZZZZZZZZZZZZZZZZZZZZZZZP = 805;
+														v79 = v67[v71];
+														v77[v79[(ZZZZZZZZZZZZZZZZZZZZZZZP - (768 + ZZZZZZZZZZZZZZZZZZZZZZZB)) - 2]] = v77[v79[ZZZZZZZZZZZZZZZZZZZZZZZV + 2]];
+														v71 = v71 + (ZZZZZZZZZZZZZZZZZZZZZZZK - ((ZZZZZZZZZZZZZZZZZZZZZZZX - 1589) + ZZZZZZZZZZZZZZZZZZZZZZZJ));
+														v79 = v67[v71];
+														v77[v79[ZZZZZZZZZZZZZZZZZZZZZZZQ - ZZZZZZZZZZZZZZZZZZZZZZZZ]] = v79[ZZZZZZZZZZZZZZZZZZZZZZZZe + ZZZZZZZZZZZZZZZZZZZZZZZZt];
+														v71 = v71 + (ZZZZZZZZZZZZZZZZZZZZZZZZa - 1);
+														v79 = v67[v71];
+														v77[v79[ZZZZZZZZZZZZZZZZZZZZZZZZo - ZZZZZZZZZZZZZZZZZZZZZZZZi]] = v79[ZZZZZZZZZZZZZZZZZZZZZZZZn - (ZZZZZZZZZZZZZZZZZZZZZZZZs + ZZZZZZZZZZZZZZZZZZZZZZZZh)];
+														v251 = 645 - (ZZZZZZZZZZZZZZZZZZZZZZZZr + 190);
+													end
+													if (v251 == (ZZZZZZZZZZZZZZZZZZZZZZZZd + 21)) then
+														local ZZZZZZZZZZZZZZZZZZZZZZZZb = 287;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZp = 250;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZy = 112;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZg = 363;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZf = 187;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZw = 1;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZm = 305;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZu = 4;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZc = 1;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZl = 1;
+														v71 = v71 + 1 + 0;
+														v79 = v67[v71];
+														v252 = v79[ZZZZZZZZZZZZZZZZZZZZZZZZl + ZZZZZZZZZZZZZZZZZZZZZZZZc];
+														v77[v252] = v77[v252](v13(v77, v252 + 1, v79[ZZZZZZZZZZZZZZZZZZZZZZZZu - 1]));
+														v71 = v71 + (ZZZZZZZZZZZZZZZZZZZZZZZZm - (300 + 4));
+														v79 = v67[v71];
+														v77[v79[1 + (ZZZZZZZZZZZZZZZZZZZZZZZZw - 0)]][v79[7 - 4]] = v77[v79[1498 - (1307 + ZZZZZZZZZZZZZZZZZZZZZZZZf)]];
+														v71 = v71 + (ZZZZZZZZZZZZZZZZZZZZZZZZg - (ZZZZZZZZZZZZZZZZZZZZZZZZy + ZZZZZZZZZZZZZZZZZZZZZZZZp));
+														v251 = 352 - (ZZZZZZZZZZZZZZZZZZZZZZZZb + 41);
+													end
+													if ((ZZZZZZZZZZZZZZZZZZZZZZZZv + ZZZZZZZZZZZZZZZZZZZZZZZZk) == v251) then
+														local ZZZZZZZZZZZZZZZZZZZZZZZZU = 0;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZC = 1;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZL = 1;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZD = 2;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZR = 1;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZH = 3;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZS = 565;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZN = 3;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZI = 0;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZO = 0;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZA = 2;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZT = 4;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZE = 7;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZz = 3;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZq = 638;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZj = 852;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZx = nil;
+														v252 = ZZZZZZZZZZZZZZZZZZZZZZZZx;
+														v77[v79[(ZZZZZZZZZZZZZZZZZZZZZZZZj - (ZZZZZZZZZZZZZZZZZZZZZZZZq + 209)) - ZZZZZZZZZZZZZZZZZZZZZZZZz]] = v77[v79[ZZZZZZZZZZZZZZZZZZZZZZZZE - ZZZZZZZZZZZZZZZZZZZZZZZZT]];
+														v71 = v71 + 1 + 0;
+														v79 = v67[v71];
+														v77[v79[ZZZZZZZZZZZZZZZZZZZZZZZZA + ZZZZZZZZZZZZZZZZZZZZZZZZO + ZZZZZZZZZZZZZZZZZZZZZZZZI]] = v79[ZZZZZZZZZZZZZZZZZZZZZZZZN + 0];
+														v71 = v71 + (ZZZZZZZZZZZZZZZZZZZZZZZZS - (510 + 54));
+														v79 = v67[v71];
+														v77[v79[ZZZZZZZZZZZZZZZZZZZZZZZZH - ZZZZZZZZZZZZZZZZZZZZZZZZR]] = v79[ZZZZZZZZZZZZZZZZZZZZZZZZD + ZZZZZZZZZZZZZZZZZZZZZZZZL];
+														v251 = ZZZZZZZZZZZZZZZZZZZZZZZZC + ZZZZZZZZZZZZZZZZZZZZZZZZU;
+													end
+													if (v251 == (ZZZZZZZZZZZZZZZZZZZZZZZZM - 10)) then
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZh = 344;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZs = 373;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZn = 730;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZi = 0;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZo = 1;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZa = 90;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZt = 603;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZe = 29;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZ = 66;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZQ = 1159;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZJ = 1786;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZX = 695;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZK = 324;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZV = 314;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZB = 2555;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZP = 1590;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZY = 96;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZG = 413;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZF = 1001;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZW = 1416;
+														v79 = v67[v71];
+														v77[v79[ZZZZZZZZZZZZZZZZZZZZZZZZW - (ZZZZZZZZZZZZZZZZZZZZZZZZF + ZZZZZZZZZZZZZZZZZZZZZZZZG)]] = v77[v79[(1692 - (ZZZZZZZZZZZZZZZZZZZZZZZZY + ZZZZZZZZZZZZZZZZZZZZZZZZP)) - 3]];
+														v71 = v71 + ((ZZZZZZZZZZZZZZZZZZZZZZZZB - (741 + 931)) - (244 + ZZZZZZZZZZZZZZZZZZZZZZZZV + ZZZZZZZZZZZZZZZZZZZZZZZZK));
+														v79 = v67[v71];
+														v77[v79[ZZZZZZZZZZZZZZZZZZZZZZZZX - ((ZZZZZZZZZZZZZZZZZZZZZZZZJ - ZZZZZZZZZZZZZZZZZZZZZZZZQ) + ZZZZZZZZZZZZZZZZZZZZZZZZZ)]] = v79[(37 - ZZZZZZZZZZZZZZZZZZZZZZZZZe) - 5];
+														v71 = v71 + (ZZZZZZZZZZZZZZZZZZZZZZZZZt - (512 + ZZZZZZZZZZZZZZZZZZZZZZZZZa));
+														v79 = v67[v71];
+														v77[v79[1 + ZZZZZZZZZZZZZZZZZZZZZZZZZo + ZZZZZZZZZZZZZZZZZZZZZZZZZi]] = v79[1909 - (1665 + 241)];
+														v251 = ZZZZZZZZZZZZZZZZZZZZZZZZZn - (ZZZZZZZZZZZZZZZZZZZZZZZZZs + ZZZZZZZZZZZZZZZZZZZZZZZZZh);
+													end
+													if ((ZZZZZZZZZZZZZZZZZZZZZZZZZr <= 1870) and (v251 == (2 + 1))) then
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZv = 1;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZb = 1;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZp = 1;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZy = 1064;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZg = 1102;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZf = 5;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZw = 1;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZm = 4;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZu = 3;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZc = 138;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZl = 0;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZd = 1;
+														v71 = v71 + ZZZZZZZZZZZZZZZZZZZZZZZZZd + ZZZZZZZZZZZZZZZZZZZZZZZZZl;
+														v79 = v67[v71];
+														v252 = v79[(105 + ZZZZZZZZZZZZZZZZZZZZZZZZZc) - (237 + 4)];
+														v77[v252] = v77[v252](v13(v77, v252 + 1, v79[(ZZZZZZZZZZZZZZZZZZZZZZZZZu + ZZZZZZZZZZZZZZZZZZZZZZZZZm) - 4]));
+														v71 = v71 + (ZZZZZZZZZZZZZZZZZZZZZZZZZw - 0);
+														v79 = v67[v71];
+														v77[v79[7 - ZZZZZZZZZZZZZZZZZZZZZZZZZf]][v79[ZZZZZZZZZZZZZZZZZZZZZZZZZg - (35 + ZZZZZZZZZZZZZZZZZZZZZZZZZy)]] = v77[v79[3 + ZZZZZZZZZZZZZZZZZZZZZZZZZp]];
+														v71 = v71 + ((1 + ZZZZZZZZZZZZZZZZZZZZZZZZZb) - ZZZZZZZZZZZZZZZZZZZZZZZZZv);
+														v251 = 4;
+													end
+													if (v251 == (1 + ZZZZZZZZZZZZZZZZZZZZZZZZZk)) then
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZF = 327;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZW = 45;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZM = 39;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZU = 347;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZC = 1;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZL = 2;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZD = 6;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZR = 1341;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZH = 85;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZS = 1429;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZN = 0;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZI = 1030;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZO = 636;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZA = 1026;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZT = 233;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZE = 1260;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZz = 938;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZq = 152;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZj = 1238;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZx = 1;
+														v71 = v71 + ZZZZZZZZZZZZZZZZZZZZZZZZZx + 0;
+														v79 = v67[v71];
+														v252 = v79[ZZZZZZZZZZZZZZZZZZZZZZZZZj - (146 + ZZZZZZZZZZZZZZZZZZZZZZZZZq + ZZZZZZZZZZZZZZZZZZZZZZZZZz)];
+														v77[v252] = v77[v252](v13(v77, v252 + (ZZZZZZZZZZZZZZZZZZZZZZZZZE - (ZZZZZZZZZZZZZZZZZZZZZZZZZT + ZZZZZZZZZZZZZZZZZZZZZZZZZA)), v79[1669 - (ZZZZZZZZZZZZZZZZZZZZZZZZZO + ZZZZZZZZZZZZZZZZZZZZZZZZZI)]));
+														v71 = v71 + 1 + ZZZZZZZZZZZZZZZZZZZZZZZZZN;
+														v79 = v67[v71];
+														v77[v79[2]][v79[ZZZZZZZZZZZZZZZZZZZZZZZZZS - (ZZZZZZZZZZZZZZZZZZZZZZZZZH + ZZZZZZZZZZZZZZZZZZZZZZZZZR)]] = v77[v79[ZZZZZZZZZZZZZZZZZZZZZZZZZD - ZZZZZZZZZZZZZZZZZZZZZZZZZL]];
+														v71 = v71 + ZZZZZZZZZZZZZZZZZZZZZZZZZC + (0 - 0);
+														v251 = (ZZZZZZZZZZZZZZZZZZZZZZZZZU + ZZZZZZZZZZZZZZZZZZZZZZZZZM) - (ZZZZZZZZZZZZZZZZZZZZZZZZZW + ZZZZZZZZZZZZZZZZZZZZZZZZZF);
+													end
+													if (v251 == (6 + 11)) then
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZt = 49;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZe = 1;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZ = 106;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZQ = 1;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZJ = 1;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZX = 2;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZK = 55;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZV = 221;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZB = 1;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZP = 64;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZY = 495;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZG = 1;
+														v71 = v71 + (ZZZZZZZZZZZZZZZZZZZZZZZZZG - 0);
+														v79 = v67[v71];
+														v252 = v79[(ZZZZZZZZZZZZZZZZZZZZZZZZZY - (ZZZZZZZZZZZZZZZZZZZZZZZZZP + 430)) + ZZZZZZZZZZZZZZZZZZZZZZZZZB];
+														v77[v252] = v77[v252](v13(v77, v252 + ((ZZZZZZZZZZZZZZZZZZZZZZZZZV + 1) - (ZZZZZZZZZZZZZZZZZZZZZZZZZK + 166)), v79[1 + ZZZZZZZZZZZZZZZZZZZZZZZZZX]));
+														v71 = v71 + ZZZZZZZZZZZZZZZZZZZZZZZZZJ + 0;
+														v79 = v67[v71];
+														v77[v79[1 + ZZZZZZZZZZZZZZZZZZZZZZZZZQ]][v79[3]] = v77[v79[11 - (370 - (ZZZZZZZZZZZZZZZZZZZZZZZZZZ + 257))]];
+														v71 = v71 + ZZZZZZZZZZZZZZZZZZZZZZZZZZe + 0;
+														v251 = (ZZZZZZZZZZZZZZZZZZZZZZZZZZt + 19) - 50;
+													end
+													if (v251 == (ZZZZZZZZZZZZZZZZZZZZZZZZZZa - (ZZZZZZZZZZZZZZZZZZZZZZZZZZo + 261))) then
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZw = 1;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZm = 0;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZu = 1;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZc = 225;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZl = 496;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZd = 0;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZr = 1;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZh = 1;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZs = 34;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZn = 1369;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZi = 1;
+														v71 = v71 + (2 - ZZZZZZZZZZZZZZZZZZZZZZZZZZi);
+														v79 = v67[v71];
+														v252 = v79[3 - 1];
+														v77[v252] = v77[v252](v13(v77, v252 + (ZZZZZZZZZZZZZZZZZZZZZZZZZZn - (ZZZZZZZZZZZZZZZZZZZZZZZZZZs + 1334)), v79[ZZZZZZZZZZZZZZZZZZZZZZZZZZh + 2]));
+														v71 = v71 + ZZZZZZZZZZZZZZZZZZZZZZZZZZr + 0;
+														v79 = v67[v71];
+														v77[v79[2 + ZZZZZZZZZZZZZZZZZZZZZZZZZZd]][v79[1286 - (1035 + 248)]] = v77[v79[(746 - (ZZZZZZZZZZZZZZZZZZZZZZZZZZl + ZZZZZZZZZZZZZZZZZZZZZZZZZZc)) - (20 + (ZZZZZZZZZZZZZZZZZZZZZZZZZZu - ZZZZZZZZZZZZZZZZZZZZZZZZZZm))]];
+														v71 = v71 + ZZZZZZZZZZZZZZZZZZZZZZZZZZw + 0;
+														v251 = 8 + 8;
+													end
+													if ((3889 == 3889) and (v251 == (343 - (ZZZZZZZZZZZZZZZZZZZZZZZZZZf + 185)))) then
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZS = 1156;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZN = 213;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZI = 1449;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZO = 786;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZA = 1175;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZT = 30;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZE = 1899;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZz = 1;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZq = 971;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZj = 4;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZx = 1865;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZk = 371;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZv = 314;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZb = 1402;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZp = 584;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZy = 2125;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZg = 2674;
+														v79 = v67[v71];
+														v77[v79[1135 - ((ZZZZZZZZZZZZZZZZZZZZZZZZZZg - ZZZZZZZZZZZZZZZZZZZZZZZZZZy) + ZZZZZZZZZZZZZZZZZZZZZZZZZZp)]] = v77[v79[(2346 - (256 + ZZZZZZZZZZZZZZZZZZZZZZZZZZb)) - (ZZZZZZZZZZZZZZZZZZZZZZZZZZv + ZZZZZZZZZZZZZZZZZZZZZZZZZZk)]];
+														v71 = v71 + (ZZZZZZZZZZZZZZZZZZZZZZZZZZx - (1710 + 154));
+														v79 = v67[v71];
+														v77[v79[6 - ZZZZZZZZZZZZZZZZZZZZZZZZZZj]] = v79[ZZZZZZZZZZZZZZZZZZZZZZZZZZq - (478 + 490)];
+														v71 = v71 + ZZZZZZZZZZZZZZZZZZZZZZZZZZz + (ZZZZZZZZZZZZZZZZZZZZZZZZZZE - (ZZZZZZZZZZZZZZZZZZZZZZZZZZT + 1869));
+														v79 = v67[v71];
+														v77[v79[2 + 0]] = v79[ZZZZZZZZZZZZZZZZZZZZZZZZZZA - (ZZZZZZZZZZZZZZZZZZZZZZZZZZO + 386)];
+														v251 = (ZZZZZZZZZZZZZZZZZZZZZZZZZZI - (ZZZZZZZZZZZZZZZZZZZZZZZZZZN + ZZZZZZZZZZZZZZZZZZZZZZZZZZS)) - 55;
+													end
+													if ((1411 < ZZZZZZZZZZZZZZZZZZZZZZZZZZH) and (v251 == (ZZZZZZZZZZZZZZZZZZZZZZZZZZR + ZZZZZZZZZZZZZZZZZZZZZZZZZZD))) then
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZJ = 7;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZX = 18;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZK = 9;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZV = 5;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZB = 5;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZP = 1;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZY = 92;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZG = 0;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZF = 2;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZW = 247;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZM = 1093;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZU = 324;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZC = 1055;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZL = 1382;
+														v79 = v67[v71];
+														v77[v79[2]] = v77[v79[ZZZZZZZZZZZZZZZZZZZZZZZZZZL - (ZZZZZZZZZZZZZZZZZZZZZZZZZZC + ZZZZZZZZZZZZZZZZZZZZZZZZZZU)]];
+														v71 = v71 + (1341 - (ZZZZZZZZZZZZZZZZZZZZZZZZZZM + ZZZZZZZZZZZZZZZZZZZZZZZZZZW));
+														v79 = v67[v71];
+														v77[v79[ZZZZZZZZZZZZZZZZZZZZZZZZZZF + ZZZZZZZZZZZZZZZZZZZZZZZZZZG]] = v79[1 + (190 - (96 + ZZZZZZZZZZZZZZZZZZZZZZZZZZY))];
+														v71 = v71 + ZZZZZZZZZZZZZZZZZZZZZZZZZZP;
+														v79 = v67[v71];
+														v77[v79[(2 + ZZZZZZZZZZZZZZZZZZZZZZZZZZB) - ZZZZZZZZZZZZZZZZZZZZZZZZZZV]] = v79[ZZZZZZZZZZZZZZZZZZZZZZZZZZK - 6];
+														v251 = ZZZZZZZZZZZZZZZZZZZZZZZZZZX - ZZZZZZZZZZZZZZZZZZZZZZZZZZJ;
+													end
+												end
+											end
+										end
+									else
+										local ZZZZZZZZZZZZZZZZZZZZZZZZZZQ = 68;
+										if ((4771 == 4771) and (v80 <= (105 - ZZZZZZZZZZZZZZZZZZZZZZZZZZQ))) then
+											local ZZZZZZZZZZZZZZZZZZZZZZZZZZZe = 757;
+											local ZZZZZZZZZZZZZZZZZZZZZZZZZZZ = 6;
+											if (v80 == (ZZZZZZZZZZZZZZZZZZZZZZZZZZZ + (929 - (142 + ZZZZZZZZZZZZZZZZZZZZZZZZZZZe)))) then
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZf = 0;
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZw = 6;
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZm = 8;
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZu = 2;
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZc = 4;
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZl = 7;
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZd = 690;
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZr = 80;
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZh = 0;
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZs = 2;
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZn = 8;
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZi = 11;
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZo = 1;
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZa = 1;
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZt = 2;
+												local v253;
+												local v254;
+												local v255;
+												v77[v79[4 - ZZZZZZZZZZZZZZZZZZZZZZZZZZZt]] = {};
+												v71 = v71 + 1 + 0;
+												v79 = v67[v71];
+												v77[v79[ZZZZZZZZZZZZZZZZZZZZZZZZZZZa + ZZZZZZZZZZZZZZZZZZZZZZZZZZZo]] = v79[ZZZZZZZZZZZZZZZZZZZZZZZZZZZi - ZZZZZZZZZZZZZZZZZZZZZZZZZZZn];
+												v71 = v71 + (3 - ZZZZZZZZZZZZZZZZZZZZZZZZZZZs);
+												v79 = v67[v71];
+												v77[v79[2 + ZZZZZZZZZZZZZZZZZZZZZZZZZZZh + 0]] = #v77[v79[3]];
+												v71 = v71 + ((1 + 1) - (ZZZZZZZZZZZZZZZZZZZZZZZZZZZr - (32 + 47)));
+												v79 = v67[v71];
+												v77[v79[ZZZZZZZZZZZZZZZZZZZZZZZZZZZd - (364 + 324)]] = v79[ZZZZZZZZZZZZZZZZZZZZZZZZZZZl - ZZZZZZZZZZZZZZZZZZZZZZZZZZZc];
+												v71 = v71 + (ZZZZZZZZZZZZZZZZZZZZZZZZZZZu - 1);
+												v79 = v67[v71];
+												v255 = v79[1 + 1];
+												v254 = v77[v255];
+												v253 = v77[v255 + (ZZZZZZZZZZZZZZZZZZZZZZZZZZZm - ZZZZZZZZZZZZZZZZZZZZZZZZZZZw)];
+												if (v253 > (0 - ZZZZZZZZZZZZZZZZZZZZZZZZZZZf)) then
+													local ZZZZZZZZZZZZZZZZZZZZZZZZZZZy = 2345;
+													local ZZZZZZZZZZZZZZZZZZZZZZZZZZZg = 98;
+													if ((v254 > v77[v255 + (1502 - (251 + 1250))]) or (ZZZZZZZZZZZZZZZZZZZZZZZZZZZg >= ZZZZZZZZZZZZZZZZZZZZZZZZZZZy)) then
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZp = 5;
+														v71 = v79[8 - ZZZZZZZZZZZZZZZZZZZZZZZZZZZp];
+													else
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZx = 924;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZk = 1053;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZv = 1996;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZb = 1249;
+														v77[v255 + (1271 - (ZZZZZZZZZZZZZZZZZZZZZZZZZZZb + (ZZZZZZZZZZZZZZZZZZZZZZZZZZZv - (ZZZZZZZZZZZZZZZZZZZZZZZZZZZk + ZZZZZZZZZZZZZZZZZZZZZZZZZZZx))))] = v254;
+													end
+												else
+													local ZZZZZZZZZZZZZZZZZZZZZZZZZZZj = 1;
+													if (v254 < v77[v255 + ZZZZZZZZZZZZZZZZZZZZZZZZZZZj + 0]) then
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZz = 8;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZq = 11;
+														v71 = v79[ZZZZZZZZZZZZZZZZZZZZZZZZZZZq - ZZZZZZZZZZZZZZZZZZZZZZZZZZZz];
+													else
+														v77[v255 + (1089 - (686 + 400))] = v254;
+													end
+												end
+											else
+												v77[v79[2 + 0]] = v61[v79[3 - 0]];
+											end
+										else
+											local ZZZZZZZZZZZZZZZZZZZZZZZZZZZE = 5;
+											if (v80 == ((262 + ZZZZZZZZZZZZZZZZZZZZZZZZZZZE) - (73 + 156))) then
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZH = 90;
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZS = 721;
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZN = 815;
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZI = 2;
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZO = 1;
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZA = 4;
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZT = 6;
+												v77[v79[ZZZZZZZZZZZZZZZZZZZZZZZZZZZT - ZZZZZZZZZZZZZZZZZZZZZZZZZZZA]] = v77[v79[(ZZZZZZZZZZZZZZZZZZZZZZZZZZZO - 0) + ZZZZZZZZZZZZZZZZZZZZZZZZZZZI]] % v77[v79[ZZZZZZZZZZZZZZZZZZZZZZZZZZZN - (ZZZZZZZZZZZZZZZZZZZZZZZZZZZS + ZZZZZZZZZZZZZZZZZZZZZZZZZZZH)]];
+											else
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZU = 9;
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZC = 1;
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZL = 963;
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZD = 685;
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZR = 1649;
+												for v389 = v79[(ZZZZZZZZZZZZZZZZZZZZZZZZZZZR - (ZZZZZZZZZZZZZZZZZZZZZZZZZZZD + ZZZZZZZZZZZZZZZZZZZZZZZZZZZL)) + ZZZZZZZZZZZZZZZZZZZZZZZZZZZC], v79[ZZZZZZZZZZZZZZZZZZZZZZZZZZZU - 6] do
+													local ZZZZZZZZZZZZZZZZZZZZZZZZZZZM = nil;
+													v77[v389] = ZZZZZZZZZZZZZZZZZZZZZZZZZZZM;
+												end
+											end
+										end
+									end
+								end
+							else
+								local ZZZZZZZZZZZZZZZZZZZZZZZZZZZY = 224;
+								local ZZZZZZZZZZZZZZZZZZZZZZZZZZZG = 533;
+								local ZZZZZZZZZZZZZZZZZZZZZZZZZZZF = 1049;
+								local ZZZZZZZZZZZZZZZZZZZZZZZZZZZW = 1243;
+								if ((4297 > ZZZZZZZZZZZZZZZZZZZZZZZZZZZW) and (v80 <= ((ZZZZZZZZZZZZZZZZZZZZZZZZZZZF - ZZZZZZZZZZZZZZZZZZZZZZZZZZZG) - (ZZZZZZZZZZZZZZZZZZZZZZZZZZZY + 246)))) then
+									local ZZZZZZZZZZZZZZZZZZZZZZZZZZZP = 67;
+									if (v80 <= (ZZZZZZZZZZZZZZZZZZZZZZZZZZZP - 25)) then
+										local ZZZZZZZZZZZZZZZZZZZZZZZZZZZK = 76;
+										local ZZZZZZZZZZZZZZZZZZZZZZZZZZZV = 116;
+										local ZZZZZZZZZZZZZZZZZZZZZZZZZZZB = 167;
+										if ((ZZZZZZZZZZZZZZZZZZZZZZZZZZZB <= 4460) and (v80 <= (ZZZZZZZZZZZZZZZZZZZZZZZZZZZV - ZZZZZZZZZZZZZZZZZZZZZZZZZZZK))) then
+											local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZa = 3812;
+											local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZt = 1712;
+											local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZe = 0;
+											local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZ = 1;
+											local ZZZZZZZZZZZZZZZZZZZZZZZZZZZQ = 0;
+											local ZZZZZZZZZZZZZZZZZZZZZZZZZZZJ = 1;
+											local ZZZZZZZZZZZZZZZZZZZZZZZZZZZX = 3;
+											local v139 = v79[ZZZZZZZZZZZZZZZZZZZZZZZZZZZX - ZZZZZZZZZZZZZZZZZZZZZZZZZZZJ];
+											local v140 = v79[3 + 1];
+											local v141 = v139 + (1 - ZZZZZZZZZZZZZZZZZZZZZZZZZZZQ) + 1;
+											local v142 = {v77[v139](v77[v139 + 1 + 0], v77[v141])};
+											for v154 = 1 + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZe, v140 do
+												v77[v141 + v154] = v142[v154];
+											end
+											local v143 = v142[(ZZZZZZZZZZZZZZZZZZZZZZZZZZZZt - (541 + 1168)) - 2];
+											if (v143 or (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZa < 3081)) then
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZi = 0;
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZo = 3;
+												v77[v141] = v143;
+												v71 = v79[ZZZZZZZZZZZZZZZZZZZZZZZZZZZZo + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZi];
+											else
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZs = 0;
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZn = 1;
+												v71 = v71 + (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZn - ZZZZZZZZZZZZZZZZZZZZZZZZZZZZs);
+											end
+										else
+											local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZl = 3611;
+											local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZd = 95;
+											local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZr = 952;
+											local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZh = 1733;
+											if ((v80 > ((ZZZZZZZZZZZZZZZZZZZZZZZZZZZZh - (645 + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZr)) - ZZZZZZZZZZZZZZZZZZZZZZZZZZZZd)) or (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZl > 4881)) then
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZf = true;
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZw = 169;
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZm = 1148;
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZu = 203;
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZc = 513;
+												local v271 = ZZZZZZZZZZZZZZZZZZZZZZZZZZZZc - (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZu + (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZm - (669 + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZw)));
+												local v272;
+												local v273;
+												while ZZZZZZZZZZZZZZZZZZZZZZZZZZZZf do
+													local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZy = 755;
+													local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZg = 1238;
+													if (v271 == (1993 - (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZg + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZy))) then
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZv = 0;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZb = 0;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZp = 98;
+														v272 = v79[91 - ((138 - ZZZZZZZZZZZZZZZZZZZZZZZZZZZZp) + 49)];
+														v273 = {};
+														v271 = (1 - ZZZZZZZZZZZZZZZZZZZZZZZZZZZZb) + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZv;
+													end
+													if (v271 == 1) then
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZq = 546;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZj = 279;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZx = 709;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZk = 1535;
+														for v736 = ZZZZZZZZZZZZZZZZZZZZZZZZZZZZk - (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZx + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZj + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZq), #v76 do
+															local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZz = 0;
+															local v737 = v76[v736];
+															for v744 = ZZZZZZZZZZZZZZZZZZZZZZZZZZZZz - (0 + 0), #v737 do
+																local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZT = 0;
+																local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZE = 0;
+																local v745 = ZZZZZZZZZZZZZZZZZZZZZZZZZZZZE - ZZZZZZZZZZZZZZZZZZZZZZZZZZZZT;
+																local v746;
+																local v747;
+																local v748;
+																while true do
+																	local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZU = 0;
+																	local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZC = 0;
+																	local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZN = 665;
+																	local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZI = 2063;
+																	local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZO = 584;
+																	local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZA = 865;
+																	if (v745 == (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZA - ((961 - (181 + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZO)) + (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZI - (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZN + 730))))) then
+																		local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZS = 5;
+																		v748 = v746[7 - ZZZZZZZZZZZZZZZZZZZZZZZZZZZZS];
+																		if ((2187 < 3817) and (v747 == v77) and (v748 >= v272)) then
+																			local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZH = 0;
+																			local v773 = ZZZZZZZZZZZZZZZZZZZZZZZZZZZZH - 0;
+																			while true do
+																				local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZD = 662;
+																				local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZR = 833;
+																				if (v773 == (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZR - (171 + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZD))) then
+																					local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZL = 94;
+																					v273[v748] = v747[v748];
+																					v746[ZZZZZZZZZZZZZZZZZZZZZZZZZZZZL - (4 + 89)] = v273;
+																					break;
+																				end
+																			end
+																		end
+																		break;
+																	end
+																	if (v745 == (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZC - (0 - ZZZZZZZZZZZZZZZZZZZZZZZZZZZZU))) then
+																		local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZW = 4;
+																		local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZM = 1;
+																		v746 = v737[v744];
+																		v747 = v746[ZZZZZZZZZZZZZZZZZZZZZZZZZZZZM + 0];
+																		v745 = ZZZZZZZZZZZZZZZZZZZZZZZZZZZZW - 3;
+																	end
+																end
+															end
+														end
+														break;
+													end
+												end
+											else
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZG = true;
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZF = 0;
+												local v274 = 0 + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZF;
+												local v275;
+												while ZZZZZZZZZZZZZZZZZZZZZZZZZZZZG do
+													local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZP = 1451;
+													local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZY = 35;
+													if (v274 == (1486 - (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZY + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZP))) then
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZV = 1454;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZB = 2;
+														v275 = v79[ZZZZZZZZZZZZZZZZZZZZZZZZZZZZB];
+														v77[v275] = v77[v275](v13(v77, v275 + (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZV - (28 + 1425)), v72));
+														break;
+													end
+												end
+											end
+										end
+									else
+										local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZK = 44;
+										if (v80 <= ZZZZZZZZZZZZZZZZZZZZZZZZZZZZK) then
+											local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZX = 428;
+											if ((ZZZZZZZZZZZZZZZZZZZZZZZZZZZZX <= 985) and (v80 == (59 - 16))) then
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZJ = 1052;
+												local v276 = 1993 - (941 + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZJ);
+												while true do
+													local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZd = 122;
+													local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZY = 328;
+													local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZG = 518;
+													local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZI = 0;
+													local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZv = 6;
+													local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZr = 2;
+													local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ = 0;
+													local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZQ = 0;
+													if (v276 == ((0 - ZZZZZZZZZZZZZZZZZZZZZZZZZZZZQ) + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ)) then
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZh = 1;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZs = 45;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZn = 1191;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZi = 2;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZo = 3;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZa = 692;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZt = 822;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZe = 810;
+														v77[v79[(2866 - (540 + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZe)) - (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZt + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZa)]] = v77[v79[ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZo - 0]][v79[ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZi + 2]];
+														v71 = v71 + ((ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZn - 893) - (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZs + 252));
+														v79 = v67[v71];
+														v276 = ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZh + 0;
+													end
+													if (v276 == (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZr + 2)) then
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZm = 3;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZu = 222;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZc = 4;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZl = 7;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZd = 2;
+														v77[v79[ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZd]] = v77[v79[ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZl - ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZc]][v79[563 - (432 + (349 - ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZu))]];
+														v71 = v71 + (434 - (114 + 319));
+														v79 = v67[v71];
+														v276 = ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZm + 2;
+													end
+													if (v276 == (2 - 0)) then
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZb = 3;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZp = 0;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZy = 1;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZg = 1;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZf = 0;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZw = 2;
+														v77[v79[ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZw - ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZf]] = v77[v79[2 + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZg]][v79[5 - ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZy]];
+														v71 = v71 + (1 - ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZp);
+														v79 = v67[v71];
+														v276 = ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZb;
+													end
+													if (v276 == ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZv) then
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZO = 295;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZA = 170;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZT = 472;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZE = 465;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZz = 1410;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZq = 1407;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZj = 556;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZx = 1966;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZk = 2;
+														v77[v79[(ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZk + 0) - 0]] = v77[v79[ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZx - (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZj + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZq)]][v79[8 - 4]];
+														v71 = v71 + ((ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZz - (166 + 37)) - (741 + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZE));
+														v79 = v67[v71];
+														v276 = ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZT - (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZA + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZO);
+													end
+													if ((2952 >= 1023) and (v276 == ((1882 - (22 + 1859)) + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZI))) then
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZC = 0;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZL = 929;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZD = 843;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZR = 1983;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZH = 533;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZS = 4;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZN = 7;
+														v77[v79[2 + 0]] = v77[v79[ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZN - ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZS]][v79[ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZH - (318 + (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZR - (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZD + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZL)))]];
+														v71 = v71 + 1 + 0;
+														v79 = v67[v71];
+														v276 = 2 + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZC;
+													end
+													if (v276 == (6 + 3)) then
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZF = 957;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZW = 232;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZM = 30;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZU = 7;
+														v77[v79[9 - ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZU]] = v77[v79[(1495 - (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZM + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZW)) - (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZF + 273)]][v79[2 + 2]];
+														break;
+													end
+													if ((554 <= 3482) and (v276 == (854 - (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZG + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZY)))) then
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZX = 18;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZK = 1;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZV = 2;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZB = 2;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZP = 15;
+														v77[v79[1 + 1]] = v77[v79[2 + 1]][v79[ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZP - 11]];
+														v71 = v71 + (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZB - (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZV - ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZK));
+														v79 = v67[v71];
+														v276 = 27 - ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZX;
+													end
+													if ((74 <= 3533) and (v276 == (14 - 11))) then
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZa = 168;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZt = 1;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZe = 722;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ = 55;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZQ = 780;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZJ = 1;
+														v77[v79[1782 - (389 + 1391)]] = v77[v79[2 + 1]][v79[ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZJ + (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZQ - (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZe))]];
+														v71 = v71 + (2 - ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZt);
+														v79 = v67[v71];
+														v276 = 955 - (783 + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZa);
+													end
+													if (v276 == (16 - 11)) then
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZr = 18;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZh = 309;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZs = 315;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZn = 0;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZi = 3;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZo = 1;
+														v77[v79[ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZo + 1]] = v77[v79[ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZi + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZn]][v79[ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZs - (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZh + 2)]];
+														v71 = v71 + (1 - 0);
+														v79 = v67[v71];
+														v276 = ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZr - 12;
+													end
+													if (v276 == (1219 - (1090 + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZd))) then
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZp = 382;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZy = 628;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZg = 1126;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZf = 1;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZw = 6;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZm = 9;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZu = 1;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZc = 78;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZl = 1676;
+														v77[v79[(ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZl - (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZc + 1597)) + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZu]] = v77[v79[ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZm - ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZw]][v79[14 - 10]];
+														v71 = v71 + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZf + 0;
+														v79 = v67[v71];
+														v276 = ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZg - (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZy + 108 + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZp);
+													end
+												end
+											else
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZv = true;
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZb = 0;
+												local v277 = ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZb + 0 + 0;
+												local v278;
+												local v279;
+												local v280;
+												while ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZv do
+													local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZz = 0;
+													if (v277 == (0 - 0)) then
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZq = 343;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZj = 431;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZx = 1;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZk = 6;
+														v278 = v79[9 - (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZk + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZx)];
+														v279 = v77[v278];
+														v277 = 775 - (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZj + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZq);
+													end
+													if (v277 == (1 - ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZz)) then
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZA = 0;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZT = 3;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZE = 5;
+														v280 = v77[v278 + (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZE - ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZT)];
+														if (v280 > (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZA + (549 - (305 + 244)))) then
+															local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZO = 520;
+															if (v279 > v77[v278 + (614 - (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZO + 93))]) then
+																local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZS = 2;
+																local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZN = 0;
+																local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZI = 1;
+																v71 = v79[ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZI + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZN + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZS];
+															else
+																local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZD = 1139;
+																local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZR = 556;
+																local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZH = 1698;
+																v77[v278 + (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZH - (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZR + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZD))] = v279;
+															end
+														else
+															local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZC = 9;
+															local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZL = 6;
+															if (v279 < v77[v278 + (16 - (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZL + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZC))]) then
+																local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZW = 95;
+																local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZM = 112;
+																local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZU = 10;
+																v71 = v79[ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZU - (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZM - (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZW + 10))];
+															else
+																local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZG = 396;
+																local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZF = 421;
+																v77[v278 + ((ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZF + 173) - (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZG + 195))] = v279;
+															end
+														end
+														break;
+													end
+												end
+											end
+										else
+											local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZB = 184;
+											local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZP = 269;
+											local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZY = 130;
+											if (v80 == (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZY - (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZP - ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZB))) then
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZX = 1;
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZK = 3;
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZV = 1;
+												if (v77[v79[1 + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZV]] == v77[v79[ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZK + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZX]]) then
+													local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZJ = 1;
+													v71 = v71 + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZJ;
+												else
+													v71 = v79[172 - (28 + 141)];
+												end
+											else
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ = 0;
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZQ = 0;
+												local v281 = ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZQ + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ;
+												local v282;
+												while true do
+													local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZe = 3319;
+													if ((1657 < ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZe) and (v281 == (545 - (424 + 121)))) then
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZo = 706;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZa = 0;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZt = 2;
+														v282 = v79[ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZt - ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZa];
+														v77[v282] = v77[v282](v77[v282 + (1348 - (641 + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZo))]);
+														break;
+													end
+												end
+											end
+										end
+									end
+								elseif (v80 <= (35 + 14)) then
+									local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZn = 1003;
+									local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZi = 28;
+									if ((v80 <= (19 + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZi)) or (1616 == ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZn)) then
+										local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZc = 2;
+										local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZl = 3;
+										local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZd = 2;
+										local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZr = 178;
+										local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZh = 664;
+										local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZs = 1319;
+										local v144 = v79[ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZs - ((ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZh - ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZr) + 831)];
+										local v145, v146 = v70(v77[v144](v13(v77, v144 + (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZd - 1), v72)));
+										v72 = (v146 + v144) - (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZl - ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZc);
+										local v147 = 0 + 0;
+										for v157 = v144, v72 do
+											v147 = v147 + (3 - 2);
+											v77[v157] = v145[v147];
+										end
+									else
+										local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZm = 595;
+										local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZu = 668;
+										if (v80 > (1311 - (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZu + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZm))) then
+											local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZH = 7;
+											local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZS = 1;
+											local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZN = 3;
+											local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZI = 424;
+											local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZO = 1751;
+											local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZA = 16;
+											local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZT = 371;
+											local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZE = 389;
+											local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZz = 1;
+											local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZq = 2;
+											local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZj = 815;
+											local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZx = 1947;
+											local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZk = 267;
+											local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZv = 2;
+											local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZb = 0;
+											local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZp = 2;
+											local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZy = 513;
+											local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZg = 1;
+											local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZf = 0;
+											local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZw = 2;
+											local v283;
+											v77[v79[ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZw + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZf]] = v77[v79[ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZg + 2]][v79[12 - (770 - (592 + 170))]];
+											v71 = v71 + (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZy - (169 + 343));
+											v79 = v67[v71];
+											v77[v79[ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZp + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZb]] = v77[v79[3]];
+											v71 = v71 + (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZv - 1);
+											v79 = v67[v71];
+											v77[v79[292 - (23 + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZk)]] = v77[v79[ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZx - (1129 + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZj)]];
+											v71 = v71 + (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZq - ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZz);
+											v79 = v67[v71];
+											v283 = v79[ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZE - (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZT + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZA)];
+											v77[v283] = v77[v283](v13(v77, v283 + (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZO - ((4624 - 3298) + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZI)), v79[ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZN]));
+											v71 = v71 + ((2 - ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZS) - 0);
+											v79 = v67[v71];
+											if v77[v79[ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZH - 5]] then
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZD = 30;
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZR = 119;
+												v71 = v71 + (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZR - (88 + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZD));
+											else
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZU = 51;
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZC = 720;
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZL = 774;
+												v71 = v79[ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZL - (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZC + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZU)];
+											end
+										else
+											local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZM = 4;
+											v77[v79[ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZM - (1 + 1)]] = {};
+										end
+									end
+								else
+									local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZW = 155;
+									if ((v80 <= (534 - (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZW + 242 + 86))) or (3672 <= 863)) then
+										local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZY = 453;
+										local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZG = 423;
+										local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZF = 926;
+										if (v80 > (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZF - (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZG + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZY))) then
+											local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZB = true;
+											local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZP = 421;
+											local v293 = 1776 - (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZP + 1355);
+											local v294;
+											local v295;
+											local v296;
+											local v297;
+											while ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZB do
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZn = 0;
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZe = 0;
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ = 0;
+												if ((612 < 1082) and (v293 == (2 - 0))) then
+													for v738 = v294, v72 do
+														local v739 = 0 + 0;
+														while true do
+															local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZK = 0;
+															local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZV = 0;
+															if ((2142 == 2142) and (v739 == (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZV + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZK))) then
+																local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZQ = 797;
+																local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZJ = 286;
+																local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZX = 1084;
+																v297 = v297 + (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZX - (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZJ + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZQ));
+																v77[v738] = v295[v297];
+																break;
+															end
+														end
+													end
+													break;
+												end
+												if (v293 == (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ - ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZe)) then
+													local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZi = 801;
+													local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZo = 2;
+													local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZa = 42;
+													local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZt = 0;
+													v294 = v79[2 - ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZt];
+													v295, v296 = v70(v77[v294](v13(v77, v294 + (440 - (397 + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZa)), v79[1 + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZo])));
+													v293 = ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZi - ((57 - 33) + 776);
+												end
+												if (v293 == (1 - ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZn)) then
+													local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZl = 1;
+													local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZd = 3;
+													local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZr = 563;
+													local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZh = 222;
+													local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZs = 785;
+													v72 = (v296 + v294) - (1 + 0);
+													v297 = ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZs - (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZh + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZr);
+													v293 = ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZd - ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZl;
+												end
+											end
+										else
+											local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZf = 439;
+											local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZw = 157;
+											local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZm = 600;
+											local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZu = 0;
+											local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZc = 2;
+											if (v79[ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZc + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZu] == v77[v79[ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZm - (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZw + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZf)]]) then
+												v71 = v71 + (1 - 0);
+											else
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZg = 23;
+												v71 = v79[193 - (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZg + 167)];
+											end
+										end
+									else
+										local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZb = 1108;
+										local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZp = 690;
+										local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZy = 1850;
+										if (v80 > (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZy - (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZp + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZb))) then
+											local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZk = true;
+											local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZv = 0;
+											local v298 = 0 + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZv;
+											local v299;
+											local v300;
+											local v301;
+											local v302;
+											while ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZk do
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZL = 0;
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZI = 0;
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZj = 749;
+												local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZx = 0;
+												if (((2 + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZx) == v298) or (1680 < ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZj)) then
+													for v740 = v299, v72 do
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZT = true;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZE = 808;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZz = 40;
+														local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZq = 848;
+														local v741 = ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZq - (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZz + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZE);
+														while ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZT do
+															local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZA = 0;
+															if (v741 == (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZA + 0 + 0)) then
+																local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZO = 3;
+																v302 = v302 + (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZO - 2);
+																v77[v740] = v300[v302];
+																break;
+															end
+														end
+													end
+													break;
+												end
+												if (v298 == (1 + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZI)) then
+													local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZD = 524;
+													local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZR = 47;
+													local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZH = 573;
+													local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZS = 0;
+													local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZN = 0;
+													v72 = (v301 + v299) - (1 + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZN);
+													v302 = ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZS + 0;
+													v298 = ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZH - (ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZR + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZD);
+												end
+												if (v298 == (0 + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZL)) then
+													local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZM = 3;
+													local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZU = 4;
+													local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZC = 9;
+													v299 = v79[(ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZC - ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZU) - ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZM];
+													v300, v301 = v70(v77[v299](v77[v299 + (2 - 1)]));
+													v298 = 1 - 0;
+												end
+											end
+										else
+											local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZF = 2;
+											local ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZW = 4;
+											v77[v79[ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZW - ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZF]] = v77[v79[1729 - (1165 + 561)]];
+										end
+									end
+								end
+							end
+						end
+						v71 = v71 + 1 + ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZG;
+						break;
+					end
+				end
+			end
+		end;
+	end
+	return v29(v28(), {}, v17)(...);
+end
+return v15(ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZY, v9(), ...);
